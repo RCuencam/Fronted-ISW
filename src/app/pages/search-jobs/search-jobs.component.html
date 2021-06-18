@@ -1,0 +1,42 @@
+
+<mat-toolbar class="navbar">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon (click)="opened=!opened" class="menu-icon">menu</mat-icon>
+  </button>
+  <span class="example-spacer"></span>
+  <div class="user-icon">User</div>
+  <span class="user-name">Bienvenido(a) Keiko</span>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="user-logout">
+    Log Out
+  </button>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav mode="over" [(opened)]="opened" class="side-menu" autoFocus="false">
+    <ul>
+      <li>Inicio</li>
+      <li>Postular</li>
+      <li>Mis Postulaciones</li>
+      <li>Entrevistas</li>
+      <li>Mi cuenta</li>
+      <li>Configuración</li>
+      <li class="side-menu-session">Cerrar Sesión</li>
+    </ul>
+  </mat-sidenav>
+  <mat-sidenav-content class="jobs_container">
+    <div class="jobs-container-header">
+      <h1>BÚSQUEDA DE EMPLEOS</h1>
+      <form action="">
+        <mat-form-field class="jobs-container-header-input">
+          <input matInput placeholder="Ingresa el empleo">
+        </mat-form-field>
+        <br>
+        <button>BUSCAR</button>
+      </form>
+    </div>
+    <div class="jobs-container-content">
+      <div></div>
+      <div></div>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

@@ -1,0 +1,110 @@
+.example-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  .example-events {
+    width: 300px;
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #555;
+  }
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .side-menu{
+    height: 100%;
+  }
+  .side{
+    height: 500px;
+  }
+  .navbar{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background: #1955AE;
+  }
+  .side-menu{
+    background: #1955AE;
+    width: 350px;
+  }
+  .side-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .side-menu ul li{
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, .5);
+    border-bottom: 1px solid rgba(255, 255, 255, .5);
+    padding: 20px 0;
+    color: white;
+    font-size: 1.5em;
+    padding-left: 20px;
+  }
+  .side-menu-session{
+    background: red;
+  }
+  .user-icon{
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .8em;
+  }
+  .user-name{
+    margin: 0 20px;
+    color: white;
+  }
+  .user-logout{
+    background: red;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+  }
+  .menu-icon{
+    color: white;
+    font-weight: 700;
+    font-size: 2.7em;
+  }
+
+/*---------------MAIN SECTION*/
+.jobs_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    height: 90vh;
+}
+.jobs-container-header{
+    text-align: center;
+    width: 35%;
+}
+.jobs-container-header-input{
+    width: 100%;
+    margin: 20px 0;
+}
+.jobs-container-header button{
+    width: 200px;
+    padding:10px 0;
+    background: #1955AE;
+    color: white;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 8px 17px -7px rgba(0,0,0,0.75);
+}
+
+.jobs-container-header h1{
+    font-weight: 700;
+    font-size: 3em;
+    color: #1955AE;
+}
