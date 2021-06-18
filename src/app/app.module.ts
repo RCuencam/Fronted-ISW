@@ -17,7 +17,6 @@ import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatPaginatorModule} from "@angular/material/paginator";
-import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -26,16 +25,18 @@ import {MatStepperModule} from "@angular/material/stepper";
 import { PostulationStepOneComponent } from './pages/postulation-step-one/postulation-step-one.component';
 import { PostulationStepTwoComponent } from './pages/postulation-step-two/postulation-step-two.component';
 import { PostulationStepTreeComponent } from './pages/postulation-step-tree/postulation-step-tree.component';
+import { MainNavPostulantComponent } from './pages/main-nav-postulant/main-nav-postulant.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostulantsComponent,
-    MainNavComponent,
+
     PostulationsComponent,
     PostulationStepOneComponent,
     PostulationStepTwoComponent,
-    PostulationStepTreeComponent
+    PostulationStepTreeComponent,
+    MainNavPostulantComponent
   ],
   imports: [
     BrowserModule,
