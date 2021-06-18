@@ -21,8 +21,10 @@
     "@angular/platform-browser-dynamic": "~12.0.2",
     "@angular/router": "~12.0.2",
     "@types/lodash": "^4.14.170",
+    "filestack-js": "^3.23.2",
     "json-server": "^0.16.3",
     "lodash": "^4.17.21",
+    "ng2-file-upload": "^1.4.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.1.0",
     "zone.js": "~0.11.4"

@@ -1,0 +1,15 @@
+
+<div class="centered" [formGroup]="regForm!">
+  <div align="center" class="form-group col-md-4" formGroupName="personalDetails">
+    <img src="../../../assets/images/curriculum.png">
+    <mat-card>Adjunta tu hoja de vida detallando información
+      relevante para el puesto de trabajo al que postulas</mat-card>
+
+  </div>
+
+
+</div>
+<br/>
+
+
+<button class="centered" matStepperNext (click)="step1Submitted()" mat-raised-button>Continuar</button>
