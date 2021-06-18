@@ -17,11 +17,16 @@ import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatPaginatorModule} from "@angular/material/paginator";
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PostulantsComponent
+    PostulantsComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,9 @@ import {MatPaginatorModule} from "@angular/material/paginator";
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    LayoutModule,
+    MatSidenavModule,
+    MatListModule,
 
 
   ],

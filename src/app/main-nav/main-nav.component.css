@@ -1,0 +1,49 @@
+.sidenav-container {
+  height: 100%;
+
+}
+
+.sidenav {
+  width: 200px;
+  background: #1955AE;
+
+}
+
+.sidenav .mat-toolbar {
+  background: #1955AE;
+
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+
+  top: 0;
+  z-index: 1;
+  background: #1955AE;
+}
+
+.mat-list-item:hover{
+  background-color:lightskyblue;
+}
+
+.mat-icon:hover{
+  color: lightblue;
+}
+
+
+.mat-list-item{
+  color: white;
+
+}
+
+
+.mat-toolbar{
+  background: #1955AE;
+  color: white;
+
+}
+
+
+.default-spacer {
+  flex: 1 1 auto;
+}
