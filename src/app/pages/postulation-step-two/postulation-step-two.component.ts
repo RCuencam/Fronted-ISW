@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-postulation-step-two',
@@ -9,7 +10,14 @@ export class PostulationStepTwoComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  @Input() regForm!: FormGroup;
+
+  ngOnInit() {
+  }
+
+  step2Submitted() {
+    this.regForm.get('contactDetails')!.get('email')!.markAsTouched();
+    this.regForm.get('contactDetails')!.get('email')!.updateValueAndValidity();
   }
 
 }

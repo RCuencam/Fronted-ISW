@@ -1,1 +1,24 @@
-<p>postulation works!</p>
+
+<div style="text-align:center">
+  <h1>Welcome to {{ title }}!</h1>
+</div>
+<div id="registration" class="conatiner col-md-12">
+  <form id="regForm" [formGroup]="registrationForm">
+    <mat-horizontal-stepper #stepper linear>
+      <mat-step align="center" formGroupName="personalDetails"
+                [stepControl]="registrationForm.get('personalDetails')!">
+        <ng-template matStepLabel>Enter Personal Details</ng-template>
+        <app-postulation-step-one [regForm]="registrationForm"></app-postulation-step-one>
+      </mat-step>
+      <mat-step formGroupName="contactDetails"
+                [stepControl]="registrationForm.get('contactDetails')!">
+        <ng-template matStepLabel>Enter Contact Details</ng-template>
+        <app-postulation-step-two [regForm]="registrationForm"></app-postulation-step-two>
+      </mat-step>
+      <mat-step>
+        <ng-template matStepLabel>Confirm Details</ng-template>
+        <app-postulation-step-tree [regForm]="registrationForm"></app-postulation-step-tree>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </form>
+</div>

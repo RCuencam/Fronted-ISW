@@ -1,0 +1,15 @@
+
+.form-control.ng-touched.ng-invalid{
+  border-color:red;
+}
+
+.centered{
+  height: 40%;
+  width: 60%;
+  margin: auto;
+
+}
+
+.default-spacer {
+  flex: 1 1 auto;
+}
