@@ -1,36 +1,44 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-               [mode]="(isHandset$ | async) ? 'over' : 'side'"
-               [opened]="(isHandset$ | async) === false">
-
-    <mat-toolbar >Menu</mat-toolbar>
+               mode="over">
+    <div class="menu-sidenav">
+      <mat-toolbar >Menu</mat-toolbar>
+      <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          class="sidenav-button"
+          >
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+    </div>
     <mat-nav-list >
       <br><br><br>
       <a  mat-list-item href="#"> Home  <span class="default-spacer"></span><mat-icon>home</mat-icon> </a>
-      <a mat-list-item href="#">Postular   <span class="default-spacer"></span><mat-icon>fiber_manual_record  </mat-icon></a>
-      <a mat-list-item href="#">Mis postulaciones   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
+      <a mat-list-item routerLink="/jobs" (click)="drawer.toggle()">Postular   <span class="default-spacer"></span><mat-icon>fiber_manual_record  </mat-icon></a>
+      <a mat-list-item routerLink="/postulations" (click)="drawer.toggle()">Mis postulaciones   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
       <a mat-list-item href="#">Entrevistas  <span class="default-spacer"></span><mat-icon>home</mat-icon></a>
       <a mat-list-item href="#">Mi cuenta  <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
       <a mat-list-item href="#">Configuración  <span class="default-spacer"></span><mat-icon>settings</mat-icon></a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar >
+    <mat-toolbar>
       <button
         type="button"
         aria-label="Toggle sidenav"
         mat-icon-button
         (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
+        >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
       <span class="default-spacer"></span>
-      <img src="../../../assets/images/logo.jpg">
-      <span >Bienvenido(a) Keiko </span>
-
-      <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
-        <mat-icon>logout</mat-icon>
+      <div class="user-icon">User</div>
+      <span class="user-name">Bienvenido(a) Keiko</span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="user-logout">
+        Log Out
       </button>
 
 
