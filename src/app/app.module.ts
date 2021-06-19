@@ -78,7 +78,6 @@ import { JobInformationComponent } from './pages/job-information/job-information
     FilestackModule,
     MatCheckboxModule,
 
-
     MatPaginatorModule
 
   ],
