@@ -7,11 +7,12 @@
 }
 
 .mat-stepper-horizontal{
-  background-color: lightskyblue;
+
   height: 100%;
   width: 50%;
-  border: 5px solid darkblue;
+
   margin: auto;
+  background: lightblue;
 
 }
 

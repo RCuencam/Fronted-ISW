@@ -17,7 +17,6 @@ import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatPaginatorModule} from "@angular/material/paginator";
-import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { PostulationsComponent } from './pages/postulations/postulations.component';
@@ -26,12 +25,16 @@ import { PostulationStepOneComponent } from './pages/postulation-step-one/postul
 import { PostulationStepTwoComponent } from './pages/postulation-step-two/postulation-step-two.component';
 import { PostulationStepTreeComponent } from './pages/postulation-step-tree/postulation-step-tree.component';
 import { MainNavPostulantComponent } from './pages/main-nav-postulant/main-nav-postulant.component';
+import { FilestackModule } from '@filestack/angular';
+import { UploudfilesComponent } from './pages/uploudfiles/uploudfiles.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 import { FiltroPostulanteComponent } from './components/filtro-postulante/filtro-postulante.component';
 import { SearchJobsComponent } from './pages/search-jobs/search-jobs.component';
 import { SideMenuComponent } from './components/side-menu-postulant/side-menu.component';
 import { JobsListComponent } from './components/jobs-list/jobs-list.component';
 import { JobsApiService } from './services/jobs-api.service';
 import { JobInformationComponent } from './pages/job-information/job-information.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,8 +47,10 @@ import { JobInformationComponent } from './pages/job-information/job-information
     PostulationStepTwoComponent,
     PostulationStepTreeComponent,
     MainNavPostulantComponent,
+    UploudfilesComponent,
     PostulantsComponent,
     JobInformationComponent,
+
   ],
   imports: [
     HttpClientModule,
@@ -66,10 +71,17 @@ import { JobInformationComponent } from './pages/job-information/job-information
     MatCardModule,
     MatSortModule,
     MatTableModule,
-    LayoutModule,
+    MatSidenavModule,
+    MatListModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    FilestackModule,
+    MatCheckboxModule,
+
     MatPaginatorModule
+
   ],
-  providers: [PostulantsApiService,JobsApiService],
+  providers: [PostulantsApiService,JobsApiService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
