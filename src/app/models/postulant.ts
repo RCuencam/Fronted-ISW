@@ -3,3 +3,4 @@ export interface Postulant {
   firstname: string
   lastname: string
 }
+

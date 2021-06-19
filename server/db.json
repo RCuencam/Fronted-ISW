@@ -159,5 +159,14 @@
       "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
       "benefits":["Ingreso a planilla","Trabajo Remoto"]
     }
+  ],
+
+  "uploads": [
+    {
+      "id": 1,
+      "Handle": "ebF5s6DDSqyhv0WTNPB8",
+      "url": "https://cdn.filestackcontent.com/ebF5s6DDSqyhv0WTNPB8"
+
+    }
   ]
 }

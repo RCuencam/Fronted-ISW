@@ -34,6 +34,9 @@ import { SideMenuComponent } from './components/side-menu-postulant/side-menu.co
 import { JobsListComponent } from './components/jobs-list/jobs-list.component';
 import { JobsApiService } from './services/jobs-api.service';
 import { JobInformationComponent } from './pages/job-information/job-information.component';
+import { AccountsettingsComponent } from './pages/accountsettings/accountsettings.component';
+import { ProfileStudentComponent } from './pages/profile-student/profile-student.component';
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -50,38 +53,41 @@ import { JobInformationComponent } from './pages/job-information/job-information
     UploudfilesComponent,
     PostulantsComponent,
     JobInformationComponent,
+    AccountsettingsComponent,
+    ProfileStudentComponent,
 
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatGridListModule,
-    MatInputModule,
-    MatStepperModule,
-    MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatSortModule,
-    MatTableModule,
-    MatSidenavModule,
-    MatListModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    FilestackModule,
-    MatCheckboxModule,
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatSidenavModule,
+        MatListModule,
+        MatGridListModule,
+        MatInputModule,
+        MatStepperModule,
+        MatFormFieldModule,
+        FormsModule,
+        ReactiveFormsModule,
+        MatCardModule,
+        MatSortModule,
+        MatTableModule,
+        MatSidenavModule,
+        MatListModule,
+        MatStepperModule,
+        ReactiveFormsModule,
+        FilestackModule,
+        MatCheckboxModule,
 
 
-    MatPaginatorModule
+        MatPaginatorModule,
+        MatChipsModule
 
-  ],
+    ],
   providers: [PostulantsApiService,JobsApiService,],
   bootstrap: [AppComponent]
 })
