@@ -37,6 +37,8 @@ import { JobInformationComponent } from './pages/job-information/job-information
 import { AccountsettingsComponent } from './pages/accountsettings/accountsettings.component';
 import { ProfileStudentComponent } from './pages/profile-student/profile-student.component';
 import {MatChipsModule} from "@angular/material/chips";
+import {MatExpansionModule} from '@angular/material/expansion';
+
 
 @NgModule({
   declarations: [
@@ -57,38 +59,63 @@ import {MatChipsModule} from "@angular/material/chips";
     ProfileStudentComponent,
 
   ],
-    imports: [
-        HttpClientModule,
-        BrowserModule,
-        AppRoutingModule,
-        BrowserAnimationsModule,
-        MatToolbarModule,
-        MatIconModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatListModule,
-        MatGridListModule,
-        MatInputModule,
-        MatStepperModule,
-        MatFormFieldModule,
-        FormsModule,
-        ReactiveFormsModule,
-        MatCardModule,
-        MatSortModule,
-        MatTableModule,
-        MatSidenavModule,
-        MatListModule,
-        MatStepperModule,
-        ReactiveFormsModule,
-        FilestackModule,
-        MatCheckboxModule,
+
+  imports: [
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule,
+    MatInputModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatSortModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatListModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    FilestackModule,
+    MatCheckboxModule,
+    HttpClientModule,
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatGridListModule,
+    MatInputModule,
+    MatStepperModule,
+    MatFormFieldModule,
+    FormsModule,
+    ReactiveFormsModule,
+    MatCardModule,
+    MatSortModule,
+    MatTableModule,
+    MatSidenavModule,
+    MatListModule,
+    MatStepperModule,
+    ReactiveFormsModule,
+    FilestackModule,
+    MatCheckboxModule,
+    MatExpansionModule,
+    MatPaginatorModule,
+    MatChipsModule
 
 
-        MatPaginatorModule,
-        MatChipsModule
-
-    ],
-  providers: [PostulantsApiService,JobsApiService,],
+  ],
+  providers: [PostulantsApiService,JobsApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
