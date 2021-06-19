@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchJobsComponent implements OnInit {
 
+  panelOpenState: boolean=false;
   events: string[] = [];
   opened: boolean=false;
   toggle():void{

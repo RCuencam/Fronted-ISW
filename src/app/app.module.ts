@@ -34,6 +34,7 @@ import { SideMenuComponent } from './components/side-menu-postulant/side-menu.co
 import { JobsListComponent } from './components/jobs-list/jobs-list.component';
 import { JobsApiService } from './services/jobs-api.service';
 import { JobInformationComponent } from './pages/job-information/job-information.component';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 @NgModule({
   declarations: [
@@ -77,7 +78,7 @@ import { JobInformationComponent } from './pages/job-information/job-information
     ReactiveFormsModule,
     FilestackModule,
     MatCheckboxModule,
-
+    MatExpansionModule,
     MatPaginatorModule
 
   ],
