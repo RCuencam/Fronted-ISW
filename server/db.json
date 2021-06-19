@@ -1,7 +1,5 @@
 {
-<<<<<<< HEAD
 
-=======
   "postulants": [
     {
       "id": 1,
@@ -93,6 +91,73 @@
       "address": "sad",
       "id": 15
     }
+  ],
+  "jobs":[
+    {
+      "id":1,
+      "location": "San Isidro, Lima",
+      "title": "Desarrollador Backend C#",
+      "type": "FullTime",
+      "date": "10 de enero",
+      "url": "https://logo.clearbit.com/claro.com.pe",
+      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
+      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+    },
+    {
+      "id":2,
+      "location": "San Borja, Lima",
+      "title": "Desarrollador Fronted",
+      "type": "FullTime",
+      "date": "04 de Abril",
+      "url": "https://logo.clearbit.com/movistar.com",
+      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
+      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+    },
+    {
+      "id":3,
+      "location": "La Molina, Lima",
+      "title": "Desarrollador Backend Python",
+      "type": "FullTime",
+      "date": "08 de Abril",
+      "url":"https://logo.clearbit.com/entel.pe",
+      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
+      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+    },
+    {
+      "id":4,
+      "location": "San Isidro, Lima",
+      "title": "Desarrollador Fullstack MERN",
+      "type": "FullTime",
+      "date": "28 de Febrero",
+      "url": "https://logo.clearbit.com/bitel.com.pe",
+      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
+      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+    },
+    {
+      "id":5,
+      "location": "San Borja, Lima",
+      "title": "Soporte Técnico",
+      "type": "FullTime",
+      "date": "15 de Abril",
+      "url": "https://logo.clearbit.com/nestle.com.pe",
+      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
+      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+    },
+    {
+      "id":6,
+      "location": "Santiago de Surco, Lima",
+      "title": "Maquetador HTML",
+      "type": "FullTime",
+      "date": "30 de Marzo",
+      "url": "https://logo.clearbit.com/claro.com.pe",
+      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
+      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+    }
   ]
->>>>>>> 8e64227fe65da6d39328cc633fb684788716ca84
 }

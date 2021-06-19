@@ -9,7 +9,6 @@
 }
 .jobs-container-header{
     text-align: center;
-    width: 35%;
     margin: 50px auto;
 }
 .jobs-container-header-input{
@@ -32,4 +31,15 @@
     font-weight: 700;
     font-size: 3em;
     color: #1955AE;
+}
+.jobs-container-content{
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+}
+.filter-jobs{
+    width: 50%;
+}
+.list-jobs{
+    width: 50%;
 }

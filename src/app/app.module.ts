@@ -3,27 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SearchJobsComponent } from './pages/search-jobs/search-jobs.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-
-import { SideMenuComponent } from './components/side-menu-postulant/side-menu.component';
-
-import {MatGridListModule} from '@angular/material/grid-list';
-
-import { FiltroPostulanteComponent } from './components/filtro-postulante/filtro-postulante.component';
-import { JobItemComponent } from './components/job-item/job-item.component';
 import { HttpClientModule} from "@angular/common/http";
 import {PostulantsApiService} from "./services/postulants-api.service";
 import { PostulantsComponent } from './pages/postulants/postulants.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
+import {MatIconModule} from "@angular/material/icon";
+import {MatGridListModule} from "@angular/material/grid-list";
 import {MatCardModule} from "@angular/material/card";
-
-
-
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
 import {MatTableModule} from "@angular/material/table";
 import {MatSortModule} from "@angular/material/sort";
 import {MatFormFieldModule} from "@angular/material/form-field";
@@ -37,30 +26,32 @@ import { PostulationStepOneComponent } from './pages/postulation-step-one/postul
 import { PostulationStepTwoComponent } from './pages/postulation-step-two/postulation-step-two.component';
 import { PostulationStepTreeComponent } from './pages/postulation-step-tree/postulation-step-tree.component';
 import { MainNavPostulantComponent } from './pages/main-nav-postulant/main-nav-postulant.component';
-
-
+import { FiltroPostulanteComponent } from './components/filtro-postulante/filtro-postulante.component';
+import { SearchJobsComponent } from './pages/search-jobs/search-jobs.component';
+import { SideMenuComponent } from './components/side-menu-postulant/side-menu.component';
+import { JobsListComponent } from './components/jobs-list/jobs-list.component';
+import { JobsApiService } from './services/jobs-api.service';
+import { JobInformationComponent } from './pages/job-information/job-information.component';
 @NgModule({
   declarations: [
     AppComponent,
-
     SearchJobsComponent,
     SideMenuComponent,
     FiltroPostulanteComponent,
-    JobItemComponent,
-    PostulantsComponent,
-
+    JobsListComponent,
     PostulationsComponent,
     PostulationStepOneComponent,
     PostulationStepTwoComponent,
     PostulationStepTreeComponent,
-    MainNavPostulantComponent
-
+    MainNavPostulantComponent,
+    PostulantsComponent,
+    JobInformationComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
@@ -68,28 +59,17 @@ import { MainNavPostulantComponent } from './pages/main-nav-postulant/main-nav-p
     MatListModule,
     MatGridListModule,
     MatInputModule,
-    HttpClientModule,
-    FormsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatIconModule,
-    MatCardModule,
-    MatGridListModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatTableModule,
-    MatPaginatorModule,
-    MatSortModule,
-    LayoutModule,
-    MatSidenavModule,
-    MatListModule,
     MatStepperModule,
+    MatFormFieldModule,
+    FormsModule,
     ReactiveFormsModule,
-
-
-
+    MatCardModule,
+    MatSortModule,
+    MatTableModule,
+    LayoutModule,
+    MatPaginatorModule
   ],
-  providers: [PostulantsApiService],
+  providers: [PostulantsApiService,JobsApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
