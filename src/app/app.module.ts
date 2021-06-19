@@ -37,7 +37,9 @@ import { PostulationStepOneComponent } from './pages/postulation-step-one/postul
 import { PostulationStepTwoComponent } from './pages/postulation-step-two/postulation-step-two.component';
 import { PostulationStepTreeComponent } from './pages/postulation-step-tree/postulation-step-tree.component';
 import { MainNavPostulantComponent } from './pages/main-nav-postulant/main-nav-postulant.component';
-
+import { FilestackModule } from '@filestack/angular';
+import { UploudfilesComponent } from './pages/uploudfiles/uploudfiles.component';
+import {MatCheckboxModule} from "@angular/material/checkbox";
 
 @NgModule({
   declarations: [
@@ -53,7 +55,8 @@ import { MainNavPostulantComponent } from './pages/main-nav-postulant/main-nav-p
     PostulationStepOneComponent,
     PostulationStepTwoComponent,
     PostulationStepTreeComponent,
-    MainNavPostulantComponent
+    MainNavPostulantComponent,
+    UploudfilesComponent
 
   ],
   imports: [
@@ -85,7 +88,8 @@ import { MainNavPostulantComponent } from './pages/main-nav-postulant/main-nav-p
     MatListModule,
     MatStepperModule,
     ReactiveFormsModule,
-
+    FilestackModule,
+    MatCheckboxModule
 
 
   ],
