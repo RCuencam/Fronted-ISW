@@ -1,6 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
+import {Job} from "../../models/job";
+import {ActivatedRoute} from "@angular/router";
+import {JobsApiService} from "../../services/jobs-api.service";
 
 /**
  * @title Stepper with customized states
@@ -16,14 +19,30 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 })
 export class PostulationsComponent implements OnInit {
 
-  title = 'Aqui deberia ir el nombre de la oferta de trabajo si tan solo tuviera la conexion >:c';
 
 
+  jobId:number=0;
+  jobInfo: Job;
+  constructor(private route:ActivatedRoute, private jobs_service : JobsApiService) {
+    this.route.params.subscribe(params=>this.jobId=params.id)
+    this.jobInfo={} as Job;
+  }
 
   ngOnInit(): void {
+    this.getJobById()
+  }
+
+  getJobById():void{
+    console.log(this.jobId);
+
+    this.jobs_service.getJobById(this.jobId).subscribe((response: any)=>{
+      this.jobInfo=response;
+    });
+
+  }
 
 
 
   }
 
-}
+

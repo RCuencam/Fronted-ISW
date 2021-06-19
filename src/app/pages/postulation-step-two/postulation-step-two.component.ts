@@ -15,9 +15,6 @@ export class PostulationStepTwoComponent implements OnInit {
   ngOnInit() {
   }
 
-  step2Submitted() {
-    this.regForm.get('contactDetails')!.get('email')!.markAsTouched();
-    this.regForm.get('contactDetails')!.get('email')!.updateValueAndValidity();
-  }
+
 
 }
