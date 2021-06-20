@@ -4,6 +4,7 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 import {Job} from "../../models/job";
 import {ActivatedRoute} from "@angular/router";
 import {JobsApiService} from "../../services/jobs-api.service";
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 /**
  * @title Stepper with customized states
@@ -20,12 +21,18 @@ import {JobsApiService} from "../../services/jobs-api.service";
 export class PostulationsComponent implements OnInit {
 
 
-
+  smallScreen:boolean=false;
   jobId:number=0;
   jobInfo: Job;
-  constructor(private route:ActivatedRoute, private jobs_service : JobsApiService) {
+  constructor(private route:ActivatedRoute, private jobs_service : JobsApiService, private breakpointObserver: BreakpointObserver) {
     this.route.params.subscribe(params=>this.jobId=params.id)
     this.jobInfo={} as Job;
+    breakpointObserver.observe([
+      Breakpoints.XSmall,
+      Breakpoints.Small
+    ]).subscribe(result =>{
+      this.smallScreen=result.matches;
+    });
   }
 
   ngOnInit(): void {

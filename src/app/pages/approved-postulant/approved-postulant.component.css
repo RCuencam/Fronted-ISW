@@ -1,0 +1,45 @@
+.text{
+  text-align: center;
+  color: deepskyblue;
+  font-family: Verdana;
+}
+
+.circular--portrait {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.circular--portrait img {
+  width: 100%;
+  height: auto;
+}
+
+.mat-button{
+  margin: 40px auto;
+  width: 280px;
+  background-color: #1955AE;
+  color: white;
+  display: block;
+  padding: 5px 30px 5px 30px;
+  text-align: center;
+}
+
+.mat-button-approved{
+  margin: 40px auto;
+  width: 280px;
+  background-color: greenyellow;
+  color: white;
+  display: block;
+  padding: 5px 30px 5px 30px;
+  text-align: center;
+}
+
+.prueba{
+  display: flex;
+
+}

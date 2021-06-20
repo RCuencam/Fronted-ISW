@@ -18,9 +18,9 @@
       <br><br><br>
       <a  mat-list-item href="#"> Home  <span class="default-spacer"></span><mat-icon>home</mat-icon> </a>
       <a mat-list-item routerLink="/jobs" (click)="drawer.toggle()">Postular   <span class="default-spacer"></span><mat-icon>fiber_manual_record  </mat-icon></a>
-      <a mat-list-item routerLink="/postulation/job/:id" (click)="drawer.toggle()">Mis postulaciones   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
-      <a mat-list-item href="#">Entrevistas  <span class="default-spacer"></span><mat-icon>home</mat-icon></a>
-      <a mat-list-item href="#">Mi cuenta  <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
+      <a mat-list-item routerLink="/postulations" (click)="drawer.toggle()">Mis postulaciones   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
+      <a mat-list-item href="/job/interview/:id">Entrevistas <span class="default-spacer"></span> <mat-icon>home</mat-icon></a>
+      <a mat-list-item routerLink="/account" (click)="drawer.toggle()">Mi cuenta  <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
       <a mat-list-item href="#">Configuración  <span class="default-spacer"></span><mat-icon>settings</mat-icon></a>
     </mat-nav-list>
   </mat-sidenav>

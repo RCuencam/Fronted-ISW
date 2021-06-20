@@ -43,3 +43,32 @@
 .list-jobs{
     width: 50%;
 }
+.filter-jobs-container{
+    width: 70%;
+    margin: 0 auto;
+    background: #1955AE;
+    padding: 30px;
+}
+.filter-jobs-container h1{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+.filter-jobs-container-item{
+    margin: 40px 0;
+    border-radius: 10px !important;
+}
+@media screen and (max-width:768px){
+    .jobs-container-content{
+        flex-direction: column;
+    }
+    .filter-jobs{
+        width: 100%;
+    }
+    .list-jobs{
+        width: 100%;
+        margin: 0 auto;
+    }
+}

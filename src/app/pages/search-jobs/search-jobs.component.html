@@ -2,7 +2,79 @@
   <h1>BÚSQUEDA DE EMPLEOS</h1>
 </div>
 <div class="jobs-container-content">
-  <div class="filter-jobs">Aquí irá el filtro</div>
+  <div class="filter-jobs">
+    <div class="filter-jobs-container">
+      <h1>FILTROS</h1>
+      <div class="filter-jobs-container-items">
+        <mat-accordion>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" class="filter-jobs-container-item">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Experiencia Laboral
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" class="filter-jobs-container-item">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Categoría
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" class="filter-jobs-container-item">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Departamento
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" class="filter-jobs-container-item">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Distrito
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" class="filter-jobs-container-item">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Tipo de Puesto
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" class="filter-jobs-container-item">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Fecha de Publicación
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+          </mat-expansion-panel>
+          <mat-expansion-panel (opened)="panelOpenState = true"
+                               (closed)="panelOpenState = false" class="filter-jobs-container-item">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                Salario
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <p>I'm visible because I am open</p>
+          </mat-expansion-panel>
+          
+        </mat-accordion>
+      </div>
+    </div>
+  </div>
   <div class="list-jobs">
     <app-jobs-list></app-jobs-list>
   </div>
