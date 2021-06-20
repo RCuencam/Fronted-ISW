@@ -38,6 +38,9 @@ import { AccountsettingsComponent } from './pages/accountsettings/accountsetting
 import { ProfileStudentComponent } from './pages/profile-student/profile-student.component';
 import {MatChipsModule} from "@angular/material/chips";
 import {MatExpansionModule} from '@angular/material/expansion';
+import { ContratComponent } from './pages/contrat/contrat.component';
+import { InterviewsComponent } from './pages/interviews/interviews.component';
+import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-postulant.component';
 
 
 @NgModule({
@@ -57,6 +60,9 @@ import {MatExpansionModule} from '@angular/material/expansion';
     JobInformationComponent,
     AccountsettingsComponent,
     ProfileStudentComponent,
+    ContratComponent,
+    InterviewsComponent,
+    ApprovedPostulantComponent,
 
   ],
 

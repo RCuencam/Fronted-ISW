@@ -1,5 +1,4 @@
 {
-
   "postulants": [
     {
       "id": 1,
@@ -92,6 +91,52 @@
       "id": 15
     }
   ],
+
+  "postulant-approved":[
+    {
+      "id": 1,
+      "name": "John",
+      "last": "Doe",
+      "age": 25,
+      "address": "The Next Location."
+    },
+    {
+      "id": 2,
+      "name": "Jason",
+      "last": "Bourne",
+      "age": 25,
+      "address": "Unknown"
+    },
+    {
+      "id": 3,
+      "name": "William",
+      "last": "Norton",
+      "age": 30,
+      "address": "One Place"
+    },
+    {
+      "id": 4,
+      "name": "Steven",
+      "last": "Strange",
+      "age": 35,
+      "address": "Santum Santorum"
+    },
+    {
+      "id": 5,
+      "name": "Mike",
+      "last": "Myers",
+      "age": 24,
+      "address": "The Final Place"
+    },
+    {
+      "id": 6,
+      "name": "Peter",
+      "last": "Parker",
+      "age": 26,
+      "address": "New York"
+    }
+  ],
+
   "jobs":[
     {
       "id":1,
@@ -167,6 +212,56 @@
       "Handle": "ebF5s6DDSqyhv0WTNPB8",
       "url": "https://cdn.filestackcontent.com/ebF5s6DDSqyhv0WTNPB8"
 
+    }
+  ],
+
+  "interviews": [
+    {
+      "id": 1,
+      "date_interview": "13 de Enero del 2021",
+      "hour_interview": "15:00 - 17:00 pm",
+      "link_interview": "https://meet.google.com/",
+      "final_date_offer": "14 de Enero del 2021"
+    },
+
+    {
+      "id": 2,
+      "date_interview": "20 de Enero del 2021",
+      "hour_interview": "19:00 - 20:00 pm",
+      "link_interview": "https://meet.google.com/",
+      "final_date_offer": "21  de Enero del 2021"
+    },
+
+    {
+      "id": 3,
+      "date_interview": "20 de Febrero del 2021",
+      "hour_interview": "14:00 - 15:00 pm",
+      "link_interview": "https://meet.google.com/",
+      "final_date_offer": "01  de Marzo del 2021"
+    },
+
+    {
+      "id": 4,
+      "date_interview": "01 de Abril del 2021",
+      "hour_interview": "8:00 - 9:00 am",
+      "link_interview": "https://meet.google.com/",
+      "final_date_offer": "02  de Abril del 2021"
+    },
+
+    {
+      "id": 5,
+      "date_interview": "06 de Febrero del 2021",
+      "hour_interview": "14:00 - 15:00 pm",
+      "link_interview": "https://meet.google.com/",
+      "final_date_offer": "07  de Marzo del 2021"
+    },
+
+    {
+      "id": 6,
+      "date_interview": "25 de Abril del 2021",
+      "hour_interview": "21:00 - 22:00 pm",
+      "link_interview": "https://meet.google.com/",
+      "final_date_offer": "26  de Abril del 2021"
     }
   ]
 }
