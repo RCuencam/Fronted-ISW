@@ -41,7 +41,13 @@
                 Distrito
               </mat-panel-title>
             </mat-expansion-panel-header>
-            <p>I'm visible because I am open</p>
+            <mat-list>
+              <mat-list-item (click)="getAllJobs()"> TODOS </mat-list-item>
+              <mat-list-item (click)="filterByDistritMolina()"> La Molina </mat-list-item>
+              <mat-list-item (click)="filterByDistritBorja()"> San Borja </mat-list-item>
+              <mat-list-item (click)="filterByDistritSurco()"> Santiago de Surco </mat-list-item>
+              <mat-list-item (click)="filterByDistritIsidro()"> San Isidro </mat-list-item>
+             </mat-list>
           </mat-expansion-panel>
           <mat-expansion-panel (opened)="panelOpenState = true"
                                (closed)="panelOpenState = false" class="filter-jobs-container-item">
@@ -76,6 +82,6 @@
     </div>
   </div>
   <div class="list-jobs">
-    <app-jobs-list></app-jobs-list>
+    <app-jobs-list [jobs]="jobs"></app-jobs-list>
   </div>
 </div>
