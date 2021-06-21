@@ -12,6 +12,9 @@ import {JobNewComponent} from "./pages/job-new/job-new.component";
 
 //Eliminar despues
 import {PruebaComponent} from "./pages/prueba/prueba.component";
+import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
+import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
+import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 
 const routes: Routes = [
   {path:'jobs', component : SearchJobsComponent},
@@ -26,6 +29,10 @@ const routes: Routes = [
 
   //Eliminar Despues
   {path:'prueba', component: PruebaComponent},
+  {path:'myaccount', component : MyAccountPostulantComponent},
+  {path:'modify-professional-profile/:id', component: ModifyProfessionalProfileComponent},
+  {path:'modify-personal-information', component: ModifyPersonalInformationComponent}
+
 ];
 
 @NgModule({
