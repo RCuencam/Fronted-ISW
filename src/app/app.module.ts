@@ -44,6 +44,7 @@ import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-
 import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
+import { EmployeerpruebaComponent } from './pages/employeerprueba/employeerprueba.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +68,8 @@ import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-accou
     ApprovedPostulantComponent,
     ModifyPersonalInformationComponent,
     ModifyProfessionalProfileComponent,
-    MyAccountPostulantComponent
+    MyAccountPostulantComponent,
+    EmployeerpruebaComponent
   ],
 
   imports: [
@@ -77,15 +79,16 @@ import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-accou
     BrowserAnimationsModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule,
+    MatCardModule,
+    MatSortModule,
+    MatTableModule,
     MatSidenavModule,
-    MatListModule,
+    FilestackModule,
+    MatButtonModule,
     MatGridListModule,
     MatInputModule,
-    MatStepperModule,
     MatFormFieldModule,
     FormsModule,
-    ReactiveFormsModule,
     MatCardModule,
     MatSortModule,
     MatTableModule,
@@ -93,31 +96,6 @@ import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-accou
     MatListModule,
     MatStepperModule,
     ReactiveFormsModule,
-    FilestackModule,
-    MatCheckboxModule,
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatGridListModule,
-    MatInputModule,
-    MatStepperModule,
-    MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatSortModule,
-    MatTableModule,
-    MatSidenavModule,
-    MatListModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    FilestackModule,
     MatCheckboxModule,
     MatExpansionModule,
     MatPaginatorModule,

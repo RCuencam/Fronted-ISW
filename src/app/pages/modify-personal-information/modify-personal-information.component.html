@@ -6,28 +6,64 @@
     <form action="">
       <mat-form-field appearance="outline" class="profile-form-input">
         <mat-hint>Nombres</mat-hint>
-        <input matInput matAutosizeMinRows=4 placeholder="Nombres">
+        <input matInput matAutosizeMinRows=4  [(ngModel)]="employeerData.firstname" placeholder="Nombres">
       </mat-form-field>
     </form>
     <form action="">
       <mat-form-field appearance="outline" class="profile-form-input">
         <mat-hint>Apellidos</mat-hint>
-        <input matInput matAutosizeMinRows=4 placeholder="Apellidos">
+        <input matInput matAutosizeMinRows=4 [(ngModel)]="employeerData.lastname"   placeholder="Apellidos">
+      </mat-form-field>
+    </form>
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Apellidos</mat-hint>
+        <input matInput matAutosizeMinRows=4 [(ngModel)]="employeerData.document"  placeholder="Apellidos">
+      </mat-form-field>
+    </form>
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Apellidos</mat-hint>
+        <input matInput matAutosizeMinRows=4 [(ngModel)]="employeerData.password" placeholder="Apellidos">
+      </mat-form-field>
+    </form>
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Apellidos</mat-hint>
+        <input matInput matAutosizeMinRows=4 [(ngModel)]="employeerData.posicion" placeholder="posicion">
+      </mat-form-field>
+    </form>
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Apellidos</mat-hint>
+        <input matInput matAutosizeMinRows=4 [(ngModel)]="employeerData.email"   placeholder="email">
       </mat-form-field>
     </form>
     <form action="">
       <mat-form-field appearance="outline" class="profile-form-input">
         <mat-hint>E-mail</mat-hint>
-        <input type="email" matInput matAutosizeMinRows=4 placeholder="E-mail">
+        <input type="email" matInput matAutosizeMinRows=4 [(ngModel)]="employeerData.number" placeholder="number">
       </mat-form-field>
     </form>
+
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>E-mail</mat-hint>
+        <input type="email" matInput matAutosizeMinRows=4 [(ngModel)]="employeerData.id" placeholder="id">
+      </mat-form-field>
+    </form>
+
     <div>
       <button mat-raised-button class="mat-focus-indicator mat-button mat-button-base" [routerLink]="[]">Cambiar Contraseña</button>
     </div>
     <form action="">
       <input type="submit" mat-raised-button class="mat-focus-indicator mat-button mat-button-base" value="Guardar Cambios">
     </form>
+
+    <button (click)="addEmployeer()">Buscar</button>
   </div>
 </div>
+
+
 
 
