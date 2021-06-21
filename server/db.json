@@ -263,5 +263,43 @@
       "link_interview": "https://meet.google.com/",
       "final_date_offer": "26  de Abril del 2021"
     }
+  ],
+  "professional_profile" : [
+    {
+      "id": 1,
+      "description": "Mi nombre es Keiko Sofía Fujimori Higuchi y soy egresada de la carrera de Negocios en la universidad Cesar Vallejo. Me considero una persona super responsable, optimista y sobretodo perserverante, ya que jamás me rindo ante ningúna circunstancia.",
+      "ocupation": "Desempleada",
+      "video_link": "https://www.youtube.com/keikovideo"
+    },
+    {
+      "id": 2,
+      "description": "Mi nombre es Kenji Fujimori. Me considero una persona amante de la naturaleza y los animales. Soy muy proactivo y dispuesto a mejorar.",
+      "ocupation": "Administrador de Empresas",
+      "video_link": "https://www.youtube.com/kenjivideo"
+    },
+    {
+      "id": 3,
+      "description": "Soy Luis Panta y me dedico a la venta de adornos artesanales como pulseras hechas a mano, las cuales las voy vendiendo de ciudad en ciudad en cada viaje. Me considero una persona proactiva y muy perserverante.",
+      "ocupation": "Comerciante",
+      "video_link": "https://www.youtube.com/pantaaroundtheworld",
+      "estudios" : "cesar vallejo"
+    }
+  ],
+  "languages" : [
+    {
+      "id": 1,
+      "name": "Español",
+      "level": "5"
+    },
+    {
+      "id": 2,
+      "name": "Inglés",
+      "level": "4"
+    },
+    {
+      "id": 3,
+      "name": "Portugués",
+      "level": "2"
+    }
   ]
 }

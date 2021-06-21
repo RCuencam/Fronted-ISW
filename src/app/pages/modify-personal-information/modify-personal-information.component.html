@@ -1,0 +1,33 @@
+<div class="profile-container-header">
+  <h1>INFORMACIÓN PERSONAL</h1>
+</div>
+<div class="profile-container-contain">
+  <div class="form-group">
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Nombres</mat-hint>
+        <input matInput matAutosizeMinRows=4 placeholder="Nombres">
+      </mat-form-field>
+    </form>
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Apellidos</mat-hint>
+        <input matInput matAutosizeMinRows=4 placeholder="Apellidos">
+      </mat-form-field>
+    </form>
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>E-mail</mat-hint>
+        <input type="email" matInput matAutosizeMinRows=4 placeholder="E-mail">
+      </mat-form-field>
+    </form>
+    <div>
+      <button mat-raised-button class="mat-focus-indicator mat-button mat-button-base" [routerLink]="[]">Cambiar Contraseña</button>
+    </div>
+    <form action="">
+      <input type="submit" mat-raised-button class="mat-focus-indicator mat-button mat-button-base" value="Guardar Cambios">
+    </form>
+  </div>
+</div>
+
+
