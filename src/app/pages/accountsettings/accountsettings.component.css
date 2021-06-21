@@ -1,0 +1,16 @@
+.cent{
+  height: 100%;
+  width: 50%;
+
+  margin: auto;
+  background: lightblue;
+}
+.check{
+  display: flex;
+  justify-content: center;
+}
+
+.mat-card-title{
+  font-size: xxx-large;
+  font-family: ROBOTO;
+}

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Upload} from "../../models/upload";
+import { FilesApiService } from '../../services/files-api.service';
+import {MatTableDataSource} from "@angular/material/table";
 
 @Component({
   selector: 'app-uploudfiles',
@@ -6,6 +9,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./uploudfiles.component.css']
 })
 export class UploudfilesComponent implements OnInit {
+
+
+  uploadData: Upload;
+  information: object = [];
+  dataSource = new MatTableDataSource();
+  constructor(private uploadApi: FilesApiService,  ) {
+    this.uploadData = {} as Upload;
+
+  }
+
 
   apikey!: string;
 
@@ -15,10 +28,23 @@ export class UploudfilesComponent implements OnInit {
 
   onUploadSuccess(res: object) {
     console.log('###uploadSuccess', res);
+     this.information=res;
+    this.setInfo(res);
   }
+
 
   onUploadError(err: any) {
     console.log('###uploadError', err);
   }
+
+  setInfo(res: object){
+   console.log(this.information,"olah")
+  }
+
+  getInfo(){
+    return this.information;
+  }
+
+
 
 }

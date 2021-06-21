@@ -1,17 +1,23 @@
 import { Injectable } from '@angular/core';
+
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
-import {Observable, throwError} from "rxjs";
-import {Job} from "../models/job";
+import { Observable, throwError } from "rxjs";
 import {catchError, retry} from "rxjs/operators";
-import {Upload} from "../models/upload";
+
+import {PostulantApproved} from "../models/postulant-approved";
+import {Interview} from "../models/interview";
 
 @Injectable({
   providedIn: 'root'
 })
-export class FilesApiService {
 
-  basePath = 'http://localhost:3000/uploads';
+export class PostulantApprovedApiService {
+
+  basePath = 'http://localhost:3000/postulant-approved';
+
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'aplication/json'})}
+
+  constructor(private http: HttpClient) { }
 
   handleError(error: HttpErrorResponse): Observable<never>{
     if (error.error instanceof ErrorEvent){
@@ -23,14 +29,8 @@ export class FilesApiService {
     return throwError('Something happened with request, please try again later')
   }
 
-  constructor(private http: HttpClient) { }
-
-  // ADD INFO OF  Upload
-  addUpload(item: any): Observable<Upload> {
-    return this.http.post<Upload>(this.basePath, JSON.stringify(item), this.httpOptions)
+  getPostulantApprovedById(id: number): Observable<PostulantApproved>{
+    return this.http.get<PostulantApproved>(`${this.basePath}/${id}`)
       .pipe(retry(2), catchError(this.handleError));
   }
-
-
-
 }
