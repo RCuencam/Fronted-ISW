@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'jobs/:id', component: JobInformationComponent},
   {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'account', component: AccountsettingsComponent},
-  {path:':id/profile', component: ProfileStudentComponent},
+  {path:'profile/:id', component: ProfileStudentComponent},
   {path:'contrat', component: ContratComponent},
   {path:'job/interview/:id', component: InterviewsComponent},
   {path:'postulant/job/:id', component: ApprovedPostulantComponent},
