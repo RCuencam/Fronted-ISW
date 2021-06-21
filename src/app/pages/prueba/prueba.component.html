@@ -1,0 +1,96 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      Pruebas
+    </mat-card-title>
+    <mat-card-subtitle>
+      {{isEditMode ? 'Edit Prueba' : 'Add new Prueba'}}
+    </mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-grid-list cols="2" rowHeight="100px">
+      <mat-grid-tile>
+
+        <form (submit)="onSubmit()" #pruebaForm=ngForm>
+
+          <mat-form-field>
+            <input matInput placeholder="Name" name="name" required [(ngModel)]="pruebaData.name">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Lastname" name="lastname" required [(ngModel)]="pruebaData.lastname">
+          </mat-form-field>
+
+          <mat-form-field>
+            <input matInput placeholder="Age" name="age" type="number" required [(ngModel)]="pruebaData.age">
+          </mat-form-field>
+
+          <ng-container *ngIf="isEditMode; else elseTemplate">
+            <button mat-button color="primary" class="mat-button-text">Update</button>
+            <button mat-button class="mat-button-text" color="warn" (click)="cancelEdit()">Cancel</button>
+          </ng-container>
+
+          <ng-template #elseTemplate>
+            <button mat-button color="primary" class="mat-button-text">Add</button>
+          </ng-template>
+
+        </form>
+      </mat-grid-tile>
+
+      <mat-grid-tile>
+        <mat-form-field>
+          <mat-label>
+            Filter
+          </mat-label>
+          <input matInput (keyup)="applyfilter($event)" placeholder="Ex. Mark Schmidt" #input>
+          <mat-icon *ngIf="isFiltering" matSuffix>
+            Search
+          </mat-icon>
+        </mat-form-field>
+      </mat-grid-tile>
+    </mat-grid-list>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> #Id </th>
+        <td mat-cell *matCellDef="let element"> {{ element.id }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{ element.name }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="lastname">
+        <th mat-header-cell *matHeaderCellDef> LastName </th>
+        <td mat-cell *matCellDef="let element"> {{ element.lastname }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef> Age </th>
+        <td mat-cell *matCellDef="let element"> {{ element.age }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+          [ngClass]="{'editable-row': pruebaData.id === row.id}"></tr>
+
+    </table>
+
+    <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator>
+
+  </mat-card-content>
+
+  <mat-card-actions>
+    <a mat-button class="mat-button-text" color="primary" (click)="navigateToAddPrueba()">Add Prueba</a>
+    <a mat-button class="mat-button-text" color="primary" (click)="refresh()">Reload</a>
+    <a mat-button class="mat-button-text" color="primary" (click)="navigateToEditPrueba(2)">edit</a>
+  </mat-card-actions>
+
+</mat-card>

@@ -8,6 +8,10 @@ import {ProfileStudentComponent} from "./pages/profile-student/profile-student.c
 import {ContratComponent} from "./pages/contrat/contrat.component";
 import {InterviewsComponent} from "./pages/interviews/interviews.component";
 import {ApprovedPostulantComponent} from "./pages/approved-postulant/approved-postulant.component";
+import {JobNewComponent} from "./pages/job-new/job-new.component";
+
+//Eliminar despues
+import {PruebaComponent} from "./pages/prueba/prueba.component";
 
 const routes: Routes = [
   {path:'jobs', component : SearchJobsComponent},
@@ -18,6 +22,10 @@ const routes: Routes = [
   {path:'contrat', component: ContratComponent},
   {path:'job/interview/:id', component: InterviewsComponent},
   {path:'postulant/job/:id', component: ApprovedPostulantComponent},
+  {path:'job/new', component: JobNewComponent},
+
+  //Eliminar Despues
+  {path:'prueba', component: PruebaComponent},
 ];
 
 @NgModule({

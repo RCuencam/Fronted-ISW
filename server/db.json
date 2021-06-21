@@ -91,8 +91,7 @@
       "id": 15
     }
   ],
-
-  "postulant-approved":[
+  "postulant-approved": [
     {
       "id": 1,
       "name": "John",
@@ -136,85 +135,186 @@
       "address": "New York"
     }
   ],
-
-  "jobs":[
+  "jobs": [
     {
-      "id":1,
+      "id": 1,
       "location": "San Isidro, Lima",
       "title": "Desarrollador Backend C#",
       "type": "FullTime",
       "date": "10 de enero",
       "url": "https://logo.clearbit.com/claro.com.pe",
-      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
-      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
-      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+      "details": "Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements": [
+        "Experiencia en Angular",
+        "Nivel Avanzado en HTML, CSS y Javascript",
+        "Experiencia en creacion de mockups, wireframes y prototipos",
+        "Experiencia en consumo de API REST",
+        "Experiencia UX(Opcional)",
+        "Conocimiento de GIT"
+      ],
+      "benefits": [
+        "Ingreso a planilla",
+        "Trabajo Remoto"
+      ]
     },
     {
-      "id":2,
+      "id": 2,
       "location": "San Borja, Lima",
       "title": "Desarrollador Fronted",
       "type": "FullTime",
       "date": "04 de Abril",
       "url": "https://logo.clearbit.com/movistar.com",
-      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
-      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
-      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+      "details": "Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements": [
+        "Experiencia en Angular",
+        "Nivel Avanzado en HTML, CSS y Javascript",
+        "Experiencia en creacion de mockups, wireframes y prototipos",
+        "Experiencia en consumo de API REST",
+        "Experiencia UX(Opcional)",
+        "Conocimiento de GIT"
+      ],
+      "benefits": [
+        "Ingreso a planilla",
+        "Trabajo Remoto"
+      ]
     },
     {
-      "id":3,
+      "id": 3,
       "location": "La Molina, Lima",
       "title": "Desarrollador Backend Python",
       "type": "FullTime",
       "date": "08 de Abril",
-      "url":"https://logo.clearbit.com/entel.pe",
-      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
-      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
-      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+      "url": "https://logo.clearbit.com/entel.pe",
+      "details": "Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements": [
+        "Experiencia en Angular",
+        "Nivel Avanzado en HTML, CSS y Javascript",
+        "Experiencia en creacion de mockups, wireframes y prototipos",
+        "Experiencia en consumo de API REST",
+        "Experiencia UX(Opcional)",
+        "Conocimiento de GIT"
+      ],
+      "benefits": [
+        "Ingreso a planilla",
+        "Trabajo Remoto"
+      ]
     },
     {
-      "id":4,
+      "id": 4,
       "location": "San Isidro, Lima",
       "title": "Desarrollador Fullstack MERN",
       "type": "FullTime",
       "date": "28 de Febrero",
       "url": "https://logo.clearbit.com/bitel.com.pe",
-      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
-      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
-      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+      "details": "Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements": [
+        "Experiencia en Angular",
+        "Nivel Avanzado en HTML, CSS y Javascript",
+        "Experiencia en creacion de mockups, wireframes y prototipos",
+        "Experiencia en consumo de API REST",
+        "Experiencia UX(Opcional)",
+        "Conocimiento de GIT"
+      ],
+      "benefits": [
+        "Ingreso a planilla",
+        "Trabajo Remoto"
+      ]
     },
     {
-      "id":5,
+      "id": 5,
       "location": "San Borja, Lima",
       "title": "Soporte Técnico",
       "type": "FullTime",
       "date": "15 de Abril",
       "url": "https://logo.clearbit.com/nestle.com.pe",
-      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
-      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
-      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+      "details": "Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements": [
+        "Experiencia en Angular",
+        "Nivel Avanzado en HTML, CSS y Javascript",
+        "Experiencia en creacion de mockups, wireframes y prototipos",
+        "Experiencia en consumo de API REST",
+        "Experiencia UX(Opcional)",
+        "Conocimiento de GIT"
+      ],
+      "benefits": [
+        "Ingreso a planilla",
+        "Trabajo Remoto"
+      ]
     },
     {
-      "id":6,
+      "id": 6,
       "location": "Santiago de Surco, Lima",
       "title": "Maquetador HTML",
       "type": "FullTime",
       "date": "30 de Marzo",
       "url": "https://logo.clearbit.com/claro.com.pe",
-      "details":"Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
-      "requirements":["Experiencia en Angular","Nivel Avanzado en HTML, CSS y Javascript", "Experiencia en creacion de mockups, wireframes y prototipos","Experiencia en consumo de API REST","Experiencia UX(Opcional)","Conocimiento de GIT"],
-      "benefits":["Ingreso a planilla","Trabajo Remoto"]
+      "details": "Nuestro cliente en tecnología de la información con más de 39 años en el sector, enfocado en proyectos de Medio de Pago - POS. Se encuentra en búsqueda de un PROGRAMADOR FRONT END",
+      "requirements": [
+        "Experiencia en Angular",
+        "Nivel Avanzado en HTML, CSS y Javascript",
+        "Experiencia en creacion de mockups, wireframes y prototipos",
+        "Experiencia en consumo de API REST",
+        "Experiencia UX(Opcional)",
+        "Conocimiento de GIT"
+      ],
+      "benefits": [
+        "Ingreso a planilla",
+        "Trabajo Remoto"
+      ]
+    },
+    {
+      "title": "Desarrollador Back End",
+      "location": "Jesus Maria",
+      "type": "Medio Tiempo",
+      "date": "19 de Abril del 2021",
+      "url": "https://logo.clearbit.com/claro.com.pe",
+      "details": "Empresa innovadora",
+      "id": 7
+    },
+    {
+      "title": "Desarrollador Back End",
+      "location": "Jesus Maria",
+      "type": "Medio Tiempo",
+      "date": "19 de Abril del 2021",
+      "url": "https://logo.clearbit.com/claro.com.pe",
+      "details": "Empresa innovadora",
+      "id": 8
+    },
+    {
+      "title": "Desarrollador Back End",
+      "location": "Jesus Maria",
+      "type": "Medio Tiempo",
+      "date": "19 de Abril del 2021",
+      "url": "https://logo.clearbit.com/claro.com.pe",
+      "details": "Empresa innovadora",
+      "id": 9
+    },
+    {
+      "title": "Desarrollador Back End",
+      "location": "Jesus Maria",
+      "type": "Medio Tiempo",
+      "date": "19 de Abril del 2021",
+      "url": "https://logo.clearbit.com/claro.com.pe",
+      "details": "Empresa innovadora",
+      "id": 10
+    },
+    {
+      "title": "Soporte Tecnico",
+      "location": "Jesus Maria",
+      "type": "Medio Tiempo",
+      "date": "2021-06-13",
+      "url": "https://logo.clearbit.com/movistar.com",
+      "details": "ADSADASDASDASDASD",
+      "id": 11
     }
   ],
-
   "uploads": [
     {
       "id": 1,
       "Handle": "ebF5s6DDSqyhv0WTNPB8",
       "url": "https://cdn.filestackcontent.com/ebF5s6DDSqyhv0WTNPB8"
-
     }
   ],
-
   "interviews": [
     {
       "id": 1,
@@ -223,7 +323,6 @@
       "link_interview": "https://meet.google.com/",
       "final_date_offer": "14 de Enero del 2021"
     },
-
     {
       "id": 2,
       "date_interview": "20 de Enero del 2021",
@@ -231,7 +330,6 @@
       "link_interview": "https://meet.google.com/",
       "final_date_offer": "21  de Enero del 2021"
     },
-
     {
       "id": 3,
       "date_interview": "20 de Febrero del 2021",
@@ -239,7 +337,6 @@
       "link_interview": "https://meet.google.com/",
       "final_date_offer": "01  de Marzo del 2021"
     },
-
     {
       "id": 4,
       "date_interview": "01 de Abril del 2021",
@@ -247,7 +344,6 @@
       "link_interview": "https://meet.google.com/",
       "final_date_offer": "02  de Abril del 2021"
     },
-
     {
       "id": 5,
       "date_interview": "06 de Febrero del 2021",
@@ -255,13 +351,50 @@
       "link_interview": "https://meet.google.com/",
       "final_date_offer": "07  de Marzo del 2021"
     },
-
     {
       "id": 6,
       "date_interview": "25 de Abril del 2021",
       "hour_interview": "21:00 - 22:00 pm",
       "link_interview": "https://meet.google.com/",
       "final_date_offer": "26  de Abril del 2021"
+    }
+  ],
+  "prueba": [
+    {
+      "id": 1,
+      "name": "mark",
+      "lastname": "schmidt",
+      "age": 20
+    },
+    {
+      "name": "ae",
+      "lastname": "df",
+      "age": 123,
+      "id": 2
+    },
+    {
+      "name": "luis",
+      "lastname": "panta",
+      "age": 25,
+      "id": 3
+    },
+    {
+      "name": "Tim Cook",
+      "lastname": "per",
+      "age": 43,
+      "id": 4
+    },
+    {
+      "name": "carol",
+      "lastname": "villefa",
+      "age": 20,
+      "id": 5
+    },
+    {
+      "name": "carol",
+      "lastname": "villefa",
+      "age": 20,
+      "id": 6
     }
   ]
 }

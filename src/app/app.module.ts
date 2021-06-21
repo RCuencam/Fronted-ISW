@@ -41,6 +41,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ContratComponent } from './pages/contrat/contrat.component';
 import { InterviewsComponent } from './pages/interviews/interviews.component';
 import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-postulant.component';
+import { PruebaComponent } from './pages/prueba/prueba.component';
+import { JobNewComponent } from './pages/job-new/job-new.component';
 
 
 @NgModule({
@@ -63,6 +65,8 @@ import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-
     ContratComponent,
     InterviewsComponent,
     ApprovedPostulantComponent,
+    PruebaComponent,
+    JobNewComponent,
 
   ],
 
