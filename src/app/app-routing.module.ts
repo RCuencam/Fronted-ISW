@@ -11,6 +11,7 @@ import {ApprovedPostulantComponent} from "./pages/approved-postulant/approved-po
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
 import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
+import {LoginRegisterComponent} from "./pages/login-register/login-register.component";
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   {path:'job/interview/:id', component: InterviewsComponent},
   {path:'myaccount', component : MyAccountPostulantComponent},
   {path:'modify-professional-profile/:id', component: ModifyProfessionalProfileComponent},
-  {path:'modify-personal-information', component: ModifyPersonalInformationComponent}
+  {path:'modify-personal-information', component: ModifyPersonalInformationComponent},
+  {path:'login', component: LoginRegisterComponent}
 ];
 
 @NgModule({

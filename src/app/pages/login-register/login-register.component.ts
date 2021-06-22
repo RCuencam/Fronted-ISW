@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ErrorStateMatcher } from '@angular/material/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from "@angular/forms";
 import {LoginRegisterService} from "../../services/login-register.service";
+import {Router} from "@angular/router";
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -18,8 +19,10 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class LoginRegisterComponent implements OnInit {
 
-    constructor(private usersApi: LoginRegisterService) { }
+    constructor(private usersApi: LoginRegisterService, private router: Router) { }
   emailexist!:string
+  passwordexist!:string
+  validador=false
   ngOnInit(): void {
   }
 
@@ -36,11 +39,22 @@ export class LoginRegisterComponent implements OnInit {
   getAllUsers(): void {
     this.usersApi.getAllUsers().subscribe((response: any) => {
 
-      console.log(response.content[0])
+      console.log(response.content)
       for(var i=0;i<response.content.length;i++){
-        if(response.content[i].email==this.emailexist){
-          console.log("coincidencia")
+        if(response.content[i].email==this.emailexist &&
+          response.content[i].password==this.passwordexist
+        ){
+         this.validador=true;
         }
+
+      }
+      if(this.validador){
+        this.router.navigate([`/contrat`])
+          .then(() => console.log('Ingrese'));
+
+      }
+      else {
+        alert("Contraseña incorrecta intentelo nuevamente")
       }
     });
   }
