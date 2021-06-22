@@ -1,0 +1,78 @@
+.general{
+  width: 90%;
+  margin: 50px auto;
+
+}
+
+.img-logo{
+  width: 30%;
+
+}
+
+.mail-full-width{
+
+
+  width: 20%;
+  font-size: large;
+}
+.password-full-width{
+
+  width: 20%;
+  font-size: large;
+}
+
+.btn-ingresar{
+
+  width: 20%;
+  font-size: large;
+}
+.btn-registrarse{
+
+  width: 20%;
+  font-size: large;
+
+}
+
+.btn-olvidar{
+
+  font-size: large;
+}
+
+@media screen and (max-width:768px){
+  .img-logo{
+    width: 50%;
+    margin: 0 6em 0 6em ;
+  }
+
+  .mail-full-width{
+
+    margin: 0 6em 0 6em ;
+    width: 50%;
+    font-size: x-small;
+  }
+  .password-full-width{
+    margin: 0 6em 0 6em ;
+    width: 50%;
+    font-size: x-small;
+  }
+
+  .btn-ingresar{
+    margin: 0 6em 0 6em ;
+    width: 50%;
+    font-size: x-small;
+  }
+  .btn-registrarse{
+    margin: 0 6em 0 6em ;
+    width: 50%;
+    font-size: x-small;
+  }
+
+  .btn-olvidar{
+    margin: 0 1em 0 9.5em ;
+
+    font-size: x-small;
+  }
+}
+.default-spacer {
+  flex: 1 1 auto;
+}
