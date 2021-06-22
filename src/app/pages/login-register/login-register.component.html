@@ -4,7 +4,7 @@
     <mat-form-field class="mail-full-width">
       <mat-label>Email</mat-label>
       <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-             placeholder="Ex. pat@example.com">
+             [(ngModel)]="emailexist"       placeholder="Ex. pat@example.com">
       <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
         Please enter a valid email address
       </mat-error>
@@ -25,7 +25,8 @@
 
   <span class="btn-olvidar " onClick="alert('aqui deberia ir la funcion que lo lleve a cambiarcontraseña')">    Olvidaste tu contraseña has click aqui</span>
     <br>    <br> <br>
-    <button class="btn-ingresar" mat-raised-button color="primary">Ingresar</button>
+    <button (click)="getAllUsers()" class="btn-ingresar" mat-raised-button color="primary">Ingresar</button>
+
     <br> <br>
     <button class="btn-registrarse" mat-raised-button color="primary">Registrarse</button>
   </form>

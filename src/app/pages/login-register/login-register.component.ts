@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ErrorStateMatcher } from '@angular/material/core';
 import {FormControl, FormGroupDirective, NgForm, Validators} from "@angular/forms";
+import {LoginRegisterService} from "../../services/login-register.service";
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -17,8 +18,8 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class LoginRegisterComponent implements OnInit {
 
-    constructor() { }
-
+    constructor(private usersApi: LoginRegisterService) { }
+  emailexist!:string
   ngOnInit(): void {
   }
 
@@ -32,9 +33,18 @@ export class LoginRegisterComponent implements OnInit {
 
   ]);
 
-  probando():void {
-   console.log("oa funciono")
+  getAllUsers(): void {
+    this.usersApi.getAllUsers().subscribe((response: any) => {
+
+      console.log(response.content[0])
+      for(var i=0;i<response.content.length;i++){
+        if(response.content[i].email==this.emailexist){
+          console.log("coincidencia")
         }
+      }
+    });
+  }
+
   matcher = new MyErrorStateMatcher();
 
 }
