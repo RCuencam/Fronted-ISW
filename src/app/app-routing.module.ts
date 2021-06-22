@@ -12,6 +12,7 @@ import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-accou
 import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 import {LoginRegisterComponent} from "./pages/login-register/login-register.component";
+import {MainNavPostulantComponent} from "./pages/main-nav-postulant/main-nav-postulant.component";
 
 
 const routes: Routes = [
@@ -25,7 +26,8 @@ const routes: Routes = [
   {path:'myaccount', component : MyAccountPostulantComponent},
   {path:'modify-professional-profile/:id', component: ModifyProfessionalProfileComponent},
   {path:'modify-personal-information', component: ModifyPersonalInformationComponent},
-  {path:'login', component: LoginRegisterComponent}
+  {path:'login', component: LoginRegisterComponent},
+  {path:'home', component: MainNavPostulantComponent},
 ];
 
 @NgModule({

@@ -49,7 +49,7 @@ export class LoginRegisterComponent implements OnInit {
 
       }
       if(this.validador){
-        this.router.navigate([`/contrat`])
+        this.router.navigate([`/jobs`])
           .then(() => console.log('Ingrese'));
 
       }
