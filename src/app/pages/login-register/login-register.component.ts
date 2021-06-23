@@ -55,7 +55,7 @@ export class LoginRegisterComponent implements OnInit {
         }
 
       }
-    
+
       if(this.validador){
 
         this.employeerApi.getEmployeerbyId(this.ingresante).subscribe((responseEmployeer: any) => {
@@ -63,8 +63,8 @@ export class LoginRegisterComponent implements OnInit {
             .then(() => console.log('Ingrese'));
         });
 
-        this.   postulantApi.getPostulantbyId(this.ingresante).subscribe((responseEmployeer: any) => {
-          this.router.navigate([`/contracts`])
+        this.postulantApi.getPostulantbyId(this.ingresante).subscribe((responseEmployeer: any) => {
+          this.router.navigate([`/contrat`])
             .then(() => console.log('Ingrese'));
         });
 
