@@ -16,10 +16,11 @@ import {MainNavPostulantComponent} from "./pages/main-nav-postulant/main-nav-pos
 import {ChoosePostulantOrEmployerComponent} from "./pages/choose-postulant-or-employer/choose-postulant-or-employer.component";
 import {EmployeerNewComponent} from "./pages/employeer-new/employeer-new.component";
 import {PostulantNewComponent} from "./pages/postulant-new/postulant-new.component";
+import {MainNavEmployeerComponent} from "./pages/main-nav-employeer/main-nav-employeer.component";
 
 
 const routes: Routes = [
-  {path:'jobs', component : SearchJobsComponent},
+  {path:'home/:employeerId/jobs', component : SearchJobsComponent},
   {path:'jobs/:id', component: JobInformationComponent},
   {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'account', component: AccountsettingsComponent},
@@ -33,8 +34,8 @@ const routes: Routes = [
   {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
   {path:'employeer/new', component: EmployeerNewComponent},
   {path:'postulant/new', component: PostulantNewComponent},
-  {path:'home', component: MainNavPostulantComponent},
-  {path:'home', component: MainNavPostulantComponent},
+  {path:'homes/:postulantId', component: MainNavPostulantComponent},
+  {path:'home/:employeerId', component: MainNavEmployeerComponent},
 ];
 
 @NgModule({

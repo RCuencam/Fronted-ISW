@@ -31,8 +31,8 @@
 
     <form >
       <mat-form-field appearance="outline" class="profile-form-input">
-        <mat-hint>Coloque su Estado civil</mat-hint>
-        <input matInput matAutosizeMinRows=4 required name="estadocivil" [(ngModel)]="employeerData.posicion" placeholder="Estado civil">
+        <mat-hint>Coloque su posición en la empresa</mat-hint>
+        <input matInput matAutosizeMinRows=4 required name="posicion" [(ngModel)]="employeerData.posicion" placeholder="Posición">
       </mat-form-field>
     </form>
     <form >
@@ -46,7 +46,7 @@
         <mat-hint>Coloque su contraseña</mat-hint>
         <input matInput matAutosizeMinRows=4 required name="password" type="password" [(ngModel)]="employeerData.password" placeholder="Password">
       </mat-form-field>
-      <input  (click)="AddEmployeer()"  class="mat-focus-indicator mat-button mat-button-base" value="Guardar Cambios">
+      <input  (click)="AddEmployeer()"  [routerLink]="['/login']" class="mat-focus-indicator mat-button mat-button-base" value="Guardar Cambios">
     </form>
 
 

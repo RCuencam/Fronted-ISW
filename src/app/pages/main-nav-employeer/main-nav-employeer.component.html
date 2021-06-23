@@ -1,0 +1,48 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               mode="over">
+    <div class="menu-sidenav">
+      <mat-toolbar >Menu</mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        class="sidenav-button"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+    </div>
+    <mat-nav-list >
+      <br><br><br>
+      <a mat-list-item routerLink="/jobs" (click)="drawer.toggle()">Mis anuncios   <span class="default-spacer"></span><mat-icon>fiber_manual_record  </mat-icon></a>
+      <a  mat-list-item routerLink="/login"> Publicar anuncio  <span class="default-spacer"></span><mat-icon>Publicar anuncio</mat-icon> </a>
+      <a mat-list-item routerLink="/postulations" (click)="drawer.toggle()">Entrevistas   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
+      <a mat-list-item href="/job/interview/:id">Mi cuenta <span class="default-spacer"></span> <mat-icon>account_circle</mat-icon></a>
+      <a mat-list-item routerLink="/myaccount" (click)="drawer.toggle()">Configuración  <span class="default-spacer"></span><mat-icon>settings</mat-icon> </a>
+      <a mat-list-item href="#">Cerrar sesión<span class="default-spacer"></span><mat-icon>settings</mat-icon></a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+      >
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span class="default-spacer"></span>
+      <div class="user-icon">User</div>
+      <span class="user-name"  >Bienvenida {{employeerData.firstname}}!</span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="user-logout">
+        Log Out
+      </button>
+
+
+    </mat-toolbar>
+    <ng-content></ng-content>
+  </mat-sidenav-content>
+</mat-sidenav-container>

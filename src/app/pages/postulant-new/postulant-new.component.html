@@ -46,7 +46,7 @@
         <mat-hint>Coloque su contraseña</mat-hint>
         <input matInput matAutosizeMinRows=4 required name="password" type="password" [(ngModel)]="postulantData.password" placeholder="Password">
       </mat-form-field>
-      <input  (click)="AddPostulant()"  class="mat-focus-indicator mat-button mat-button-base" value="Guardar Cambios">
+      <input  (click)="AddPostulant()"  [routerLink]="['/login']" class="mat-focus-indicator mat-button mat-button-base" value="Guardar Cambios">
     </form>
 
 

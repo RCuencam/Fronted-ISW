@@ -49,6 +49,10 @@ import { LoginRegisterComponent } from './pages/login-register/login-register.co
 import { ChoosePostulantOrEmployerComponent } from './pages/choose-postulant-or-employer/choose-postulant-or-employer.component';
 import { EmployeerNewComponent } from './pages/employeer-new/employeer-new.component';
 import { PostulantNewComponent } from './pages/postulant-new/postulant-new.component';
+import { MainNavEmployeerComponent } from './pages/main-nav-employeer/main-nav-employeer.component';
+import {EmployeerService} from "./services/employeer.service";
+import {PostulantService} from "./services/postulant.service";
+import {MatTabsModule} from "@angular/material/tabs";
 
 @NgModule({
   declarations: [
@@ -77,7 +81,8 @@ import { PostulantNewComponent } from './pages/postulant-new/postulant-new.compo
     LoginRegisterComponent,
     ChoosePostulantOrEmployerComponent,
     EmployeerNewComponent,
-    PostulantNewComponent
+    PostulantNewComponent,
+    MainNavEmployeerComponent
   ],
 
   imports: [
@@ -97,21 +102,18 @@ import { PostulantNewComponent } from './pages/postulant-new/postulant-new.compo
     MatInputModule,
     MatFormFieldModule,
     FormsModule,
-    MatCardModule,
-    MatSortModule,
-    MatTableModule,
-    MatSidenavModule,
     MatListModule,
     MatStepperModule,
     ReactiveFormsModule,
     MatCheckboxModule,
     MatExpansionModule,
     MatPaginatorModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTabsModule
 
 
   ],
-  providers: [PostulantsApiService,JobsApiService],
+  providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
