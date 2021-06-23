@@ -7,7 +7,6 @@ import {AccountsettingsComponent} from "./pages/accountsettings/accountsettings.
 import {ProfileStudentComponent} from "./pages/profile-student/profile-student.component";
 import {ContratComponent} from "./pages/contrat/contrat.component";
 import {InterviewsComponent} from "./pages/interviews/interviews.component";
-import {ApprovedPostulantComponent} from "./pages/approved-postulant/approved-postulant.component";
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
 import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";

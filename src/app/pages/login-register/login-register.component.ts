@@ -59,12 +59,12 @@ export class LoginRegisterComponent implements OnInit {
       if(this.validador){
 
         this.employeerApi.getEmployeerbyId(this.ingresante).subscribe((responseEmployeer: any) => {
-          this.router.navigate([`/jobs`])
+          this.router.navigate([`/home/${this.ingresante}`])
             .then(() => console.log('Ingrese'));
         });
 
         this.postulantApi.getPostulantbyId(this.ingresante).subscribe((responseEmployeer: any) => {
-          this.router.navigate([`/contrat`])
+          this.router.navigate([`${this.ingresante}`])
             .then(() => console.log('Ingrese'));
         });
 
