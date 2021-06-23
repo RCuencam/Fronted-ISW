@@ -20,7 +20,8 @@ import {MainNavEmployeerComponent} from "./pages/main-nav-employeer/main-nav-emp
 
 
 const routes: Routes = [
-  {path:'home/:employeerId/jobs', component : SearchJobsComponent},
+
+  {path:'home/:postulantId/jobs', component : SearchJobsComponent},
   {path:'jobs/:id', component: JobInformationComponent},
   {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'account', component: AccountsettingsComponent},
@@ -34,7 +35,7 @@ const routes: Routes = [
   {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
   {path:'employeer/new', component: EmployeerNewComponent},
   {path:'postulant/new', component: PostulantNewComponent},
-  {path:'homes/:postulantId', component: MainNavPostulantComponent},
+  {path:':postulantId', component: MainNavPostulantComponent},
   {path:'home/:employeerId', component: MainNavEmployeerComponent},
 ];
 

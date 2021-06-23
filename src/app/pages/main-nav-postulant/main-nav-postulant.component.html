@@ -17,9 +17,9 @@
     <mat-nav-list >
       <br><br><br>
       <a  mat-list-item routerLink="/login"> Home  <span class="default-spacer"></span><mat-icon>home</mat-icon> </a>
-      <a mat-list-item routerLink="/jobs" (click)="drawer.toggle()">Postular   <span class="default-spacer"></span><mat-icon>fiber_manual_record  </mat-icon></a>
+      <a mat-list-item routerLink="/home/jobs" (click)="drawer.toggle()">Postular   <span class="default-spacer"></span><mat-icon>fiber_manual_record  </mat-icon></a>
       <a mat-list-item routerLink="/postulations" (click)="drawer.toggle()">Mis postulaciones   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
-      <a mat-list-item href="/job/interview/:id">Entrevistas <span class="default-spacer"></span> <mat-icon>home</mat-icon></a>
+      <a mat-list-item href="">Entrevistas <span class="default-spacer"></span> <mat-icon>home</mat-icon></a>
       <a mat-list-item routerLink="/myaccount" (click)="drawer.toggle()">Mi cuenta  <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
       <a mat-list-item href="#">Configuración  <span class="default-spacer"></span><mat-icon>settings</mat-icon></a>
     </mat-nav-list>
@@ -36,7 +36,7 @@
       </button>
       <span class="default-spacer"></span>
       <div class="user-icon">User</div>
-      <span class="user-name">Bienvenido(a) Keiko</span>
+      <span class="user-name">Bienvenida {{postulantData.firstname}}!</span>
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="user-logout">
         Log Out
       </button>
