@@ -28,7 +28,7 @@ export class EmployeerpruebaComponent implements OnInit {
     const newEmployeer = {id: this.employeerData.id,firstname: this.employeerData.firstname, lastname: this.employeerData.lastname,
       email: this.employeerData.email, number: this.employeerData.number, password: this.employeerData.password,
       document: this.employeerData.document, posicion: this.employeerData.posicion};
-    this.employeerApi.addStudent(newEmployeer)
+    this.employeerApi.addEmployeer(newEmployeer)
       .subscribe(() => {
        console.log("me añadi correctamente")
       });

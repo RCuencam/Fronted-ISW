@@ -11,7 +11,7 @@ export class EmployeerNewComponent implements OnInit {
 
 
   employeerData: Employeer = {} as Employeer;
-  constructor(private postulantApiService: EmployeerService) { }
+  constructor(private employeerApiService: EmployeerService) { }
 
   ngOnInit(): void {
   }
@@ -19,7 +19,7 @@ export class EmployeerNewComponent implements OnInit {
   AddEmployeer(): void{
     const newEmployeer = {firstname: this.employeerData.firstname, lastname: this.employeerData.lastname, email: this.employeerData.email
       ,number: this.employeerData.number,password: this.employeerData.password,document: this.employeerData.document,civil_status: this.employeerData.posicion};
-    this.postulantApiService.addEmployeer(newEmployeer).subscribe((response: any) => {
+    this.employeerApiService.addEmployeer(newEmployeer).subscribe((response: any) => {
       console.log(response)
     });
 
