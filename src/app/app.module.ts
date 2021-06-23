@@ -46,6 +46,9 @@ import {ModifyPersonalInformationComponent} from "./pages/modify-personal-inform
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
 import { EmployeerpruebaComponent } from './pages/employeerprueba/employeerprueba.component';
 import { LoginRegisterComponent } from './pages/login-register/login-register.component';
+import { ChoosePostulantOrEmployerComponent } from './pages/choose-postulant-or-employer/choose-postulant-or-employer.component';
+import { EmployeerNewComponent } from './pages/employeer-new/employeer-new.component';
+import { PostulantNewComponent } from './pages/postulant-new/postulant-new.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +74,10 @@ import { LoginRegisterComponent } from './pages/login-register/login-register.co
     ModifyProfessionalProfileComponent,
     MyAccountPostulantComponent,
     EmployeerpruebaComponent,
-    LoginRegisterComponent
+    LoginRegisterComponent,
+    ChoosePostulantOrEmployerComponent,
+    EmployeerNewComponent,
+    PostulantNewComponent
   ],
 
   imports: [

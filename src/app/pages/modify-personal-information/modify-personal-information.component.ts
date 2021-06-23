@@ -34,7 +34,7 @@ export class ModifyPersonalInformationComponent {
 
 
   addEmployeer(): void {
-    const newEmployeer = {id: this.employeerData.id,firstname: this.employeerData.firstname, lastname: this.employeerData.lastname,
+    const newEmployeer = {firstname: this.employeerData.firstname, lastname: this.employeerData.lastname,
       email: this.employeerData.email, number: this.employeerData.number, password: this.employeerData.password,
       document: this.employeerData.document, posicion: this.employeerData.posicion};
     this.employeerApi.addStudent(newEmployeer)
@@ -42,4 +42,5 @@ export class ModifyPersonalInformationComponent {
         console.log("me añadi correctamente")
       });
   }
+
 }

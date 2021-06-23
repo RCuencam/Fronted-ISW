@@ -13,6 +13,9 @@ import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-pr
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 import {LoginRegisterComponent} from "./pages/login-register/login-register.component";
 import {MainNavPostulantComponent} from "./pages/main-nav-postulant/main-nav-postulant.component";
+import {ChoosePostulantOrEmployerComponent} from "./pages/choose-postulant-or-employer/choose-postulant-or-employer.component";
+import {EmployeerNewComponent} from "./pages/employeer-new/employeer-new.component";
+import {PostulantNewComponent} from "./pages/postulant-new/postulant-new.component";
 
 
 const routes: Routes = [
@@ -27,6 +30,10 @@ const routes: Routes = [
   {path:'modify-professional-profile/:id', component: ModifyProfessionalProfileComponent},
   {path:'modify-personal-information', component: ModifyPersonalInformationComponent},
   {path:'login', component: LoginRegisterComponent},
+  {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
+  {path:'employeer/new', component: EmployeerNewComponent},
+  {path:'postulant/new', component: PostulantNewComponent},
+  {path:'home', component: MainNavPostulantComponent},
   {path:'home', component: MainNavPostulantComponent},
 ];
 

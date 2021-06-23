@@ -36,7 +36,7 @@ export class EmployeerService {
     return this.http.get(`${this.url}`);
   }
 
-  addStudent(item: any): Observable<Employeer> {
+  addEmployeer(item: any): Observable<Employeer> {
     return this.http.post<Employeer>(this.url, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
