@@ -18,9 +18,9 @@ export class EmployeerNewComponent implements OnInit {
 
   AddEmployeer(): void{
     const newEmployeer = {firstname: this.employeerData.firstname, lastname: this.employeerData.lastname, email: this.employeerData.email
-      ,number: this.employeerData.number,password: this.employeerData.password,document: this.employeerData.document,civil_status: this.employeerData.posicion};
+      ,number: this.employeerData.number,password: this.employeerData.password,document: this.employeerData.document,posicion: this.employeerData.posicion};
     this.employeerApiService.addEmployeer(newEmployeer).subscribe((response: any) => {
-      console.log(response)
+     console.log(response)
     });
 
 
