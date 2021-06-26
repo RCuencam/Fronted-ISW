@@ -29,7 +29,7 @@ export class MainNavEmployeerComponent implements OnInit{
 
   getEmployeerId(): void {
     this.employeerId = Number(this.route.params.subscribe(params => {
-    this.employeerApiService.getEmployeerbyId(params.employeerId).subscribe((response: any)=> {
+    this.employeerApiService.getEmployeerbyId(params.postulantId).subscribe((response: any)=> {
       this.employeerData=response
       });
     }));

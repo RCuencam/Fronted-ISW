@@ -31,6 +31,7 @@ export class MainNavPostulantComponent {
     this.postulantId = Number(this.route.params.subscribe(params => {
       this.postulantApiService.getPostulantById(params.postulantId).subscribe((response: any)=> {
         this.postulantData=response
+
       });
     }));
 

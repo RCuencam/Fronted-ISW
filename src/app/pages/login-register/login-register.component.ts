@@ -37,7 +37,6 @@ export class LoginRegisterComponent implements OnInit {
 
   passwordFormControl = new FormControl('', [
     Validators.required,
-
   ]);
 
   getAllUsers(): void {

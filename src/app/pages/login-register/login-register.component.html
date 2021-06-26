@@ -23,7 +23,7 @@
    </mat-form-field>
 <br>
 
-  <span class="btn-olvidar " onClick="alert('aqui deberia ir la funcion que lo lleve a cambiarcontraseña')">    Olvidaste tu contraseña has click aqui</span>
+  <span class="btn-olvidar " [routerLink]="['/changepassword']">    Olvidaste tu contraseña has click aqui</span>
     <br>    <br> <br>
     <button (click)="getAllUsers()" class="btn-ingresar" mat-raised-button color="primary">Ingresar</button>
 

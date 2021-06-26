@@ -55,6 +55,7 @@ import {PostulantService} from "./services/postulant.service";
 import {MatTabsModule} from "@angular/material/tabs";
 import { JobOfferNewComponentComponent } from './pages/job-offer-new-component/job-offer-new-component.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     EmployeerNewComponent,
     PostulantNewComponent,
     MainNavEmployeerComponent,
-    JobOfferNewComponentComponent
+    JobOfferNewComponentComponent,
+    ChangepasswordComponent
   ],
 
   imports: [
@@ -114,8 +116,6 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     MatChipsModule,
     MatTabsModule,
     MatDatepickerModule
-
-
   ],
   providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
   bootstrap: [AppComponent]

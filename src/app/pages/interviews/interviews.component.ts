@@ -19,6 +19,8 @@ export class InterviewsComponent implements OnInit {
   interviewData: Interview;
   interviewId!: number
 
+  fecha = new Date();
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -41,9 +43,18 @@ export class InterviewsComponent implements OnInit {
       this.jobOfferId = Number(this.route.params.subscribe((paramsJobOffer => {
         this.interview_service.getInterviewByPostulantIdAndJobOfferId(paramsPostulant.postulantId, paramsJobOffer.jobOfferId)
           .subscribe((response: any) => {
-            this.interviewData = response.content[0];
-            console.log(this.interviewData)
-            console.log(response.content[0].date_Interview);
+
+            this.interviewData.id = response.content[0].id;
+            this.interviewData.date_interview = response.content[0].date_Interview;
+            this.interviewData.final_date = response.content[0].final_date_Interview;
+            this.interviewData.link = response.content[0].link_Interview;
+
+            console.log("Id de la entrevista: ", this.interviewData.id)
+            console.log("Fecha de inicio de la entrevista: ", this.interviewData.date_interview)
+            console.log("Fecha final de la entrevista: ", this.interviewData.final_date)
+            console.log("Link de la entrevista: ", this.interviewData.link)
+
+            console.log(response);
           });
       })));
     }));

@@ -17,12 +17,21 @@ import {EmployeerNewComponent} from "./pages/employeer-new/employeer-new.compone
 import {PostulantNewComponent} from "./pages/postulant-new/postulant-new.component";
 import {MainNavEmployeerComponent} from "./pages/main-nav-employeer/main-nav-employeer.component";
 import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job-offer-new-component.component";
+import {ChangepasswordComponent} from "./pages/changepassword/changepassword.component";
 
 
 const routes: Routes = [
-
+  {path:'login', component: LoginRegisterComponent},
+  {path:'employeer/new', component: EmployeerNewComponent},
+  {path:'postulant/new', component: PostulantNewComponent},
+  {path:'changepassword', component: ChangepasswordComponent},
+  {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
+  {path:'home/:postulantId', component:SearchJobsComponent },
   {path:'home/:postulantId/jobs', component : SearchJobsComponent},
   {path:'postulation/job/:id', component: PostulationsComponent},
+  {path:':postulantId/jobs', component : SearchJobsComponent},
+  {path:'home/:postulantId/jobs/:id', component: JobInformationComponent},
+  {path:'home/:postulantId/jobs/:id/newpostulation', component: PostulationsComponent},
   {path:'account', component: AccountsettingsComponent},
   {path:':id/profile', component: ProfileStudentComponent},
   {path:'contrat', component: ContratComponent},
