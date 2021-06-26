@@ -1,3 +1,4 @@
+<app-main-nav-postulant>
 <div class="job-information-container">
     <div class="job-item">
         <div class="job-item-text-left">
@@ -27,7 +28,8 @@
             <li *ngFor="let benefit of jobInfo.benefits">{{benefit}}</li>
         </ul>
         <div class="job-info-button">
-            <button mat-button [routerLink]="['/postulation/job',jobInfo.id]">POSTULARME</button>
+            <button mat-button [routerLink]="[postulantId,'jobs',jobInfo.id,'newpostulation']">POSTULARME</button>
         </div>
     </div>
 </div>
+</app-main-nav-postulant>

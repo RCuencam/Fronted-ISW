@@ -53,6 +53,7 @@ import { MainNavEmployeerComponent } from './pages/main-nav-employeer/main-nav-e
 import {EmployeerService} from "./services/employeer.service";
 import {PostulantService} from "./services/postulant.service";
 import {MatTabsModule} from "@angular/material/tabs";
+import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
 
 @NgModule({
   declarations: [
@@ -82,7 +83,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     ChoosePostulantOrEmployerComponent,
     EmployeerNewComponent,
     PostulantNewComponent,
-    MainNavEmployeerComponent
+    MainNavEmployeerComponent,
+    ChangepasswordComponent
   ],
 
   imports: [

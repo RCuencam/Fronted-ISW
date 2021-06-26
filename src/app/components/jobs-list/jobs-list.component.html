@@ -4,12 +4,12 @@
             <mat-form-field class="job-list-container-form-input">
               <input matInput matAutosizeMinRows=4 placeholder="Ingresa el empleo">
             </mat-form-field>
-            <button mat-button>BUSCAR</button>  
+            <button mat-button>BUSCAR</button>
         </form>
     </div>
     <div class="job-list-container-list">
         <ul>
-            <li class="job-item" *ngFor="let job of jobs" [routerLink]="['/jobs',job.id]">
+            <li class="job-item" *ngFor="let job of jobs" [routerLink]="['jobs',job.id]">
                 <div class="job-item-text-left">
                     <span>{{job.location}}</span>
                     <h2>{{job.title}}</h2>
