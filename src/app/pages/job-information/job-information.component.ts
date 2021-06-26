@@ -22,11 +22,10 @@ export class JobInformationComponent implements OnInit {
 
   getJobById():void{
     console.log(this.jobId);
-    
+
     this.jobs_service.getJobById(this.jobId).subscribe((response: any)=>{
       this.jobInfo=response;
     });
 
   }
-
 }

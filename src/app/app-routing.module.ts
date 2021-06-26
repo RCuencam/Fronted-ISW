@@ -16,17 +16,17 @@ import {ChoosePostulantOrEmployerComponent} from "./pages/choose-postulant-or-em
 import {EmployeerNewComponent} from "./pages/employeer-new/employeer-new.component";
 import {PostulantNewComponent} from "./pages/postulant-new/postulant-new.component";
 import {MainNavEmployeerComponent} from "./pages/main-nav-employeer/main-nav-employeer.component";
+import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job-offer-new-component.component";
 
 
 const routes: Routes = [
 
   {path:'home/:postulantId/jobs', component : SearchJobsComponent},
-  {path:'jobs/:id', component: JobInformationComponent},
   {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'account', component: AccountsettingsComponent},
   {path:':id/profile', component: ProfileStudentComponent},
   {path:'contrat', component: ContratComponent},
-  {path:'job/interview/:id', component: InterviewsComponent},
+  {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},
   {path:'myaccount', component : MyAccountPostulantComponent},
   {path:'modify-professional-profile/:id', component: ModifyProfessionalProfileComponent},
   {path:'modify-personal-information', component: ModifyPersonalInformationComponent},
@@ -36,6 +36,7 @@ const routes: Routes = [
   {path:'postulant/new', component: PostulantNewComponent},
   {path:':postulantId', component: MainNavPostulantComponent},
   {path:'home/:employeerId', component: MainNavEmployeerComponent},
+  {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
 ];
 
 @NgModule({
