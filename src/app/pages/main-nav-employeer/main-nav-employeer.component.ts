@@ -21,7 +21,6 @@ export class MainNavEmployeerComponent implements OnInit{
       shareReplay()
     );
   ngOnInit(): void {
-
     this.getEmployeerId();
   }
   constructor(private breakpointObserver: BreakpointObserver, private router: Router, private route: ActivatedRoute,private employeerApiService: EmployeerService) {
@@ -31,6 +30,7 @@ export class MainNavEmployeerComponent implements OnInit{
     this.employeerId = Number(this.route.params.subscribe(params => {
     this.employeerApiService.getEmployeerbyId(params.postulantId).subscribe((response: any)=> {
       this.employeerData=response
+      console.log(this.employeerData);
       });
     }));
 

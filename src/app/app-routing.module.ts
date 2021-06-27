@@ -48,7 +48,7 @@ const routes: Routes = [
   {path:'home/:employeerId', component: MainNavEmployeerComponent},
   {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
   {path:'postulant/:postulantId/interview', component: InterviewPostulantAllComponent},
-  {path: 'postulants/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent}
+  {path:'postulants/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent}
 ];
 
 @NgModule({

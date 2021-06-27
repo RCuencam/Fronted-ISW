@@ -4,5 +4,7 @@ export interface Job {
   begin_date_offer: string,
   final_date_offer: string,
   salary: number,
-  direction: string
+  direction: string,
+  type: string,
+  title: string
   }

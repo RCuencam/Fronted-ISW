@@ -60,6 +60,7 @@ import { InterviewsPostulantApiComponent } from './pages/interviews-postulant-ap
 import { InterviewPostulantAllComponent } from './pages/interview-postulant-all/interview-postulant-all.component';
 import { DialogContratComponent } from './pages/dialog-contrat/dialog-contrat.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { DialogJobNewComponent } from './pages/dialog-job-new/dialog-job-new.component';
 
 @NgModule({
   declarations: [
@@ -94,7 +95,8 @@ import {MatDialogModule} from "@angular/material/dialog";
     ChangepasswordComponent,
     InterviewsPostulantApiComponent,
     InterviewPostulantAllComponent,
-    DialogContratComponent
+    DialogContratComponent,
+    DialogJobNewComponent
   ],
 
     imports: [
