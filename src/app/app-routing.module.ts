@@ -19,6 +19,7 @@ import {MainNavEmployeerComponent} from "./pages/main-nav-employeer/main-nav-emp
 import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job-offer-new-component.component";
 import {ChangepasswordComponent} from "./pages/changepassword/changepassword.component";
 import {InterviewPostulantAllComponent} from "./pages/interview-postulant-all/interview-postulant-all.component";
+import {ApprovedPostulantComponent} from "./pages/approved-postulant/approved-postulant.component";
 
 const routes: Routes = [
   {path:'login', component: LoginRegisterComponent},
@@ -47,6 +48,7 @@ const routes: Routes = [
   {path:'home/:employeerId', component: MainNavEmployeerComponent},
   {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
   {path:'postulant/:postulantId/interview', component: InterviewPostulantAllComponent},
+  {path: 'postulants/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent}
 ];
 
 @NgModule({

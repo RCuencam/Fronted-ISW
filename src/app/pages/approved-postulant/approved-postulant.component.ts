@@ -1,10 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {Job} from "../../models/job";
-import {JobsApiService} from "../../services/jobs-api.service";
-import {Postulant} from "../../models/postulant";
-import {PostulantsApiService} from "../../services/postulants-api.service";
-
+import {ActivatedRoute, Router} from "@angular/router";
 import {PostulantApproved} from "../../models/postulant-approved";
 import {PostulantApprovedApiService} from "../../services/postulant-approved-api.service";
 
@@ -14,41 +9,31 @@ import {PostulantApprovedApiService} from "../../services/postulant-approved-api
   styleUrls: ['./approved-postulant.component.css']
 })
 export class ApprovedPostulantComponent implements OnInit {
-  jobId:number = 0;
-  jobInfo: Job;
+  postulantId!: number;
+  jobOfferId!: number
 
-  postulantApprovedId:number = 0;
+  postulantApprovedId!: number
   postulantApprovedInfo: PostulantApproved;
 
-  constructor(private route: ActivatedRoute,
-              private job_service: JobsApiService,
-              private postulantApproved_service: PostulantApprovedApiService) {
-    this.route.params.subscribe(params=>this.jobId=params.id);
-    this.route.params.subscribe(params=>this.postulantApprovedId=params.id);
-    this.jobInfo={} as Job;
+  constructor(private postulantApproved_service: PostulantApprovedApiService,
+              private router: Router,
+              private route: ActivatedRoute) {
     this.postulantApprovedInfo={} as PostulantApproved;
   }
 
   ngOnInit(): void {
-    this.getJobById();
     this.getPostulantApprovedById();
   }
 
-  getPostulantApprovedById():void{
-    console.log(this.postulantApprovedId);
-
-    this.postulantApproved_service.getPostulantApprovedById(this.postulantApprovedId).subscribe((response: any) => {
-      this.postulantApprovedInfo = response;
-    });
+  getPostulantApprovedById(){
+    this.postulantId = Number(this.route.params.subscribe(paramsPostulant => {
+      this.jobOfferId = Number(this.route.params.subscribe((paramsJobOffer => {
+        this.postulantApproved_service.getPostulantApprovedByPostulantIdAndJobOfferId(paramsPostulant.postulantId, paramsJobOffer.jobOfferId)
+          .subscribe((response: any) => {
+            this.postulantApprovedInfo = response
+            console.log(response)
+          })
+      })))
+    }))
   }
-
-  getJobById(): void{
-    console.log(this.jobId);
-
-    this.job_service.getJobById(this.jobId).subscribe((response: any) => {
-      this.jobInfo = response;
-    });
-  }
-
-
 }
