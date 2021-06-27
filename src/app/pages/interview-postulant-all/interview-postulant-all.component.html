@@ -1,36 +1,64 @@
-<mat-card class="job-item">
+<app-main-nav-postulant>
 
-  <h1> Entrevistas </h1>
+  <div class="acomodar">
 
-  <br><br>
+    <mat-card class="job-item">
 
-  <h3>  Fecha actual: {{fecha.toLocaleDateString()}} </h3>
+      <h1> Entrevistas </h1>
 
-  <mat-card class="interview-item">
-    <h5>
-      Fecha de Inicio de la entrevista: <br> {{interviewInfo.date_Interview}}
-    </h5>
+      <br><br>
 
-    <h5>
-      Fecha final de la entrevista: <br> {{interviewInfo.final_date_Interview}}
-    </h5>
+      <h3>  Fecha actual: {{fecha.toLocaleDateString()}} </h3>
 
-    <button>
-      <a href="{{interviewInfo.link_Interview}}">
-        Link de la entrevista
-      </a>
-    </button>
+      <mat-card class="interview-item">
+        <h4>
+          {{interviewInfo.titleJobOffer}}
+        </h4>
+
+        <h5>
+          Fecha de Inicio de la entrevista: <br> {{interviewInfo.date_Interview}}
+        </h5>
+
+        <h5>
+          Fecha final de la entrevista: <br> {{interviewInfo.final_date_Interview}}
+        </h5>
+
+        <button>
+          <a href="{{interviewInfo.link_Interview}}" target="_blank">
+            Link de la entrevista
+          </a>
+        </button>
 
 
-  </mat-card>
+      </mat-card>
 
-  <ul>
-    <li>
-      <div>
-        <span>{{interviewInfo.id}}</span>
+    </mat-card>
+
+
+    <div class="wrapper-calendar">
+      <div class="header-calendar">
+        <div>
+          <button (click)="changeMonth(-1)" class="btn-prev">Antes</button>
+        </div>
+        <h1>{{dateSelect | date:'MMMM, yyyy'}}</h1>
+        <div>
+          <button (click)="changeMonth(1)" class="btn-next">Siguiente</button>
+        </div>
       </div>
-    </li>
-  </ul>
+      <ol>
+        <li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
 
-</mat-card>
+        <li (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
+            *ngFor="let day of monthSelect;let first = first">
+          <span>{{day?.value}}</span>
+        </li>
+      </ol>
+    </div>
+
+  </div>
+
+
+</app-main-nav-postulant>
+
+
 

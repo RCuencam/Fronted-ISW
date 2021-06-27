@@ -17,10 +17,9 @@
     <mat-nav-list >
       <br><br><br>
 
-
       <a mat-list-item  [routerLink]="['Home/',postulantId]" >Home   <span class="default-spacer"></span><mat-icon>home  </mat-icon></a>
       <a mat-list-item routerLink="/postulations" (click)="drawer.toggle()">Mis postulaciones   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
-      <a mat-list-item [routerLink]="['/postulants/' + 4 + '/joboffer/' + 2 + '/interview/']">Entrevistas <span class="default-spacer"></span> <mat-icon>home</mat-icon></a>
+      <a mat-list-item [routerLink]="['/postulant/' + postulantId + '/interview']">Entrevistas <span class="default-spacer"></span> <mat-icon>home</mat-icon></a>
       <a mat-list-item routerLink="/myaccount" (click)="drawer.toggle()">Mi cuenta  <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
       <a mat-list-item href="#">Configuración  <span class="default-spacer"></span><mat-icon>settings</mat-icon></a>
 

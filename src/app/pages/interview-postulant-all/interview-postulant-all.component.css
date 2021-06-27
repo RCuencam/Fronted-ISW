@@ -1,6 +1,7 @@
 .job-item{
-  width: 44%;
+  width: 94%;
   border-radius: 30px;
+  justify-content: space-between;
   align-items: center;
   margin: 5% 0;
   box-shadow: 0px 3px 6px -2px #000000;
@@ -8,10 +9,11 @@
 }
 
 .inter-item{
-  width: 44%;
+  width: 89%;
   border-radius: 60px;
   align-items: center;
-  margin: 5% 0;
+  justify-content: space-between;
+  margin: 550px 0;
   box-shadow: 0px 35px 62px -2px #000000;
   cursor: pointer;
 }
@@ -30,10 +32,88 @@
   color: dodgerblue;
 }
 
+.job-item h4{
+  text-align: center;
+  color: black;
+}
 
 .job-item button {
   margin-left: 34%;
   border: 24px;
   padding: 0 20px;
 }
+
+*{
+  outline: none !important
+}
+
+.wrapper-calendar{
+  margin:1rem;
+  padding: .5rem;
+  border: solid 1px #eaeaea;
+  box-shadow: 0 0 10px #e4e4e4;
+}
+
+div {
+  text-align: center;
+  width: 300px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+  Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+ol {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  padding: .25rem;
+  font-size: 1.5ch;
+  cursor: pointer;
+}
+li:hover{
+  font-weight: 600;
+}
+h2 {
+  margin-bottom: 4px;
+  padding: 0;
+}
+
+.first-day {
+  grid-column-start: var(--first-day-start, 0);
+}
+
+.day-name {
+  background: #eee;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 2px;
+  padding: 4px;
+  text-align: center;
+}
+
+.header-calendar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.header-calendar h1 {
+  width: 100%;
+  font-size: 13px;
+}
+
+.header-calendar button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+.acomodar{
+}
+
+
 

@@ -34,7 +34,5 @@ export class LoginRegisterService {
   updateUser(id: number, item: User): Observable<User> {
     return this.http.put<User>(`${this.url}/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
-
-
   }
 }

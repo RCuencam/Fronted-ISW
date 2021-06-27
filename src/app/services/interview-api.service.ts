@@ -13,6 +13,8 @@ export class InterviewApiService {
   //Primero se define la ruta basica
   basePath = 'https://jobagapi.herokuapp.com/api/postulants';
 
+  base = "https://jobagapi.herokuapp.com/api/interviews";
+
   constructor(private http: HttpClient) { }
 
   handleError(error: HttpErrorResponse): Observable<never> {
@@ -32,6 +34,11 @@ export class InterviewApiService {
 
   getInterviewByPostulantId(postulantId:number) : Observable<Interview>{
     return this.http.get<Interview>(`${this.basePath}/${postulantId}/interviews`)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  getAllInterview() : Observable<Interview>{
+    return this.http.get<Interview>(this.base)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

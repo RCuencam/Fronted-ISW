@@ -32,39 +32,33 @@ export class ChangepasswordComponent implements OnInit {
 
   getAllUsers(): void {
     this.usersApi.getAllUsers().subscribe((response: any) => {
-
-
       for (var i = 0; i < response.content.length; i++) {
         if (response.content[i].email == this.emailexist &&
           response.content[i].password == this.passwordexist)
         {
-
           this.userData = response.content[i];
-        console.log(this.userData)
-        console.log(this.newpassword)
-        const newUser = {
+          console.log(this.userData)
+          console.log(this.newpassword)
+
+          const newUser = {
           id: this.userData.id,
           firstname: this.userData.firstname,
           lastname: this.userData.lastname,
-          email: this.userData.email
-          ,
+          email: this.userData.email,
           number: this.userData.number,
           password: this.newpassword,
           document: this.userData.document
         };
+
         this.usersApi.updateUser(this.userData.id, newUser)
           .subscribe(response => {
             console.log(response);
           });
       }
-
         else{
-
           this.router.navigate(['/changepassword'])
-
         }
       }
-
 
     });
   }
