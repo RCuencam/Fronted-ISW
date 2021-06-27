@@ -1,0 +1,39 @@
+.job-item{
+  width: 44%;
+  border-radius: 30px;
+  align-items: center;
+  margin: 5% 0;
+  box-shadow: 0px 3px 6px -2px #000000;
+  cursor: pointer;
+}
+
+.inter-item{
+  width: 44%;
+  border-radius: 60px;
+  align-items: center;
+  margin: 5% 0;
+  box-shadow: 0px 35px 62px -2px #000000;
+  cursor: pointer;
+}
+
+.job-item h1{
+  color: #1955AE;
+  text-align: center;
+}
+
+.job-item h3{
+  text-align: center;
+}
+
+.job-item h5{
+  text-align: center;
+  color: dodgerblue;
+}
+
+
+.job-item button {
+  margin-left: 34%;
+  border: 24px;
+  padding: 0 20px;
+}
+

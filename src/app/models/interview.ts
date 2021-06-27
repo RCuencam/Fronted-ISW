@@ -1,6 +1,6 @@
 export interface Interview{
   id: number
-  date_interview: string
-  final_date: string
-  link: string
+  date_Interview: string
+  final_date_Interview: string
+  link_Interview: string
 }

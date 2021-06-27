@@ -1,0 +1,36 @@
+<mat-card class="job-item">
+
+  <h1> Entrevistas </h1>
+
+  <br><br>
+
+  <h3>  Fecha actual: {{fecha.toLocaleDateString()}} </h3>
+
+  <mat-card class="interview-item">
+    <h5>
+      Fecha de Inicio de la entrevista: <br> {{interviewInfo.date_Interview}}
+    </h5>
+
+    <h5>
+      Fecha final de la entrevista: <br> {{interviewInfo.final_date_Interview}}
+    </h5>
+
+    <button>
+      <a href="{{interviewInfo.link_Interview}}">
+        Link de la entrevista
+      </a>
+    </button>
+
+
+  </mat-card>
+
+  <ul>
+    <li>
+      <div>
+        <span>{{interviewInfo.id}}</span>
+      </div>
+    </li>
+  </ul>
+
+</mat-card>
+

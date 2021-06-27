@@ -56,6 +56,8 @@ import {MatTabsModule} from "@angular/material/tabs";
 import { JobOfferNewComponentComponent } from './pages/job-offer-new-component/job-offer-new-component.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
+import { InterviewsPostulantApiComponent } from './pages/interviews-postulant-api/interviews-postulant-api.component';
+import { InterviewPostulantAllComponent } from './pages/interview-postulant-all/interview-postulant-all.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +89,9 @@ import { ChangepasswordComponent } from './pages/changepassword/changepassword.c
     PostulantNewComponent,
     MainNavEmployeerComponent,
     JobOfferNewComponentComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    InterviewsPostulantApiComponent,
+    InterviewPostulantAllComponent
   ],
 
   imports: [
