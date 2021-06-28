@@ -54,6 +54,9 @@ import {EmployeerService} from "./services/employeer.service";
 import {PostulantService} from "./services/postulant.service";
 import {MatTabsModule} from "@angular/material/tabs";
 import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
+import { JobOfferNewComponentComponent } from './pages/job-offer-new-component/job-offer-new-component.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+
 
 @NgModule({
   declarations: [
@@ -84,7 +87,9 @@ import { ChangepasswordComponent } from './pages/changepassword/changepassword.c
     EmployeerNewComponent,
     PostulantNewComponent,
     MainNavEmployeerComponent,
-    ChangepasswordComponent
+    ChangepasswordComponent,
+    JobOfferNewComponentComponent
+
   ],
 
   imports: [
@@ -111,7 +116,8 @@ import { ChangepasswordComponent } from './pages/changepassword/changepassword.c
     MatExpansionModule,
     MatPaginatorModule,
     MatChipsModule,
-    MatTabsModule
+    MatTabsModule,
+    MatDatepickerModule
 
 
   ],

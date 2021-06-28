@@ -27,6 +27,7 @@ export class LoginRegisterComponent implements OnInit {
   postulanteOempleador=false
   validador=false
   ingresante!:number;
+    fecha = new Date()
   ngOnInit(): void {
   }
 
@@ -59,12 +60,12 @@ export class LoginRegisterComponent implements OnInit {
       if(this.validador){
 
         this.employeerApi.getEmployeerbyId(this.ingresante).subscribe((responseEmployeer: any) => {
-          this.router.navigate([`/home/${this.ingresante}`])
+          this.router.navigate([`employeer/${this.ingresante}`])
             .then(() => console.log('Ingrese'));
         });
 
         this.postulantApi.getPostulantbyId(this.ingresante).subscribe((responseEmployeer: any) => {
-          this.router.navigate([`${this.ingresante}`])
+          this.router.navigate([`/home/${this.ingresante}/jobs`])
             .then(() => console.log('Ingrese'));
         });
 

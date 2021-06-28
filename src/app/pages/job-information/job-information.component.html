@@ -2,30 +2,30 @@
 <div class="job-information-container">
     <div class="job-item">
         <div class="job-item-text-left">
-            <span>{{jobInfo.location}}</span>
-            <h2>{{jobInfo.title}}</h2>
-            <span>{{jobInfo.type}}</span>
+            <span>{{jobInfo.direction}}</span>
+            <h2>{{jobInfo.description}}</h2>
+            <span>{{jobInfo.description}}</span>
         </div>
         <div class="job-item-text-right">
             <div class="job-item-text-right-img">
-                <img src={{jobInfo.url}} alt="">
+
             </div>
             <br>
-            <span>{{jobInfo.date}}</span>
+            <span>{{jobInfo.begin_date_offer}}</span>
         </div>
     </div>
     <div class="job-info">
         <h2>Detalles del aviso</h2>
-        <p>{{jobInfo.details}}</p>
+        <p>{{jobInfo.description}}</p>
         <br>
         <h2>Requisitos:</h2>
         <ul>
-            <li *ngFor="let requirement of jobInfo.requirements">{{requirement}}</li>
+            <li *ngFor="let requirement of jobInfo.description">{{requirement}}</li>
         </ul>
         <br>
         <h2>Ofrecemos:</h2>
         <ul>
-            <li *ngFor="let benefit of jobInfo.benefits">{{benefit}}</li>
+            <li *ngFor="let benefit of jobInfo.final_date_offer">{{benefit}}</li>
         </ul>
         <div class="job-info-button">
             <button mat-button [routerLink]="[postulantId,'jobs',jobInfo.id,'newpostulation']">POSTULARME</button>
@@ -33,3 +33,4 @@
     </div>
 </div>
 </app-main-nav-postulant>
+

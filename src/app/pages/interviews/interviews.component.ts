@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {Interview} from "../../models/interview";
 import {InterviewApiService} from "../../services/interview-api.service";
-import {JobsApiService} from "../../services/jobs-api.service";
-import {Job} from "../../models/job";
-import * as moment from 'moment'
+import {Observable} from "rxjs";
+import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
+import {map, shareReplay} from "rxjs/operators";
 
 @Component({
   selector: 'app-interviews',
@@ -13,93 +13,40 @@ import * as moment from 'moment'
 })
 
 export class InterviewsComponent implements OnInit {
-  interviewId:number = 0;
-  interviewInfo: Interview;
+  postulantId!: number;
+  jobOfferId!: number
 
-  jobId:number = 0;
-  jobInfo: Job;
+  interviewData: Interview;
+  interviewId!: number
 
-  week: any = [
-    "Lunes",
-    "Martes",
-    "Miercoles",
-    "Jueves",
-    "Viernes",
-    "Sabado",
-    "Domingo"
-  ];
+  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
+    .pipe(
+      map(result => result.matches),
+      shareReplay()
+    );
 
-  monthSelect: any;
-  dateSelect: any;
-  dateValue: any;
-
-  constructor(private route:ActivatedRoute,
-              private interviews_service: InterviewApiService,
-              private job_service: JobsApiService) {
-    this.route.params.subscribe(params=>this.jobId=params.id);
-    this.route.params.subscribe(params=>this.interviewId=params.id);
-    this.interviewInfo={} as Interview;
-    this.jobInfo={}as Job;
+  constructor(private interview_service : InterviewApiService,
+              private router: Router,
+              private route: ActivatedRoute,
+              private breakpointObserver: BreakpointObserver) {
+    this.interviewData = {} as Interview;
   }
 
   ngOnInit(): void {
-    this.getJobById();
-    this.getInterviewById();
-    this.getDaysFromDate(11, 2020)
+    this.getallInterview();
   }
 
-  getJobById():void{
-    console.log(this.jobId);
-
-    this.job_service.getJobById(this.jobId).subscribe((response: any) =>{
-      this.jobInfo = response;
-    });
+  getallInterview(){
+    this.postulantId = Number(this.route.params.subscribe(paramsPostulant => {
+      this.jobOfferId = Number(this.route.params.subscribe((paramsJobOffer => {
+        this.interview_service.getInterviewByPostulantIdAndJobOfferId(paramsPostulant.postulantId, paramsJobOffer.jobOfferId)
+          .subscribe((response: any) => {
+            this.interviewData = response.content[0];
+            console.log(this.interviewData)
+            console.log(response.content[0].date_Interview);
+          });
+      })));
+    }));
   }
 
-  getInterviewById():void{
-    console.log(this.interviewId);
-
-    this.interviews_service.getInterviewById(this.interviewId).subscribe((response: any) =>{
-      this.interviewInfo = response;
-    });
-  }
-
-  getDaysFromDate(month: number, year: number) : void {
-
-    const startDate = moment.utc(`${year}/${month}/01`)
-    const endDate = startDate.clone().endOf('month')
-    this.dateSelect = startDate;
-
-    const diffDays = endDate.diff(startDate, 'days', true)
-    const numberDays = Math.round(diffDays);
-
-    const arrayDays = Object.keys([...Array(numberDays)]).map((a: any) => {
-      a = parseInt(a) + 1;
-      const dayObject = moment(`${year}-${month}-${a}`);
-      return {
-        name: dayObject.format("dddd"),
-        value: a,
-        indexWeek: dayObject.isoWeekday()
-      };
-    });
-
-    this.monthSelect = arrayDays;
-  }
-
-  changeMonth(flag: number) {
-    if (flag < 0) {
-      const prevDate = this.dateSelect.clone().subtract(1, "month");
-      this.getDaysFromDate(prevDate.format("MM"), prevDate.format("YYYY"));
-    } else {
-      const nextDate = this.dateSelect.clone().add(1, "month");
-      this.getDaysFromDate(nextDate.format("MM"), nextDate.format("YYYY"));
-    }
-  }
-
-  clickDay(day: any) : void {
-    const monthYear = this.dateSelect.format('YYYY-MM')
-    const parse = `${monthYear}-${day.value}`
-    const objectDate = moment(parse)
-    this.dateValue = objectDate;
-  }
 }

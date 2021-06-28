@@ -23,15 +23,7 @@ export class PostulantNewComponent implements OnInit {
    this.postulantApiService.addPostulants(newPostulant).subscribe((response: any) => {
       console.log(response)
    });
-
-
-
   }
-
-
-
-
-
 }
 
 

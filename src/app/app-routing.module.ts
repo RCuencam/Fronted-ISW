@@ -11,12 +11,13 @@ import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-accou
 import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 import {LoginRegisterComponent} from "./pages/login-register/login-register.component";
-import {MainNavPostulantComponent} from "./pages/main-nav-postulant/main-nav-postulant.component";
 import {ChoosePostulantOrEmployerComponent} from "./pages/choose-postulant-or-employer/choose-postulant-or-employer.component";
 import {EmployeerNewComponent} from "./pages/employeer-new/employeer-new.component";
 import {PostulantNewComponent} from "./pages/postulant-new/postulant-new.component";
 import {MainNavEmployeerComponent} from "./pages/main-nav-employeer/main-nav-employeer.component";
 import {ChangepasswordComponent} from "./pages/changepassword/changepassword.component";
+import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job-offer-new-component.component";
+
 
 
 const routes: Routes = [
@@ -25,22 +26,21 @@ const routes: Routes = [
   {path:'postulant/new', component: PostulantNewComponent},
   {path:'changepassword', component: ChangepasswordComponent},
   {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
-  {path:'home/:postulantId', component:SearchJobsComponent },
-
-  {path:':postulantId/jobs', component : SearchJobsComponent},
-
-  {path:'home/:postulantId/jobs/:id', component: JobInformationComponent},
-  {path:'home/:postulantId/jobs/:id/newpostulation', component: PostulationsComponent},
+  {path:'postulant/:postulantId/jobs', component:SearchJobsComponent },
+  {path:'postulant/:postulantId/jobs/:id', component: JobInformationComponent},
+  {path:'postulant/:postulantId/jobs/:id/newpostulation', component: PostulationsComponent},
+  {path:'employeer/:employeerId', component: MainNavEmployeerComponent},
+  {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'account', component: AccountsettingsComponent},
   {path:':id/profile', component: ProfileStudentComponent},
   {path:'contrat', component: ContratComponent},
-  {path:'job/interview/:id', component: InterviewsComponent},
+  {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},
   {path:'myaccount', component : MyAccountPostulantComponent},
   {path:'modify-professional-profile/:id', component: ModifyProfessionalProfileComponent},
   {path:'modify-personal-information', component: ModifyPersonalInformationComponent},
 
 
-
+  {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
 
 ];
 

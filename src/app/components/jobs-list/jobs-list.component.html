@@ -11,18 +11,19 @@
         <ul>
             <li class="job-item" *ngFor="let job of jobs" [routerLink]="['jobs',job.id]">
                 <div class="job-item-text-left">
-                    <span>{{job.location}}</span>
-                    <h2>{{job.title}}</h2>
-                    <span>{{job.type}}</span>
+                    <span>{{job.direction}}</span>
+                    <h2>{{job.description}}</h2>
+                    <span>{{job.salary}}</span>
                 </div>
                 <div class="job-item-text-right">
                     <div class="job-item-text-right-img">
-                        <img src={{job.url}} alt="">
+
                     </div>
                     <br>
-                    <span>{{job.date}}</span>
+                    <span>{{job.begin_date_offer}}</span>
                 </div>
             </li>
         </ul>
     </div>
 </div>
+
