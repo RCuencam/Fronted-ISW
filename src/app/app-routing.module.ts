@@ -29,16 +29,14 @@ const routes: Routes = [
   {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
 
   {path:'postulant/:postulantId', component:SearchJobsComponent }, //HOME POSTULANTE
-  {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
-
-  {path:'postulant/:postulantId/job/:id', component: JobInformationComponent},
-  {path:'postulant/:postulantId/:id/newpostulation', component: PostulationsComponent},
+  {path:'postulant/:postulantId/job/:jobofferId', component: JobInformationComponent},
+  {path:'postulant/:postulantId/job/:jobofferId/newpostulation', component: PostulationsComponent},
   {path:'postulant/:postulantId/interview', component: InterviewPostulantAllComponent},
   {path:'postulant/:postulantId/postulations', component: MypostulationsComponent},
   {path:'postulant/:postulantId/myaccount', component : MyAccountPostulantComponent},
+//////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
-
-
+  {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
   {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'home/:postulantId', component:SearchJobsComponent },
   {path:'home/:postulantId/jobs', component : SearchJobsComponent},
