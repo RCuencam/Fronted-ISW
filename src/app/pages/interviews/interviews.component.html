@@ -1,5 +1,19 @@
-<button (click)="getallInterview()">  Hola </button>
-<h1> {{interviewData.id}} </h1>
+<app-main-nav-postulant>
+  <ul>
+    <h1> {{fecha.toDateString()}}</h1>
+    <li>
+      <h3> Fecha de inicio: <br> {{interviewData.date_Interview}}</h3>
+      <h3> Fecha Final: <br> {{interviewData.final_date_Interview}}</h3>
+      <button>
+        <a href="{{interviewData.link_Interview}}">
+          Link de la entrevista
+        </a>
+      </button>
+    </li>
+
+  </ul>
+
+</app-main-nav-postulant>
 
 
 

@@ -1,36 +1,34 @@
 <app-main-nav-postulant>
-<div class="job-information-container">
+  <div class="job-information-container">
     <div class="job-item">
-        <div class="job-item-text-left">
-            <span>{{jobInfo.direction}}</span>
-            <h2>{{jobInfo.description}}</h2>
-            <span>{{jobInfo.description}}</span>
+      <div class="job-item-text-left">
+        <span>{{jobInfo.begin_date_offer}}</span>
+        <h2>{{jobInfo.begin_date_offer}}</h2>
+        <span>{{jobInfo.begin_date_offer}}</span>
+      </div>
+      <div class="job-item-text-right">
+        <div class="job-item-text-right-img">
         </div>
-        <div class="job-item-text-right">
-            <div class="job-item-text-right-img">
-
-            </div>
-            <br>
-            <span>{{jobInfo.begin_date_offer}}</span>
-        </div>
+        <br>
+        <span>{{jobInfo.begin_date_offer}}</span>
+      </div>
     </div>
     <div class="job-info">
-        <h2>Detalles del aviso</h2>
-        <p>{{jobInfo.description}}</p>
-        <br>
-        <h2>Requisitos:</h2>
-        <ul>
-            <li *ngFor="let requirement of jobInfo.description">{{requirement}}</li>
-        </ul>
-        <br>
-        <h2>Ofrecemos:</h2>
-        <ul>
-            <li *ngFor="let benefit of jobInfo.final_date_offer">{{benefit}}</li>
-        </ul>
-        <div class="job-info-button">
-            <button mat-button [routerLink]="[postulantId,'jobs',jobInfo.id,'newpostulation']">POSTULARME</button>
-        </div>
+      <h2>Detalles del aviso</h2>
+      <p>{{jobInfo.begin_date_offer}}</p>
+      <br>
+      <h2>Requisitos:</h2>
+      <ul>
+        <li *ngFor="let requirement of jobInfo.begin_date_offer">{{requirement}}</li>
+      </ul>
+      <br>
+      <h2>Ofrecemos:</h2>
+      <ul>
+        <li *ngFor="let benefit of jobInfo.begin_date_offer">{{benefit}}</li>
+      </ul>
+      <div class="job-info-button">
+        <button mat-button [routerLink]="[postulantId,'jobs',jobInfo.id,'newpostulation']">POSTULARME</button>
+      </div>
     </div>
-</div>
+  </div>
 </app-main-nav-postulant>
-

@@ -15,6 +15,7 @@ export class MainNavPostulantComponent {
 
   postulantData!: Postulant;
   postulantId!: number
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
@@ -30,8 +31,8 @@ export class MainNavPostulantComponent {
   getPostulantId(): void{
     this.postulantId = Number(this.route.params.subscribe(params => {
       this.postulantApiService.getPostulantById(params.postulantId).subscribe((response: any)=> {
+        this.postulantId = params.postulantId;
         this.postulantData=response
-
       });
     }));
 

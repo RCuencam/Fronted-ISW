@@ -54,8 +54,14 @@ import {EmployeerService} from "./services/employeer.service";
 import {PostulantService} from "./services/postulant.service";
 import {MatTabsModule} from "@angular/material/tabs";
 import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
-import { JobOfferNewComponentComponent } from './pages/job-offer-new-component/job-offer-new-component.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import { JobOfferNewComponentComponent } from './pages/job-offer-new-component/job-offer-new-component.component';
+import { InterviewsPostulantApiComponent } from './pages/interviews-postulant-api/interviews-postulant-api.component';
+import { InterviewPostulantAllComponent } from './pages/interview-postulant-all/interview-postulant-all.component';
+import { DialogContratComponent } from './pages/dialog-contrat/dialog-contrat.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import { DialogJobNewComponent } from './pages/dialog-job-new/dialog-job-new.component';
+import { MyadsComponent } from './pages/myads/myads.component';
 
 
 @NgModule({
@@ -88,39 +94,43 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
     PostulantNewComponent,
     MainNavEmployeerComponent,
     ChangepasswordComponent,
-    JobOfferNewComponentComponent
+    InterviewsPostulantApiComponent,
+    InterviewPostulantAllComponent,
+    DialogContratComponent,
+    DialogJobNewComponent,
+    JobOfferNewComponentComponent,
+    MyadsComponent
 
   ],
 
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
-    MatSortModule,
-    MatTableModule,
-    MatSidenavModule,
-    FilestackModule,
-    MatButtonModule,
-    MatGridListModule,
-    MatInputModule,
-    MatFormFieldModule,
-    FormsModule,
-    MatListModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    MatCheckboxModule,
-    MatExpansionModule,
-    MatPaginatorModule,
-    MatChipsModule,
-    MatTabsModule,
-    MatDatepickerModule
-
-
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatCardModule,
+        MatSortModule,
+        MatTableModule,
+        MatSidenavModule,
+        FilestackModule,
+        MatButtonModule,
+        MatGridListModule,
+        MatInputModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatListModule,
+        MatStepperModule,
+        ReactiveFormsModule,
+        MatCheckboxModule,
+        MatExpansionModule,
+        MatPaginatorModule,
+        MatChipsModule,
+        MatTabsModule,
+        MatDatepickerModule,
+        MatDialogModule
+    ],
   providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
   bootstrap: [AppComponent]
 })
