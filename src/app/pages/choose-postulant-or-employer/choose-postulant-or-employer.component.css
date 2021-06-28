@@ -1,0 +1,46 @@
+.head{
+  padding: 50px;
+  text-align: center;
+  color: #1955AE;
+}
+.content{
+  display: flex;
+  text-align: center;
+  padding: 2rem;
+}
+
+.content > mat-card {
+  height: auto;
+  margin: auto;
+}
+.img-logo{
+  padding: 50px;
+  width: 50%;
+}
+
+.but{
+  padding: 30px;
+}
+
+.btn-opcion{
+  width: 60%;
+  padding: 5px;
+}
+
+.divider{
+  background-color: #1955AE;
+  width: 1px;
+  align-self: center;
+  height: 400px;
+}
+
+@media (max-width: 640px) {
+  .content{
+    display: block;
+    border:0;
+    margin: auto;
+  }
+  .divider{
+    height: 0px;
+  }
+}

@@ -1,11 +1,10 @@
 .general{
-  width: 90%;
-  margin: 50px auto;
-
+  text-align: center;
+  padding: 2rem;
 }
 
 .img-logo{
-  width: 30%;
+  width: 20%;
 
 }
 
@@ -75,4 +74,11 @@
 }
 .default-spacer {
   flex: 1 1 auto;
+}
+
+.btn-ingresar{
+  padding:5px;
+}
+.btn-registrarse{
+  padding:5px;
 }

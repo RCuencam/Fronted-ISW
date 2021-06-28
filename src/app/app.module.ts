@@ -41,7 +41,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ContratComponent } from './pages/contrat/contrat.component';
 import { InterviewsComponent } from './pages/interviews/interviews.component';
 import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-postulant.component';
-import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
 import { EmployeerpruebaComponent } from './pages/employeerprueba/employeerprueba.component';
@@ -62,6 +61,7 @@ import { DialogContratComponent } from './pages/dialog-contrat/dialog-contrat.co
 import {MatDialogModule} from "@angular/material/dialog";
 import { DialogJobNewComponent } from './pages/dialog-job-new/dialog-job-new.component';
 import { MyadsComponent } from './pages/myads/myads.component';
+import { MypostulationsComponent } from './pages/mypostulations/mypostulations.component';
 
 
 @NgModule({
@@ -85,7 +85,6 @@ import { MyadsComponent } from './pages/myads/myads.component';
     InterviewsComponent,
     ApprovedPostulantComponent,
     ModifyPersonalInformationComponent,
-    ModifyProfessionalProfileComponent,
     MyAccountPostulantComponent,
     EmployeerpruebaComponent,
     LoginRegisterComponent,
@@ -99,7 +98,8 @@ import { MyadsComponent } from './pages/myads/myads.component';
     DialogContratComponent,
     DialogJobNewComponent,
     JobOfferNewComponentComponent,
-    MyadsComponent
+    MyadsComponent,
+    MypostulationsComponent
 
   ],
 
