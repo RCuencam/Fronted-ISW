@@ -46,6 +46,7 @@ export class InterviewPostulantAllComponent implements OnInit {
     this.postulantId = Number(this.route.params.subscribe(paramsPostulant => {
       this.interview_service.getInterviewByPostulantId(paramsPostulant.postulantId)
         .subscribe((response : any) => {
+          this.postulantId = paramsPostulant.postulantId;
           this.interviewInfo = response.content[0];
         })
       }

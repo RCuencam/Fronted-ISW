@@ -34,7 +34,7 @@ const routes: Routes = [
   {path:'postulant/:postulantId/job/:id', component: JobInformationComponent},
   {path:'postulant/:postulantId/:id/newpostulation', component: PostulationsComponent},
   {path:'postulant/:postulantId/interview', component: InterviewPostulantAllComponent},
-
+  {path:'account', component: AccountsettingsComponent},
 
   {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'home/:postulantId', component:SearchJobsComponent },
