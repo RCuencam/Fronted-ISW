@@ -1,11 +1,24 @@
-<h1>Escoje tu camino! Se parte de la gran comunidad Jobag, postula o busca tu postulante ideal!</h1>
-<img src="assets/images/postulante.jpeg">
-<br>
-<button class="btn-opcion"  [routerLink]="['/postulant/new']" mat-raised-button color="primary">Postulante</button>
-<br>
-<mat-divider></mat-divider>
-<br>
-<img src="assets/images/empleador.jpeg">
-<br>
-<button  class="btn-opcion"  [routerLink]="['/employeer/new']" mat-raised-button color="primary">Empleador</button>
+<div class="head">
+  <h1><b>¡Escoje tu camino!<br><br> Se parte de la gran comunidad Jobag, postula o busca tu postulante ideal!</b></h1>
+</div>
+<div class="content">
+  <mat-card class="mat-elevation-z4">
+    <img class="img-logo" src="assets/images/postulante.png">
+    <br>
+    <div class="but">
+      <button class="btn-opcion"  [routerLink]="['/postulant/new']" mat-raised-button color="primary">Postulante</button>
+    </div>
+    <br>
+  </mat-card>
+  <mat-divider vertical class ="divider"></mat-divider>
+  <br> <br>
+  <mat-card class="mat-elevation-z4">
+    <br>
+    <img class="img-logo" src="assets/images/empleador.png">
+    <br>
+    <div class="but">
+      <button  class="btn-opcion"  [routerLink]="['/employeer/new']" mat-raised-button color="primary">Empleador</button>
+    </div>
+  </mat-card>
+</div>
 

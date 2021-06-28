@@ -12,23 +12,24 @@
         Email is <strong>required</strong>
       </mat-error>
     </mat-form-field>
-  <br> <br>
+    <br> <br>
     <mat-form-field class="password-full-width">
       <mat-label>Password</mat-label>
       <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher"
              [(ngModel)]="passwordexist"       placeholder="*********">
-        <mat-error *ngIf="passwordFormControl.hasError('required')">
+      <mat-error *ngIf="passwordFormControl.hasError('required')">
         Password is <strong>required</strong>
       </mat-error>
-   </mat-form-field>
-<br>
+    </mat-form-field>
+    <br>
 
-  <span class="btn-olvidar " [routerLink]="['/changepassword']">    Olvidaste tu contraseña has click aqui</span>
+
     <br>    <br> <br>
     <button (click)="getAllUsers()" class="btn-ingresar" mat-raised-button color="primary">Ingresar</button>
 
     <br> <br>
     <button class="btn-registrarse"   mat-raised-button color="primary"  [routerLink]="['/choosePostulantOrEmployeer']">Registrarse</button>
   </form>
-
+  <br> <br>
+  <span class="btn-olvidar " onClick="alert('aqui deberia ir la funcion que lo lleve a cambiarcontraseña')">¿Olvidaste tu contraseña? has click aqui</span>
 </div>

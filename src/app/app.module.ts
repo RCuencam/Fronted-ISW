@@ -41,7 +41,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ContratComponent } from './pages/contrat/contrat.component';
 import { InterviewsComponent } from './pages/interviews/interviews.component';
 import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-postulant.component';
-import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
 import { EmployeerpruebaComponent } from './pages/employeerprueba/employeerprueba.component';
@@ -83,7 +82,6 @@ import { DialogJobNewComponent } from './pages/dialog-job-new/dialog-job-new.com
     InterviewsComponent,
     ApprovedPostulantComponent,
     ModifyPersonalInformationComponent,
-    ModifyProfessionalProfileComponent,
     MyAccountPostulantComponent,
     EmployeerpruebaComponent,
     LoginRegisterComponent,

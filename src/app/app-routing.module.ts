@@ -8,7 +8,6 @@ import {ProfileStudentComponent} from "./pages/profile-student/profile-student.c
 import {ContratComponent} from "./pages/contrat/contrat.component";
 import {InterviewsComponent} from "./pages/interviews/interviews.component";
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
-import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 import {LoginRegisterComponent} from "./pages/login-register/login-register.component";
 import {MainNavPostulantComponent} from "./pages/main-nav-postulant/main-nav-postulant.component";
@@ -37,9 +36,8 @@ const routes: Routes = [
   {path:':id/profile', component: ProfileStudentComponent},
   {path:'contrat', component: ContratComponent},
   {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},
-  {path:'myaccount', component : MyAccountPostulantComponent},
-  {path:'modify-professional-profile/:id', component: ModifyProfessionalProfileComponent},
-  {path:'modify-personal-information', component: ModifyPersonalInformationComponent},
+  {path:'myaccount/:id', component : MyAccountPostulantComponent},
+  {path:'modify-personal-information/:id', component: ModifyPersonalInformationComponent},
   {path:'login', component: LoginRegisterComponent},
   {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
   {path:'employeer/new', component: EmployeerNewComponent},
