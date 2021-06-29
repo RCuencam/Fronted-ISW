@@ -129,7 +129,8 @@ import { MypostulationsComponent } from './pages/mypostulations/mypostulations.c
         MatChipsModule,
         MatTabsModule,
         MatDatepickerModule,
-        MatDialogModule
+        MatDialogModule,
+
     ],
   providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
   bootstrap: [AppComponent]

@@ -64,7 +64,7 @@ export class LoginRegisterComponent implements OnInit {
         });
 
         this.postulantApi.getPostulantbyId(this.ingresante).subscribe((responseEmployeer: any) => {
-          this.router.navigate([`/home/${this.ingresante}/jobs`])
+          this.router.navigate([`postulant/${this.ingresante}`])
             .then(() => console.log('Ingrese'));
         });
 

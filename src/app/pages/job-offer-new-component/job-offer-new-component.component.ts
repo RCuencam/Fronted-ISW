@@ -20,10 +20,11 @@ export class JobOfferNewComponentComponent implements OnInit {
   constructor(private jobOfferApiService: JobNewApiService,
               private route: ActivatedRoute,
               public dialog: MatDialog,) {
-    this.route.params.subscribe(params=>this.employeerId=params.employeerId);
+
   }
 
   ngOnInit(): void {
+    this.route.params.subscribe(params=>this.employeerId=params.employeerId);
   }
 
   openDialog(): void {

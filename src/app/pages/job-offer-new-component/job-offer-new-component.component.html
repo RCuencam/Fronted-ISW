@@ -13,7 +13,7 @@
           <mat-hint>
             Ingrese el titulo principal de la oferta de trabajo
           </mat-hint>
-          <input matAutosizeMinRows=4 matInput required="Title" name="title" type="text" [(ngModel)]="jobOfferData.title" placeholder="Title">
+          <input matInput matAutosizeMinRows=4 matInput required="Title" name="title" type="text" [(ngModel)]="jobOfferData.title" placeholder="Title">
         </mat-form-field>
       </form>
 
@@ -40,7 +40,7 @@
           <mat-hint>
             Ingrese la fecha de inicio del empleo
           </mat-hint>
-          <input matAutosizeMinRows=4 mat-calendar-body required="begin_date_offer" name="begin_date_offer" type="date" [(ngModel)]="jobOfferData.begin_date_offer" placeholder="begin_date_offer">
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="begin_date_offer" name="begin_date_offer" type="date" [(ngModel)]="jobOfferData.begin_date_offer" placeholder="begin_date_offer">
         </mat-form-field>
       </form>
 
@@ -49,7 +49,7 @@
           <mat-hint>
             Ingrese la fecha final del empleo
           </mat-hint>
-          <input matAutosizeMinRows=4 mat-calendar-body required="final_date_offer" name="final_date_offer" type="date" [(ngModel)]="jobOfferData.final_date_offer" placeholder="final_date_offer">
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="final_date_offer" name="final_date_offer" type="date" [(ngModel)]="jobOfferData.final_date_offer" placeholder="final_date_offer">
         </mat-form-field>
       </form>
 
@@ -58,7 +58,7 @@
           <mat-hint>
             Ingrese el salario
           </mat-hint>
-          <input matAutosizeMinRows=4 mat-calendar-body required="salary" name="salary" type="number" [(ngModel)]="jobOfferData.salary" placeholder="salary">
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="salary" name="salary" type="number" [(ngModel)]="jobOfferData.salary" placeholder="salary">
         </mat-form-field>
       </form>
 
@@ -67,7 +67,7 @@
           <mat-hint>
             Ingrese la direccion del empleo
           </mat-hint>
-          <input matAutosizeMinRows=4 mat-calendar-body required="direction" name="direction" [(ngModel)]="jobOfferData.direction" placeholder="direction">
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="direction" name="direction" [(ngModel)]="jobOfferData.direction" placeholder="direction">
         </mat-form-field>
       </form>
 

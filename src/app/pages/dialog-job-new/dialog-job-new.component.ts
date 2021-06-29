@@ -1,5 +1,7 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialog, MatDialogRef} from "@angular/material/dialog";
+import {JobNewApiService} from "../../services/job-new-api.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-dialog-job-new',
@@ -10,10 +12,14 @@ export class DialogJobNewComponent implements OnInit {
 
   constructor(
     public dialogRef: MatDialogRef<DialogJobNewComponent>,
-    @Inject(MAT_DIALOG_DATA) public message: string = "contrat"
+    @Inject(MAT_DIALOG_DATA) public message: string = "contrat",private route: ActivatedRoute
   ) { }
+  employeerId!: number;
+
+
 
   ngOnInit(): void {
+    this.route.params.subscribe(params=>this.employeerId=params.employeerId);
   }
 
 }

@@ -29,37 +29,28 @@ const routes: Routes = [
   {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
 
   {path:'postulant/:postulantId', component:SearchJobsComponent }, //HOME POSTULANTE
-  {path:'postulant/:postulantId/job/:jobofferId', component: JobInformationComponent},
-  {path:'postulant/:postulantId/job/:jobofferId/newpostulation', component: PostulationsComponent},
+  {path:'postulant/:postulantId/joboffer/:jobofferId', component: JobInformationComponent},
+  {path:'postulant/:postulantId/joboffer/:jobofferId/newpostulation', component: PostulationsComponent},
   {path:'postulant/:postulantId/interview', component: InterviewPostulantAllComponent},
   {path:'postulant/:postulantId/postulations', component: MypostulationsComponent},
   {path:'postulant/:postulantId/myaccount', component : MyAccountPostulantComponent},
+
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
+
   {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
-  {path:'postulation/job/:id', component: PostulationsComponent},
-  {path:'home/:postulantId', component:SearchJobsComponent },
-  {path:'home/:postulantId/jobs', component : SearchJobsComponent},
-  {path:'postulation/job/:id', component: PostulationsComponent},
-  {path:':postulantId/jobs', component : SearchJobsComponent},
-  {path:'home/:postulantId/jobs/:id', component: JobInformationComponent},
-  {path:'home/:postulantId/jobs/:id/newpostulation', component: PostulationsComponent},
+  {path:'employeer/:employeerId/joboffernew', component: JobOfferNewComponentComponent},
 
-  {path:':id/profile', component: ProfileStudentComponent},
-  {path:'contrat', component: ContratComponent},
+
+  {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant/contrat', component: ContratComponent},
   {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},
-  {path:'myaccount', component : MyAccountPostulantComponent},
-  {path:'modify-personal-information', component: ModifyPersonalInformationComponent},
-  {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
+  {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent},
 
-  {path:'modify-personal-information/:id', component: ModifyPersonalInformationComponent},
-  {path:'login', component: LoginRegisterComponent},
-  {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
-  {path:'employeer/new', component: EmployeerNewComponent},
-  {path:'postulant/new', component: PostulantNewComponent},
-  {path:'home/:employeerId', component: MainNavEmployeerComponent},
-  {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
-  {path:'postulants/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent}
+
+
+
+
+
 
 ];
 
