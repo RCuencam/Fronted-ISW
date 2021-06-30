@@ -1,0 +1,55 @@
+<app-main-nav-postulant>
+  <div class="profile-container-header">
+    <h1>INFORMACIÓN PERSONAL</h1>
+  </div>
+  <div class="profile-container-header">
+
+    <div class="form-group">
+
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Nombres </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="name" [(ngModel)]="newname" placeholder="{{userData.firstname}}">
+        </mat-form-field>
+      </form>
+
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Apellidos </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="name" [(ngModel)]="newlastname" placeholder="{{userData.lastname}}">
+        </mat-form-field>
+      </form>
+
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Documento de identidad </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="name" [(ngModel)]="newdocument" placeholder="{{userData.document}}">
+        </mat-form-field>
+      </form>
+
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Número de telefono </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="name" [(ngModel)]="newnumber" placeholder="{{userData.number}}">
+        </mat-form-field>
+      </form>
+
+
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Email </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="email" [(ngModel)]="newemail" placeholder="{{userData.email}}">
+        </mat-form-field>
+      </form>
+      <br>
+      <button class="btn-option" (click)="getAllUsers()" [routerLink]="['Home/',postulantId]" mat-stroked-button color="primary"  >Cambiar Contraseña</button>
+    </div>
+    <br><br>
+    <button class="btn-option" (click)="getAllUsers()" [routerLink]="['Home/',postulantId]" mat-raised-button color="primary"  >Guardar cambios</button>
+
+  </div>
+
+</app-main-nav-postulant>
+
+
+

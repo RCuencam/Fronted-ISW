@@ -29,34 +29,11 @@ export class SearchJobsComponent implements OnInit {
 
   getAllJobs():void{
     this.jobs_service.getAllJobs().subscribe((response: any)=>{
-      this.jobs=response;
+      this.jobs=response.content;
+      console.log(this.jobs);
+      
     });
   }
-  filterByDistritMolina():void{
-    this.jobs_service.getAllJobs().subscribe((response: any)=>{
-      this.jobs=response;
-      this.jobs=this.jobs.filter(item=>item.location.includes('Molina'))
-    });
-    
-  }
-  filterByDistritBorja():void{
-    this.jobs_service.getAllJobs().subscribe((response: any)=>{
-      this.jobs=response;
-      this.jobs=this.jobs.filter(item=>item.location.includes('Borja'))
-    });
-    
-  }
-  filterByDistritSurco():void{
-    this.jobs_service.getAllJobs().subscribe((response: any)=>{
-      this.jobs=response;
-      this.jobs=this.jobs.filter(item=>item.location.includes('Surco'))
-    });
-  }
-  filterByDistritIsidro():void{
-    this.jobs_service.getAllJobs().subscribe((response: any)=>{
-      this.jobs=response;
-      this.jobs=this.jobs.filter(item=>item.location.includes('Isidro'))
-    });
-  }
+  
 
 }

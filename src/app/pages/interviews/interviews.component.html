@@ -1,46 +1,20 @@
-<div class="interview-container">
-  <div class="interview-list-container">
-    <h1>Entrevistas Pendientes</h1>
-    <div class="interview-list-container-list">
-      <ul>
-        <li class="interview-item">
-          <div class="interview-item-text-left">
-            <h2> {{jobInfo.title}}</h2>
-            <h3> {{interviewInfo.date_interview}} </h3>
-            <h3> {{interviewInfo.hour_interview}} </h3>
-          </div>
-          <div class="interview-item-text-right">
-            <img src="assets/images/icon-google-meet.png" width="52" height="52">
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-  
-  <div class="posicion__calendario">
-    <div class="wrapper-calendar">
-      <div class="header-calendar">
-        <div>
-          <button (click)="changeMonth(-1)" class="btn-prev">Antes</button>
-        </div>
-        <h1>{{dateSelect | date:'MMMM, yyyy'}}</h1>
-        <div>
-          <button (click)="changeMonth(1)" class="btn-next">Siguiente</button>
-        </div>
-      </div>
-      <ol>
-        <li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
-  
-        <li (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
-            *ngFor="let day of monthSelect;let first = first">
-          <span>{{day?.value}}</span>
-        </li>
-      </ol>
-    </div>
-  
-  </div>
-</div>
 
+<app-main-nav-postulant>
+  <ul>
+    <h1> {{fecha.toDateString()}}</h1>
+    <li>
+      <h3> Fecha de inicio: <br> {{interviewData.date_Interview}}</h3>
+      <h3> Fecha Final: <br> {{interviewData.final_date_Interview}}</h3>
+      <button>
+        <a href="{{interviewData.link_Interview}}">
+          Link de la entrevista
+        </a>
+      </button>
+    </li>
+
+  </ul>
+
+</app-main-nav-postulant>
 
 
 

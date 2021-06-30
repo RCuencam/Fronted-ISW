@@ -1,0 +1,86 @@
+<app-main-nav-employeer>
+
+  <div class="profile-container-header">
+    <h1> REGISTRAR UNA OFERTA DE TRABAJO </h1>
+  </div>
+
+  <div class="profile-container-content">
+
+    <div class="form-group">
+
+      <form (submit)="jobOfferData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese el titulo principal de la oferta de trabajo
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 matInput required="Title" name="title" type="text" [(ngModel)]="jobOfferData.title" placeholder="Title">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="jobOfferData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese el tipo de oferta
+          </mat-hint>
+          <input matAutosizeMinRows=4 matInput required="type" name="type" type="text" [(ngModel)]="jobOfferData.type" placeholder="Type">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="jobOfferData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese la descripcion del empleo
+          </mat-hint>
+          <input matAutosizeMinRows=4 matInput required="Description" name="description" type="text" [(ngModel)]="jobOfferData.description" placeholder="Description">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="jobOfferData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese la fecha de inicio del empleo
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="begin_date_offer" name="begin_date_offer" type="date" [(ngModel)]="jobOfferData.begin_date_offer" placeholder="begin_date_offer">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="jobOfferData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese la fecha final del empleo
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="final_date_offer" name="final_date_offer" type="date" [(ngModel)]="jobOfferData.final_date_offer" placeholder="final_date_offer">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="jobOfferData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese el salario
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="salary" name="salary" type="number" [(ngModel)]="jobOfferData.salary" placeholder="salary">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="jobOfferData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese la direccion del empleo
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 mat-calendar-body required="direction" name="direction" [(ngModel)]="jobOfferData.direction" placeholder="direction">
+        </mat-form-field>
+      </form>
+
+      <form >
+        <button (click)="AddJobOfferNew()" (click)="openDialog()" class="mat-focus-indicator mat-button mat-button-base">
+          Guardar Cambios
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+
+</app-main-nav-employeer>
+
+

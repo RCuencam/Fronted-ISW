@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Job } from 'src/app/models/job';
+import { JobsApiService } from 'src/app/services/jobs-api.service';
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
   selector: 'app-jobs-list',
@@ -8,7 +11,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class JobsListComponent implements OnInit {
 
   @Input() jobs=[] as any;
-  constructor() { 
+  postulantId!:string
+  jobsData:Job
+  constructor(private jobs_service : JobsApiService,private route:ActivatedRoute ) {
+    this.jobsData={} as Job;
+    this.route.params.subscribe(params=>this.postulantId=params.postulantId)
+
   }
 
   ngOnInit(): void {
@@ -16,5 +24,11 @@ export class JobsListComponent implements OnInit {
     
   }
 
-  
+  getAllJobs():void{
+    this.jobs_service.getAllJobs().subscribe((response: any)=>{
+      this.jobs=response.content;
+      
+    });
+  }
+
 }

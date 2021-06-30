@@ -1,3 +1,4 @@
+<app-main-nav-postulant>
 <div class="jobs-container-header">
   <h1>BÚSQUEDA DE EMPLEOS</h1>
 </div>
@@ -42,11 +43,7 @@
               </mat-panel-title>
             </mat-expansion-panel-header>
             <mat-list>
-              <mat-list-item (click)="getAllJobs()"> TODOS </mat-list-item>
-              <mat-list-item (click)="filterByDistritMolina()"> La Molina </mat-list-item>
-              <mat-list-item (click)="filterByDistritBorja()"> San Borja </mat-list-item>
-              <mat-list-item (click)="filterByDistritSurco()"> Santiago de Surco </mat-list-item>
-              <mat-list-item (click)="filterByDistritIsidro()"> San Isidro </mat-list-item>
+
              </mat-list>
           </mat-expansion-panel>
           <mat-expansion-panel (opened)="panelOpenState = true"
@@ -76,7 +73,7 @@
             </mat-expansion-panel-header>
             <p>I'm visible because I am open</p>
           </mat-expansion-panel>
-          
+
         </mat-accordion>
       </div>
     </div>
@@ -85,3 +82,5 @@
     <app-jobs-list [jobs]="jobs"></app-jobs-list>
   </div>
 </div>
+
+</app-main-nav-postulant>

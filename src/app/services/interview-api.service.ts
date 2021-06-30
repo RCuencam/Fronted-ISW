@@ -3,37 +3,42 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import {catchError, retry} from "rxjs/operators";
 import {Interview} from "../models/interview";
-import {Postulant} from "../models/postulant";
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class InterviewApiService {
-  basePath = 'http://localhost:3000/interviews';
 
-  httpOptions = {headers: new HttpHeaders({'Content-Type': 'aplication/json'})}
+  //Primero se define la ruta basica
+  basePath = 'https://jobagapi.herokuapp.com/api/postulants';
+
+  base = "https://jobagapi.herokuapp.com/api/interviews";
 
   constructor(private http: HttpClient) { }
 
-  //Api Error Handling
-  handleError(error: HttpErrorResponse): Observable<never>{
-    if (error.error instanceof ErrorEvent){
-      console.log('An error ocurred: ',error.error.message);
+  handleError(error: HttpErrorResponse): Observable<never> {
+    if (error.error instanceof ErrorEvent) {
+      console.log('An error occurred: ', error.error.message);
     }
     else {
-      console.log(`Backend returned code ${error.status}, body was:  ${error.error}`);
+      console.log(`Backend returned code ${error.status}, body was: ${error.error}`);
     }
-    return throwError('Something happened with request, please try again later')
+    return throwError('Something happened with request, please try again later.');
   }
 
-  getInterviewById(id: number): Observable<Interview>{
-    return this.http.get<Interview>(`${this.basePath}/${id}`)
+  getInterviewByPostulantIdAndJobOfferId(postulantId: number, jobofferId: number): Observable<Interview>{
+    return this.http.get<Interview>(`${this.basePath}/${postulantId}/joboffers/${jobofferId}/interviews`)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  getAllInterviews(): Observable<Interview>{
-    return this.http.get<Interview>(this.basePath)
+  getInterviewByPostulantId(postulantId:number) : Observable<Interview>{
+    return this.http.get<Interview>(`${this.basePath}/${postulantId}/interviews`)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  getAllInterview() : Observable<Interview>{
+    return this.http.get<Interview>(this.base)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

@@ -1,0 +1,53 @@
+<div class="profile-container-header">
+  <h1>REGISTRAR INFORMACIÓN PERSONAL</h1>
+</div>
+<div class="profile-container-contain">
+  <div class="form-group">
+
+    <form (submit)="postulantData">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Coloque sus nombres</mat-hint>
+        <input matInput matAutosizeMinRows=4 required name="name" [(ngModel)]="postulantData.firstname" placeholder="Nombre">
+      </mat-form-field>
+    </form>
+    <form (submit)="postulantData" >
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Coloque sus apellidos</mat-hint>
+        <input matInput matAutosizeMinRows=4 required name="name" [(ngModel)]="postulantData.lastname"   placeholder="Apellidos">
+      </mat-form-field>
+    </form>
+    <form >
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Coloque su Documento de Identidad</mat-hint>
+        <input matInput matAutosizeMinRows=4  name="document" type="number"   required [(ngModel)]="postulantData.document"  placeholder="Documento de Identidad">
+      </mat-form-field>
+    </form>
+    <form >
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Coloque su número de telefono</mat-hint>
+        <input type="email" matInput matAutosizeMinRows=4 name="telefono"  type="number" required [(ngModel)]="postulantData.number" placeholder="Número de telefono">
+      </mat-form-field>
+    </form>
+
+    <form >
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Coloque su Estado civil</mat-hint>
+        <input matInput matAutosizeMinRows=4 required name="estadocivil" [(ngModel)]="postulantData.civil_status" placeholder="Estado civil">
+      </mat-form-field>
+    </form>
+    <form >
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Coloque su correo electronico</mat-hint>
+        <input matInput matAutosizeMinRows=4 name="email" type="email" required [(ngModel)]="postulantData.email"   placeholder="Email">
+      </mat-form-field>
+    </form>
+    <form >
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Coloque su contraseña</mat-hint>
+        <input matInput matAutosizeMinRows=4 required name="password" type="password" [(ngModel)]="postulantData.password" placeholder="Password">
+      </mat-form-field>
+      <input  (click)="AddPostulant()"  [routerLink]="['/login']" class="mat-focus-indicator mat-button mat-button-base" value="Guardar Cambios">
+    </form>
+
+  </div>
+</div>

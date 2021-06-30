@@ -41,6 +41,30 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ContratComponent } from './pages/contrat/contrat.component';
 import { InterviewsComponent } from './pages/interviews/interviews.component';
 import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-postulant.component';
+import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
+import { EmployeerpruebaComponent } from './pages/employeerprueba/employeerprueba.component';
+import { LoginRegisterComponent } from './pages/login-register/login-register.component';
+import { ChoosePostulantOrEmployerComponent } from './pages/choose-postulant-or-employer/choose-postulant-or-employer.component';
+import { EmployeerNewComponent } from './pages/employeer-new/employeer-new.component';
+import { PostulantNewComponent } from './pages/postulant-new/postulant-new.component';
+import { MainNavEmployeerComponent } from './pages/main-nav-employeer/main-nav-employeer.component';
+import {EmployeerService} from "./services/employeer.service";
+import {PostulantService} from "./services/postulant.service";
+import {MatTabsModule} from "@angular/material/tabs";
+import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
+import {MatDatepickerModule} from "@angular/material/datepicker";
+import { JobOfferNewComponentComponent } from './pages/job-offer-new-component/job-offer-new-component.component';
+import { InterviewsPostulantApiComponent } from './pages/interviews-postulant-api/interviews-postulant-api.component';
+import { InterviewPostulantAllComponent } from './pages/interview-postulant-all/interview-postulant-all.component';
+import { DialogContratComponent } from './pages/dialog-contrat/dialog-contrat.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import { DialogJobNewComponent } from './pages/dialog-job-new/dialog-job-new.component';
+import { MyadsComponent } from './pages/myads/myads.component';
+import { MypostulationsComponent } from './pages/mypostulations/mypostulations.component';
+import { ModifyPersonalInformationPostulantComponent} from "./pages/modify-personal-information-postulant/modify-personal-information-postulant.component";
+import { ModifyPersonalInformationEmployeerComponent } from './pages/modify-personal-information-employeer/modify-personal-information-employeer.component';
+import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
+import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostulants.component';
 
 
 @NgModule({
@@ -63,65 +87,59 @@ import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-
     ContratComponent,
     InterviewsComponent,
     ApprovedPostulantComponent,
-
-  ],
-
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatGridListModule,
-    MatInputModule,
-    MatStepperModule,
-    MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatSortModule,
-    MatTableModule,
-    MatSidenavModule,
-    MatListModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    FilestackModule,
-    MatCheckboxModule,
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatGridListModule,
-    MatInputModule,
-    MatStepperModule,
-    MatFormFieldModule,
-    FormsModule,
-    ReactiveFormsModule,
-    MatCardModule,
-    MatSortModule,
-    MatTableModule,
-    MatSidenavModule,
-    MatListModule,
-    MatStepperModule,
-    ReactiveFormsModule,
-    FilestackModule,
-    MatCheckboxModule,
-    MatExpansionModule,
-    MatPaginatorModule,
-    MatChipsModule
+    MyAccountPostulantComponent,
+    EmployeerpruebaComponent,
+    LoginRegisterComponent,
+    ChoosePostulantOrEmployerComponent,
+    EmployeerNewComponent,
+    PostulantNewComponent,
+    MainNavEmployeerComponent,
+    ChangepasswordComponent,
+    InterviewsPostulantApiComponent,
+    InterviewPostulantAllComponent,
+    DialogContratComponent,
+    DialogJobNewComponent,
+    JobOfferNewComponentComponent,
+    MyadsComponent,
+    MypostulationsComponent,
+    MyAccountEmployeerComponent,
+    ModifyPersonalInformationPostulantComponent,
+    ModifyPersonalInformationEmployeerComponent,
+    SelectpostulantsComponent
 
 
   ],
-  providers: [PostulantsApiService,JobsApiService],
+
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatCardModule,
+        MatSortModule,
+        MatTableModule,
+        MatSidenavModule,
+        FilestackModule,
+        MatButtonModule,
+        MatGridListModule,
+        MatInputModule,
+        MatFormFieldModule,
+        FormsModule,
+        MatListModule,
+        MatStepperModule,
+        ReactiveFormsModule,
+        MatCheckboxModule,
+        MatExpansionModule,
+        MatPaginatorModule,
+        MatChipsModule,
+        MatTabsModule,
+        MatDatepickerModule,
+        MatDialogModule,
+
+    ],
+  providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
