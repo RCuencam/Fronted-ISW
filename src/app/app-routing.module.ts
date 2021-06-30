@@ -22,6 +22,7 @@ import {MyadsComponent} from "./pages/myads/myads.component";
 import {MypostulationsComponent} from "./pages/mypostulations/mypostulations.component";
 import {ModifyPersonalInformationEmployeerComponent} from "./pages/modify-personal-information-employeer/modify-personal-information-employeer.component";
 import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
+import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostulants.component';
 
 
 const routes: Routes = [
@@ -49,10 +50,24 @@ const routes: Routes = [
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
   {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
+
   {path:'employeer/:employeerId/joboffernew', component: JobOfferNewComponentComponent},
 
 
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant/contrat', component: ContratComponent},
+
+  {path: 'employeer/:employeerId/joboffer/:jobofferId/postulantjobs', component: SelectpostulantsComponent},
+  {path:'postulation/job/:id', component: PostulationsComponent},
+  {path:'home/:postulantId', component:SearchJobsComponent },
+  {path:'home/:postulantId/jobs', component : SearchJobsComponent},
+  {path:'postulation/job/:id', component: PostulationsComponent},
+  {path:':postulantId/jobs', component : SearchJobsComponent},
+  {path:'home/:postulantId/jobs/:id', component: JobInformationComponent},
+  {path:'home/:postulantId/jobs/:id/newpostulation', component: PostulationsComponent},
+
+  {path:':id/profile', component: ProfileStudentComponent},
+  {path:'contrat', component: ContratComponent},
+
   {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},
 
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent},

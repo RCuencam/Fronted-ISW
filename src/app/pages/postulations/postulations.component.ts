@@ -25,7 +25,7 @@ export class PostulationsComponent implements OnInit {
   jobId:number=0;
   jobInfo: Job;
   constructor(private route:ActivatedRoute, private jobs_service : JobsApiService, private breakpointObserver: BreakpointObserver) {
-    this.route.params.subscribe(params=>this.jobId=params.id)
+    this.route.params.subscribe(params=>this.jobId=params.jobofferId)
     this.jobInfo={} as Job;
     breakpointObserver.observe([
       Breakpoints.XSmall,
@@ -44,6 +44,7 @@ export class PostulationsComponent implements OnInit {
 
     this.jobs_service.getJobById(this.jobId).subscribe((response: any)=>{
       this.jobInfo=response;
+      console.log(response)
     });
 
   }
