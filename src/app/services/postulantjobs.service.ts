@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError, retry} from "rxjs/operators";
+import {Postulant} from "../models/postulant";
+import {Postulantjobs} from "../models/postulantjobs";
 
 @Injectable({
   providedIn: 'root'
@@ -30,6 +32,10 @@ export class PostulantjobsService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-
+  addPostulantJobs(postulantId:number, jobOfferId: number,item: any): Observable<Postulantjobs>{
+    return  this.http.post<Postulantjobs>(`${this.url}/postulants/${postulantId}/joboffers/${jobOfferId}/postulantjobs`, JSON.stringify(item),this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+    //pipe sirve para reintentar el request :D antes de mandarlo como error
+  }
 
 }
