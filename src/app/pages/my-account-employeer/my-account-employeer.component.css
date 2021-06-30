@@ -1,29 +1,20 @@
-.profile-container-header{
+
+/*---------------MAIN SECTION*/
+.account-container-header{
   text-align: center;
   margin: 50px auto;
 }
 
-.profile-container-header h1{
+.account-container-header h1{
   font-weight: 700;
   font-size: 3em;
   color: #1955AE;
 }
 
-.profile-container-content{
+.account-container-content{
   margin-top: auto;
   margin-bottom: auto;
-
 }
-
-.form-group{
-  text-align: center;
-}
-
-.profile-form-input{
-  width: 25%;
-  margin: 5px auto;
-}
-
 .mat-button{
   margin: 40px auto;
   width: 250px;
@@ -33,5 +24,3 @@
   padding: 5px 30px 5px 30px;
   text-align: center;
 }
-
-
