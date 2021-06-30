@@ -6,5 +6,4 @@ export interface User {
   number: number
   password: string
   document: number
-
 }

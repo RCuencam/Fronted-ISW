@@ -41,7 +41,6 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import { ContratComponent } from './pages/contrat/contrat.component';
 import { InterviewsComponent } from './pages/interviews/interviews.component';
 import { ApprovedPostulantComponent } from './pages/approved-postulant/approved-postulant.component';
-import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
 import { EmployeerpruebaComponent } from './pages/employeerprueba/employeerprueba.component';
 import { LoginRegisterComponent } from './pages/login-register/login-register.component';
@@ -62,7 +61,9 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { DialogJobNewComponent } from './pages/dialog-job-new/dialog-job-new.component';
 import { MyadsComponent } from './pages/myads/myads.component';
 import { MypostulationsComponent } from './pages/mypostulations/mypostulations.component';
-
+import { ModifyPersonalInformationPostulantComponent} from "./pages/modify-personal-information-postulant/modify-personal-information-postulant.component";
+import { ModifyPersonalInformationEmployeerComponent } from './pages/modify-personal-information-employeer/modify-personal-information-employeer.component';
+import { MyAccountEmployeerComponent } from './pages/my-account-employeer/my-account-employeer.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,6 @@ import { MypostulationsComponent } from './pages/mypostulations/mypostulations.c
     ContratComponent,
     InterviewsComponent,
     ApprovedPostulantComponent,
-    ModifyPersonalInformationComponent,
     MyAccountPostulantComponent,
     EmployeerpruebaComponent,
     LoginRegisterComponent,
@@ -99,8 +99,10 @@ import { MypostulationsComponent } from './pages/mypostulations/mypostulations.c
     DialogJobNewComponent,
     JobOfferNewComponentComponent,
     MyadsComponent,
-    MypostulationsComponent
-
+    MypostulationsComponent,
+    ModifyPersonalInformationPostulantComponent,
+    ModifyPersonalInformationEmployeerComponent,
+    MyAccountEmployeerComponent
   ],
 
     imports: [

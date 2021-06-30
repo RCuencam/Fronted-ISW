@@ -7,7 +7,7 @@ import {User} from "../models/user";
 @Injectable({
   providedIn: 'root'
 })
-export class ModifyPersonalInformationPostulantApiService {
+export class ModifyPersonalInformationEmployeerApiService {
 
   constructor(private http: HttpClient) {
   }
