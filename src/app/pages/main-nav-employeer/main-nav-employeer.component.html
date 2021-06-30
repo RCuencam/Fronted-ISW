@@ -19,10 +19,17 @@
 
       <br><br><br>
       <a mat-list-item [routerLink]="['/employeer',employeerId]" (click)="drawer.toggle()">Mis anuncios   <span class="default-spacer"></span><mat-icon>fiber_manual_record  </mat-icon></a>
+<<<<<<< HEAD
       <a  mat-list-item [routerLink]="['/employeer/', employeerId, 'joboffernew']"  (click)="drawer.toggle()"    > Publicar anuncio  <span class="default-spacer"></span><mat-icon>Entrevistas pendientes</mat-icon> </a>
       <a mat-list-item routerLink="/postulations" (click)="drawer.toggle()">Mi cuenta    <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
       <a mat-list-item href="/job/interview/:id">Suscripción <span class="default-spacer"></span> <mat-icon>account_circle</mat-icon></a>
       <a mat-list-item routerLink="/myaccount" (click)="drawer.toggle()">salir  <span class="default-spacer"></span><mat-icon>settings</mat-icon> </a>
+=======
+
+      <a mat-list-item routerLink="/postulations" (click)="drawer.toggle()">Entrevistas   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
+      <a mat-list-item [routerLink]="['/employeer/',employeerId,'myaccount']" (click)="drawer.toggle()" >Mi cuenta <span class="default-spacer"></span> <mat-icon>account_circle</mat-icon></a>
+      <a mat-list-item routerLink="/myaccount" (click)="drawer.toggle()">Configuración  <span class="default-spacer"></span><mat-icon>settings</mat-icon> </a>
+>>>>>>> 7d6b49caa74480fdd1b6f90d5e8a95fe0fa9a720
       <a mat-list-item href="#">Cerrar sesión<span class="default-spacer"></span><mat-icon>settings</mat-icon></a>
     </mat-nav-list>
   </mat-sidenav>
@@ -38,7 +45,7 @@
       </button>
       <span class="default-spacer"></span>
       <div class="user-icon">User</div>
-      <span class="user-name"  >Bienvenida {{employeerData.firstname}}!</span>
+      <span class="user-name"  >Bienvenido(a) {{employeerData.firstname}}!</span>
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="user-logout">
         Log Out
       </button>

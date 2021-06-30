@@ -8,7 +8,7 @@ import {catchError, retry} from "rxjs/operators";
 })
 export class JobsApiService {
 
-  basePath = 'http://localhost:3000/jobs';
+  private url: string = "https://jobagapi.herokuapp.com/api/employeers"
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'aplication/json'})}
 
   handleError(error: HttpErrorResponse): Observable<never>{
@@ -24,13 +24,13 @@ export class JobsApiService {
   constructor(private http: HttpClient) { }
 
   getAllJobs(): Observable<Job>{
-    return this.http.get<Job>(this.basePath)
+    return this.http.get<Job>(this.url)
       .pipe(retry(2), catchError(this.handleError));
   }
 
   getJobById(id: number): Observable<Job>{
-    return this.http.get<Job>(`${this.basePath}/${id}`)
+    return this.http.get<Job>(`${this.url}/${id}`)
       .pipe(retry(2), catchError(this.handleError));
   }
-  
+
 }

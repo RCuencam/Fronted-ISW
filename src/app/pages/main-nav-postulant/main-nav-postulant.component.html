@@ -25,9 +25,12 @@
       <a mat-list-item [routerLink]="['/']" (click)="drawer.toggle()">Cerrar sesión <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
 
     </mat-nav-list>
+
   </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar>
+
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -38,7 +41,7 @@
       </button>
       <span class="default-spacer"></span>
       <div class="user-icon">User</div>
-      <span class="user-name">Bienvenida {{postulantData.firstname}}!</span>
+      <span class="user-name">Bienvenido(a) {{postulantData.firstname}}!</span>
       <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="user-logout">
         Log Out
       </button>

@@ -8,7 +8,7 @@ import {ProfileStudentComponent} from "./pages/profile-student/profile-student.c
 import {ContratComponent} from "./pages/contrat/contrat.component";
 import {InterviewsComponent} from "./pages/interviews/interviews.component";
 import {MyAccountPostulantComponent} from "./pages/my-account-postulant/my-account-postulant.component";
-import {ModifyPersonalInformationComponent} from "./pages/modify-personal-information/modify-personal-information.component";
+import {ModifyPersonalInformationPostulantComponent} from "./pages/modify-personal-information-postulant/modify-personal-information-postulant.component";
 import {LoginRegisterComponent} from "./pages/login-register/login-register.component";
 import {ChoosePostulantOrEmployerComponent} from "./pages/choose-postulant-or-employer/choose-postulant-or-employer.component";
 import {EmployeerNewComponent} from "./pages/employeer-new/employeer-new.component";
@@ -20,6 +20,8 @@ import {InterviewPostulantAllComponent} from "./pages/interview-postulant-all/in
 import {ApprovedPostulantComponent} from "./pages/approved-postulant/approved-postulant.component";
 import {MyadsComponent} from "./pages/myads/myads.component";
 import {MypostulationsComponent} from "./pages/mypostulations/mypostulations.component";
+import {ModifyPersonalInformationEmployeerComponent} from "./pages/modify-personal-information-employeer/modify-personal-information-employeer.component";
+
 
 const routes: Routes = [
   {path:'login', component: LoginRegisterComponent},
@@ -35,8 +37,11 @@ const routes: Routes = [
   {path:'postulant/:postulantId/postulations', component: MypostulationsComponent},
   {path:'postulant/:postulantId/myaccount', component : MyAccountPostulantComponent},
 
+
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
   {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
   {path:'employeer/:employeerId/joboffernew', component: JobOfferNewComponentComponent},
@@ -44,6 +49,7 @@ const routes: Routes = [
 
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant/contrat', component: ContratComponent},
   {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},
+
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent},
 
 
@@ -52,6 +58,19 @@ const routes: Routes = [
 
 
 
+  {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
+
+  {path:'login', component: LoginRegisterComponent},
+  {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
+  {path:'employeer/new', component: EmployeerNewComponent},
+  {path:'postulant/new', component: PostulantNewComponent},
+  {path:'home/:employeerId', component: MainNavEmployeerComponent},
+  {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
+  {path:'postulants/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent},
+
+
+  {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
+  {path:'employeer/:employeerId/modify-personal-information-employeer', component : ModifyPersonalInformationEmployeerComponent}
 ];
 
 @NgModule({
