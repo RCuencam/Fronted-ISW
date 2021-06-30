@@ -21,6 +21,7 @@ import {ApprovedPostulantComponent} from "./pages/approved-postulant/approved-po
 import {MyadsComponent} from "./pages/myads/myads.component";
 import {MypostulationsComponent} from "./pages/mypostulations/mypostulations.component";
 import {ModifyPersonalInformationEmployeerComponent} from "./pages/modify-personal-information-employeer/modify-personal-information-employeer.component";
+import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
 
 
 const routes: Routes = [
@@ -41,6 +42,10 @@ const routes: Routes = [
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
 
+
+  {path:'employeer/:employeerId/myaccount', component : MyAccountEmployeerComponent},
+  {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
+  {path:'employeer/:employeerId/modify-personal-information-employeer', component : ModifyPersonalInformationEmployeerComponent},
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
   {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
@@ -69,8 +74,7 @@ const routes: Routes = [
   {path:'postulants/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent},
 
 
-  {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
-  {path:'employeer/:employeerId/modify-personal-information-employeer', component : ModifyPersonalInformationEmployeerComponent},
+
 ];
 
 @NgModule({

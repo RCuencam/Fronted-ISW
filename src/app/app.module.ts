@@ -63,6 +63,7 @@ import { MyadsComponent } from './pages/myads/myads.component';
 import { MypostulationsComponent } from './pages/mypostulations/mypostulations.component';
 import { ModifyPersonalInformationPostulantComponent} from "./pages/modify-personal-information-postulant/modify-personal-information-postulant.component";
 import { ModifyPersonalInformationEmployeerComponent } from './pages/modify-personal-information-employeer/modify-personal-information-employeer.component';
+import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
 
 
 @NgModule({
@@ -100,6 +101,7 @@ import { ModifyPersonalInformationEmployeerComponent } from './pages/modify-pers
     JobOfferNewComponentComponent,
     MyadsComponent,
     MypostulationsComponent,
+    MyAccountEmployeerComponent,
     ModifyPersonalInformationPostulantComponent,
     ModifyPersonalInformationEmployeerComponent,
 
