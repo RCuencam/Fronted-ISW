@@ -1,0 +1,33 @@
+<app-main-nav-postulant>
+<div class="profile-container-header">
+  <h1>PERFIL PROFESIONAL</h1>
+</div>
+<div class="profile-container-contain">
+  <div class="form-group">
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Ocupación</mat-hint>
+        <input  id="name" matInput matAutosizeMinRows=4 c [(ngModel)]="newocupation" placeholder="{{profileData.ocupation}}">
+      </mat-form-field>
+    </form>
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Descripción</mat-hint>
+        <input matInput matAutosizeMinRows=4  required name="description" [(ngModel)]="newdescription" placeholder="{{profileData.description}}">
+      </mat-form-field>
+    </form>
+
+    <form action="">
+      <mat-form-field appearance="outline" class="profile-form-input">
+        <mat-hint>Link de video de presentación</mat-hint>
+        <input matInput  matAutosizeMinRows=4 required name= "link" [(ngModel)]="newvideo" placeholder="{{profileData.video}}">
+      </mat-form-field>
+    </form>
+
+
+    <br>
+  <br><br>
+  <button class="btn-option" (click)="getAllProfiles()" [routerLink]="['Home/',postulantId]" mat-raised-button color="primary"  >Guardar cambios</button>
+  </div>
+</div>
+</app-main-nav-postulant>

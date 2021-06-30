@@ -64,6 +64,7 @@ import { MypostulationsComponent } from './pages/mypostulations/mypostulations.c
 import { ModifyPersonalInformationPostulantComponent} from "./pages/modify-personal-information-postulant/modify-personal-information-postulant.component";
 import { ModifyPersonalInformationEmployeerComponent } from './pages/modify-personal-information-employeer/modify-personal-information-employeer.component';
 import { MyAccountEmployeerComponent } from './pages/my-account-employeer/my-account-employeer.component';
+import { ModifyProfessionalProfileComponent } from './pages/modify-professional-profile/modify-professional-profile.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +103,8 @@ import { MyAccountEmployeerComponent } from './pages/my-account-employeer/my-acc
     MypostulationsComponent,
     ModifyPersonalInformationPostulantComponent,
     ModifyPersonalInformationEmployeerComponent,
-    MyAccountEmployeerComponent
+    MyAccountEmployeerComponent,
+    ModifyProfessionalProfileComponent
   ],
 
     imports: [
