@@ -62,6 +62,7 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { DialogJobNewComponent } from './pages/dialog-job-new/dialog-job-new.component';
 import { MyadsComponent } from './pages/myads/myads.component';
 import { MypostulationsComponent } from './pages/mypostulations/mypostulations.component';
+import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostulants.component';
 
 
 @NgModule({
@@ -99,7 +100,8 @@ import { MypostulationsComponent } from './pages/mypostulations/mypostulations.c
     DialogJobNewComponent,
     JobOfferNewComponentComponent,
     MyadsComponent,
-    MypostulationsComponent
+    MypostulationsComponent,
+    SelectpostulantsComponent
 
   ],
 

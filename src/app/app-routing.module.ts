@@ -20,6 +20,7 @@ import {InterviewPostulantAllComponent} from "./pages/interview-postulant-all/in
 import {ApprovedPostulantComponent} from "./pages/approved-postulant/approved-postulant.component";
 import {MyadsComponent} from "./pages/myads/myads.component";
 import {MypostulationsComponent} from "./pages/mypostulations/mypostulations.component";
+import {SelectpostulantsComponent} from "./pages/selectpostulants/selectpostulants.component";
 
 const routes: Routes = [
   {path:'login', component: LoginRegisterComponent},
@@ -37,6 +38,7 @@ const routes: Routes = [
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
   {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
+  {path: 'employeer/:employeerId/joboffer/:jobofferId/postulantjobs', component: SelectpostulantsComponent},
   {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'home/:postulantId', component:SearchJobsComponent },
   {path:'home/:postulantId/jobs', component : SearchJobsComponent},
