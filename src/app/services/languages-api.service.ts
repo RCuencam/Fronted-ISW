@@ -4,16 +4,15 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError, retry} from "rxjs/operators";
 import {MatChipInputEvent} from "@angular/material/chips";
-import {Language} from "../pages/modify-professional-profile/modify-professional-profile.component";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LanguagesApiService {
-  basePath = 'http://localhost:3000/interviews';
-
+  private url: string = "https://jobagapi.herokuapp.com/api/languages"
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})}
   constructor(private http: HttpClient) { }
+
   handleError(error: HttpErrorResponse): Observable<never>{
     if (error.error instanceof ErrorEvent){
       console.log('An error ocurred: ',error.error.message);
@@ -24,18 +23,18 @@ export class LanguagesApiService {
     return throwError('Something happened with request, please try again later')
   }
 
-  addLanguage(item: any): Observable<Languages>{
-    return this.http.post<Languages>(this.basePath, JSON.stringify(item), this.httpOptions)
+  addLanguage(item: Languages): Observable<Languages>{
+    return this.http.post<Languages>(this.url, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  updateLanguage(id: number, item: Language): Observable<Languages>{
-    return this.http.put<Languages>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
+  updateLanguage(id: number, item: Languages): Observable<Languages>{
+    return this.http.put<Languages>(`${this.url}/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
   getLanguagesById(id:number): Observable<Languages>{
-    return this.http.get<Languages>(`${this.basePath}/${id}`)
+    return this.http.get<Languages>(`${this.url}/${id}`)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

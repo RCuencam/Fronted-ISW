@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DialogContratComponent} from "../dialog-contrat/dialog-contrat.component";
+import {DialogContratComponent} from "../dialog-changes-saved-successfully/dialog-contrat.component";
 import {MatDialog} from "@angular/material/dialog";
 import {InterviewApiService} from "../../services/interview-api.service";
 import {ActivatedRoute, Router} from "@angular/router";

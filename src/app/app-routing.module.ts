@@ -23,6 +23,8 @@ import {MypostulationsComponent} from "./pages/mypostulations/mypostulations.com
 import {ModifyPersonalInformationEmployeerComponent} from "./pages/modify-personal-information-employeer/modify-personal-information-employeer.component";
 import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
 import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
+import {ModifyCompanyProfileComponent} from "./pages/modify-company-profile/modify-company-profile.component";
+import {TermsAndConditionsComponent} from "./pages/terms-and-conditions/terms-and-conditions.component";
 
 const routes: Routes = [
   {path:'login', component: LoginRegisterComponent},
@@ -64,7 +66,9 @@ const routes: Routes = [
 
   {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
   {path:'employeer/:employeerId/modify-personal-information-employeer', component : ModifyPersonalInformationEmployeerComponent},
-  {path:'postulant/:postulantId/modify-professional-profile', component : ModifyProfessionalProfileComponent}
+  {path:'postulant/:postulantId/modify-professional-profile', component : ModifyProfessionalProfileComponent},
+  {path:'employeer/:employeerId/modify-company-profile', component : ModifyCompanyProfileComponent},
+  {path:'terms-and-conditions', component : TermsAndConditionsComponent}
 ];
 
 @NgModule({

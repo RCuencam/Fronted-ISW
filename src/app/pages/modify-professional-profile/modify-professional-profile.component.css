@@ -14,3 +14,13 @@
 .btn-option{
   width: 15%;
 }
+
+@media screen and (max-width:768px) {
+  .profile-form-input{
+    width: 85%;
+  }
+
+  .btn-option{
+    width: 50%;
+  }
+}
