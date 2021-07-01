@@ -68,6 +68,7 @@ import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostul
 import { NewInterviewComponent } from './pages/new-interview/new-interview.component';
 import { MyadInformationComponent } from './pages/myad-information/myad-information.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { SelectpostulantsMoreinfoComponent } from './pages/selectpostulants-moreinfo/selectpostulants-moreinfo.component';
 
 
 @NgModule({
@@ -110,7 +111,8 @@ import {MatMenuModule} from '@angular/material/menu';
     ModifyPersonalInformationEmployeerComponent,
     SelectpostulantsComponent,
     NewInterviewComponent,
-    MyadInformationComponent
+    MyadInformationComponent,
+    SelectpostulantsMoreinfoComponent
 
 
 

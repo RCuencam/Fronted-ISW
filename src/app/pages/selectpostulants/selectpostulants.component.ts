@@ -16,6 +16,7 @@ export class SelectpostulantsComponent implements OnInit {
   postulantjobs:Array<Postulantjobs>=[];
 
   jobOfferId!: number;
+  employeerId!: number
   jobofferData!: Job
    postulantJobsData!: Postulantjobs
   postulantaccept: Array<Boolean>=[];
@@ -29,11 +30,15 @@ export class SelectpostulantsComponent implements OnInit {
     this.jobofferData={}as Job
     this._panelOpenState = false;
 
+    this.route.params.subscribe(params=>this.employeerId=params.employeerId)
+
   }
 
   ngOnInit(): void {
     this.getallPostulantJobsByJobOfferId();
     this.getJobOfferbyId();
+    this.route.params.subscribe(params=>this.jobOfferId=params.jobofferId)
+    console.log(this.jobOfferId)
 
   }
 

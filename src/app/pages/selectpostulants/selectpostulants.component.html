@@ -10,7 +10,7 @@
       <li class="job-item" *ngFor="let postulantjob of postulantjobs"   >
         <div class="job-item-text-left">
 
-          <h2>{{postulantjob.firstNamePostulant +' '+postulantjob.lastNamePostulant }}</h2>
+          <h2 [routerLink]="['/','employeer',employeerId,'joboffer',jobOfferId,'postulantjobs',postulantjob.postulantId] ">{{postulantjob.firstNamePostulant +' '+postulantjob.lastNamePostulant }} </h2>
 
         </div>
         <div class="job-item-text-right">
