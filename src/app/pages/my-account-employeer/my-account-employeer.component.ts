@@ -6,6 +6,7 @@ import {Postulant} from "../../models/postulant";
 import {ActivatedRoute, Router} from "@angular/router";
 import {EmployeerService} from "../../services/employeer.service";
 import {Employeer} from "../../models/employeer";
+import {Job} from "../../models/job";
 
 @Component({
   selector: 'app-my-account-employeer',
@@ -28,6 +29,7 @@ export class MyAccountEmployeerComponent {
     this.getEmployeerId();
   }
   constructor(private breakpointObserver: BreakpointObserver, private router: Router, private route: ActivatedRoute,private employeerApiService: EmployeerService) {
+    this.employeerData={} as Employeer;
   }
 
   getEmployeerId(): void{

@@ -72,3 +72,20 @@
         margin: 0 auto;
     }
 }
+
+.postulation-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 3px 6px -2px #000000;
+    margin: 30px 0;
+    cursor: pointer;
+    transition: all 500ms;
+}
+.postulation-item:hover{
+    transform: scale(1.05);
+}
+.postulation-item h2{
+    color: #1955AE;
+}

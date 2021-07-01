@@ -5,6 +5,7 @@ import {map, shareReplay} from "rxjs/operators";
 import {Postulant} from "../../models/postulant";
 import {ActivatedRoute, Router} from "@angular/router";
 import {PostulantService} from "../../services/postulant.service";
+import {Employeer} from "../../models/employeer";
 
 @Component({
   selector: 'app-main-nav-postulant',
@@ -26,6 +27,7 @@ export class MainNavPostulantComponent {
     this.getPostulantId();
   }
   constructor(private breakpointObserver: BreakpointObserver, private router: Router, private route: ActivatedRoute,private postulantApiService: PostulantService) {
+    this.postulantData={} as Postulant;
   }
 
   getPostulantId(): void{

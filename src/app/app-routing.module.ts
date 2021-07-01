@@ -23,6 +23,7 @@ import {MypostulationsComponent} from "./pages/mypostulations/mypostulations.com
 import {ModifyPersonalInformationEmployeerComponent} from "./pages/modify-personal-information-employeer/modify-personal-information-employeer.component";
 import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
 import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostulants.component';
+import { MyadInformationComponent } from './pages/myad-information/myad-information.component';
 
 
 const routes: Routes = [
@@ -39,6 +40,9 @@ const routes: Routes = [
   {path:'postulant/:postulantId/postulations', component: MypostulationsComponent},
   {path:'postulant/:postulantId/myaccount', component : MyAccountPostulantComponent},
   {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
+  {path:'joboffer/:jobofferId/employeers/:employeerId', component: MyadInformationComponent},
+
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
@@ -53,35 +57,22 @@ const routes: Routes = [
 
   {path:'employeer/:employeerId/joboffernew', component: JobOfferNewComponentComponent},
 
-
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant/contrat', component: ContratComponent},
-
-
-  {path:'postulation/job/:id', component: PostulationsComponent},
-  {path:'home/:postulantId', component:SearchJobsComponent },
-  {path:'home/:postulantId/jobs', component : SearchJobsComponent},
-  {path:'postulation/job/:id', component: PostulationsComponent},
-  {path:'contrat', component: ContratComponent},
 
   {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},
 
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent},
 
-
-
-
-
-
-
   {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
 
-  {path:'login', component: LoginRegisterComponent},
   {path:'choosePostulantOrEmployeer', component: ChoosePostulantOrEmployerComponent},
-  {path:'employeer/new', component: EmployeerNewComponent},
-  {path:'postulant/new', component: PostulantNewComponent},
-  {path:'home/:employeerId', component: MainNavEmployeerComponent},
-  {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
-  {path:'postulants/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent},
+
+
+
+
+
+
+
 
 
 

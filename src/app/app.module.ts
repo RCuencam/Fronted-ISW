@@ -66,6 +66,8 @@ import { ModifyPersonalInformationEmployeerComponent } from './pages/modify-pers
 import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
 import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostulants.component';
 import { NewInterviewComponent } from './pages/new-interview/new-interview.component';
+import { MyadInformationComponent } from './pages/myad-information/myad-information.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -107,7 +109,9 @@ import { NewInterviewComponent } from './pages/new-interview/new-interview.compo
     ModifyPersonalInformationPostulantComponent,
     ModifyPersonalInformationEmployeerComponent,
     SelectpostulantsComponent,
-    NewInterviewComponent
+    NewInterviewComponent,
+    MyadInformationComponent
+
 
 
   ],
@@ -139,7 +143,7 @@ import { NewInterviewComponent } from './pages/new-interview/new-interview.compo
         MatTabsModule,
         MatDatepickerModule,
         MatDialogModule,
-
+        MatMenuModule,
     ],
   providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
   bootstrap: [AppComponent]

@@ -26,6 +26,7 @@ export class SelectpostulantsComponent implements OnInit {
               private router: Router,
               private route: ActivatedRoute) {
     this.postulantJobsData = {} as Postulantjobs;
+    this.jobofferData={}as Job
     this._panelOpenState = false;
 
   }
@@ -41,8 +42,6 @@ export class SelectpostulantsComponent implements OnInit {
       this.postulantjobs_service.getAllPostulantJobsByJobOfferId(paramsJobOffer.jobofferId)
         .subscribe((response: any) => {
           this.postulantjobs = response.content;
-
-
 
         });
     })));

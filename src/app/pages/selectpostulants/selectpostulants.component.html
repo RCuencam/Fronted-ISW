@@ -7,7 +7,7 @@
 
   <div class="job-list-container-list">
     <ul>
-      <li class="job-item" *ngFor="let postulantjob of postulantjobs"  >
+      <li class="job-item" *ngFor="let postulantjob of postulantjobs"   >
         <div class="job-item-text-left">
 
           <h2>{{postulantjob.firstNamePostulant +' '+postulantjob.lastNamePostulant }}</h2>
@@ -18,12 +18,12 @@
           </div>
 
           <mat-checkbox [(ngModel)]="postulantjob.accept"    >  </mat-checkbox>
-          <span>{{postulantjob.accept ? 'Aceptado':'No aceptado' }} </span>
+          <span class="span_name">{{postulantjob.accept ? 'Aceptado':'No aceptado' }} </span>
         </div>
       </li>
     </ul>
   </div>
-
+    <button class="btn-option"  mat-stroked-button color="primary"  >Cambiar Contraseña</button>
   </div>
 </app-main-nav-employeer>
 
