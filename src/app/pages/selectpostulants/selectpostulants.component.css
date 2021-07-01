@@ -1,4 +1,18 @@
 
+.titulo_h1{
+  text-align: center;
+  color: #1955AE;
+  font-size: xxx-large;
+
+}
+
+.titulo_h2{
+  margin-top: 30px;
+  text-align: center;
+  color: #1955AE;
+  font-size: xxx-large;
+
+}
 .job-item{
   border-radius: 10px;
   margin: 30px 100px 0 0;
