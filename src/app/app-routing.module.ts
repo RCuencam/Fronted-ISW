@@ -25,6 +25,7 @@ import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-accou
 import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostulants.component';
 import { MyadInformationComponent } from './pages/myad-information/myad-information.component';
 import {SelectpostulantsMoreinfoComponent} from "./pages/selectpostulants-moreinfo/selectpostulants-moreinfo.component";
+import {NewInterviewComponent} from "./pages/new-interview/new-interview.component";
 
 
 const routes: Routes = [
@@ -53,6 +54,7 @@ const routes: Routes = [
   {path: 'employeer/:employeerId/joboffer/:jobofferId/postulantjobs', component: SelectpostulantsComponent},
   {path: 'employeer/:employeerId/joboffer/:jobofferId/postulantjobs/:postulantjobsId', component: SelectpostulantsMoreinfoComponent},
   {path:'employeer/:employeerId/modify-personal-information-employeer', component : ModifyPersonalInformationEmployeerComponent},
+  {path: 'employeer/:employeerId/joboffer/:jobofferId/interviewnew', component : NewInterviewComponent},
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
   {path:'employeer/:employeerId', component: MyadsComponent},   //HOME EMPLEADOR
