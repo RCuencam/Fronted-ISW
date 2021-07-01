@@ -30,6 +30,9 @@ export class PostulantjobsService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-
+  getAllPostulantJobsByPostulantId(id : number){
+    return this.http.get(`${this.url}/postulants/${id}/postulantjobs`)
+      .pipe(retry(2), catchError(this.handleError));
+  }
 
 }

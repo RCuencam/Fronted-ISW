@@ -23,6 +23,7 @@ import {MypostulationsComponent} from "./pages/mypostulations/mypostulations.com
 import {ModifyPersonalInformationEmployeerComponent} from "./pages/modify-personal-information-employeer/modify-personal-information-employeer.component";
 import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
 import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostulants.component';
+import { MyadInformationComponent } from './pages/myad-information/myad-information.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
   {path:'postulant/:postulantId/interview', component: InterviewPostulantAllComponent},
   {path:'postulant/:postulantId/postulations', component: MypostulationsComponent},
   {path:'postulant/:postulantId/myaccount', component : MyAccountPostulantComponent},
+  {path:'joboffer/:jobofferId/employeers/:employeerId', component: MyadInformationComponent},
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante

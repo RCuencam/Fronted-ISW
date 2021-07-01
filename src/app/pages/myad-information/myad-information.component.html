@@ -1,0 +1,86 @@
+<app-main-nav-employeer>
+    <div class="job-information-container">
+        <div class="job-item">
+          <div class="job-item-text-left">
+            <ng-template [ngIf]="modify" [ngIfElse]="editInfoTop">
+                <span>{{jobInfo.direction}}</span>
+                <h2>{{jobInfo.title}}</h2>
+                <span>{{jobInfo.type}}</span>
+            </ng-template>
+            <ng-template #editInfoTop>
+                <mat-form-field>
+                    <mat-label>Dirección:</mat-label>
+                    <input matInput [(ngModel)]="direction">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Título:</mat-label>
+                    <input matInput [(ngModel)]="title">
+                </mat-form-field>
+                <br>
+                <mat-form-field>
+                    <mat-label>Tipo:</mat-label>
+                    <input matInput [(ngModel)]="type">
+                </mat-form-field>
+            </ng-template>
+          </div>
+          <div class="job-item-text-right">
+            <div class="job-item-text-right-img">
+            </div>
+            <br>
+            <span>Publicado el: {{jobInfo.final_date_offer}}</span>
+          </div>
+        </div>
+        <div class="job-info">
+          <h2>Detalles del aviso</h2>
+          <ng-template [ngIf]="modify" [ngIfElse]="editInfoDetails">
+              <p>{{jobInfo.description}}</p>
+          </ng-template>
+          <ng-template #editInfoDetails class="detail-info">
+            <mat-form-field>
+                <mat-label>Detalles:</mat-label>
+                <textarea matInput [(ngModel)]="description"></textarea>
+            </mat-form-field>
+          </ng-template>
+          <br>
+          <div class="job-info-button">
+              <ng-template [ngIf]="modify" [ngIfElse]="buttonSave">
+                  <button mat-button (click)="goBack()">Cerrar Postulacion</button>
+              </ng-template>
+              <ng-template #buttonSave>
+                <button mat-button (click)="editJob()">Actualizar Anuncio</button>
+              </ng-template>
+          </div>
+          <div class="example-button-container">
+            <button mat-fab color="primary" mat-button [matMenuTriggerFor]="menu"><mat-icon>more_vert</mat-icon></button>
+            <mat-menu #menu="matMenu" yPosition="above">
+                <div class="mat-menu-item">
+                    <div class="mat-menu-item-content">
+                        <p>Ver Postulantes</p>
+                    </div>
+                    <div class="mat-menu-item-content">
+                        <mat-icon>camera_alt</mat-icon>
+                    </div>
+                </div>
+                <div class="mat-menu-item">
+                    <div class="mat-menu-item-content">
+                        <p>Crear Entrevista</p>
+                    </div>
+                    <div class="mat-menu-item-content">
+                        <mat-icon>search</mat-icon>
+                    </div>
+                </div>
+                <div class="mat-menu-item" (click)="handleModify()">
+                    <div class="mat-menu-item-content">
+                        <p>Modificar Datos</p>
+                    </div>
+                    <div class="mat-menu-item-content">
+                        <mat-icon>edit</mat-icon>
+                    </div>
+                </div>
+            </mat-menu>
+          </div>
+        </div>
+
+    </div>
+</app-main-nav-employeer>

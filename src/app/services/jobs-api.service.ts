@@ -9,7 +9,8 @@ import {catchError, retry} from "rxjs/operators";
 export class JobsApiService {
 
   private url: string = "https://jobagapi.herokuapp.com/api/jobOffers/"
-  httpOptions = {headers: new HttpHeaders({'Content-Type': 'aplication/json'})}
+  private jobofferEmployeersUrl : string="https://jobagapi.herokuapp.com/api/employeers"
+  httpOptions = {headers: new HttpHeaders({'Content-Type': 'aplication/json','Access-Control-Allow-Origin': '*'})}
 
   handleError(error: HttpErrorResponse): Observable<never>{
     if (error.error instanceof ErrorEvent){
@@ -31,6 +32,22 @@ export class JobsApiService {
   getJobById(id: number): Observable<Job>{
     return this.http.get<Job>(`${this.url}/${id}`)
       .pipe(retry(2), catchError(this.handleError));
+  }
+  getAllJobsByEmployeerId(id: number) : Observable<Job>{
+    return this.http.get<Job>(`${this.jobofferEmployeersUrl}/${id}/joboffers`)
+    .pipe(retry(2), catchError(this.handleError));
+  }
+  
+  getJobByEmployeerId(idJob : number, idEmployeer : number):Observable<Job>{
+    return this.http.get<Job>(`${this.url}/${idJob}/employeers/${idEmployeer}`)
+    .pipe(retry(2),catchError(this.handleError));
+  }
+
+  updateJobByEmployeerId(idJob: number, employeerId : number,data: Job):Observable<Job>{
+    console.log(data);
+    
+    return this.http.put<Job>(`${this.jobofferEmployeersUrl}/${employeerId}/jobOffers/${idJob}`,data)
+    .pipe(retry(2), catchError(this.handleError));
   }
 
 }
