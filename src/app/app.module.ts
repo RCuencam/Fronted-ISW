@@ -65,6 +65,7 @@ import { ModifyPersonalInformationPostulantComponent} from "./pages/modify-perso
 import { ModifyPersonalInformationEmployeerComponent } from './pages/modify-personal-information-employeer/modify-personal-information-employeer.component';
 import {MyAccountEmployeerComponent} from "./pages/my-account-employeer/my-account-employeer.component";
 import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostulants.component';
+import { NewInterviewComponent } from './pages/new-interview/new-interview.component';
 
 
 @NgModule({
@@ -105,7 +106,8 @@ import { SelectpostulantsComponent } from './pages/selectpostulants/selectpostul
     MyAccountEmployeerComponent,
     ModifyPersonalInformationPostulantComponent,
     ModifyPersonalInformationEmployeerComponent,
-    SelectpostulantsComponent
+    SelectpostulantsComponent,
+    NewInterviewComponent
 
 
   ],

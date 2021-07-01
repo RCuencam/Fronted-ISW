@@ -38,14 +38,14 @@ const routes: Routes = [
   {path:'postulant/:postulantId/interview', component: InterviewPostulantAllComponent},
   {path:'postulant/:postulantId/postulations', component: MypostulationsComponent},
   {path:'postulant/:postulantId/myaccount', component : MyAccountPostulantComponent},
-
+  {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
 
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
 
 
   {path:'employeer/:employeerId/myaccount', component : MyAccountEmployeerComponent},
-  {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
+  {path: 'employeer/:employeerId/joboffer/:jobofferId/postulantjobs', component: SelectpostulantsComponent},
   {path:'employeer/:employeerId/modify-personal-information-employeer', component : ModifyPersonalInformationEmployeerComponent},
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
@@ -56,7 +56,7 @@ const routes: Routes = [
 
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant/contrat', component: ContratComponent},
 
-  {path: 'employeer/:employeerId/joboffer/:jobofferId/postulantjobs', component: SelectpostulantsComponent},
+
   {path:'postulation/job/:id', component: PostulationsComponent},
   {path:'home/:postulantId', component:SearchJobsComponent },
   {path:'home/:postulantId/jobs', component : SearchJobsComponent},

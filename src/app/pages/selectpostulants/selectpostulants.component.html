@@ -1,13 +1,28 @@
 <app-main-nav-employeer>
-  <h1 style="text-align:center;color:#1955AE">{{postulantjobsData.id}}</h1>
+  <br>
+  <h1 style="text-align:center;color:#1955AE">{{jobofferData.title}}</h1>
+  <div>
   <h2>Postulantes</h2>
 
-  <mat-card>
-    <mat-card-title>
-      VELA CTMR
-    </mat-card-title>
-  </mat-card>
+  <div class="job-list-container-list">
+    <ul>
+      <li class="job-item" *ngFor="let postulantjob of postulantjobs"  >
+        <div class="job-item-text-left">
 
+          <h2>{{postulantjob.firstNamePostulant +' '+postulantjob.lastNamePostulant }}</h2>
 
+        </div>
+        <div class="job-item-text-right">
+          <div class="job-item-text-right-img">
+          </div>
+
+          <mat-checkbox [(ngModel)]="postulantjob.accept"    >  </mat-checkbox>
+          <span>{{postulantjob.accept ? 'Aceptado':'No aceptado' }} </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  </div>
 </app-main-nav-employeer>
 
