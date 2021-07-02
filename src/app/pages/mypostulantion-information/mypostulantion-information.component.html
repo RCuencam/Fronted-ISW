@@ -1,0 +1,26 @@
+<app-main-nav-postulant>
+  <div class="job-information-container">
+    <div class="job-item">
+      <div class="job-item-text-left">
+        <span>{{jobInfo.directionJobOffer}}</span>
+        <h2>{{jobInfo.titleJobOffer}}</h2>
+        <span>{{jobInfo.typeJobOffer}}</span>
+      </div>
+      <div class="job-item-text-right">
+        <div class="job-item-text-right-img">
+        </div>
+        <br>
+        <span>Publicado el: {{jobInfo.final_date_offerJobOffer}}</span>
+      </div>
+    </div>
+    <div class="job-info">
+      <h2>Detalles del aviso</h2>
+      <p>{{jobInfo.descriptionJobOffer}}</p>
+      <br>
+      
+      <div class="job-info-button">
+        <button mat-button [routerLink]="['/','postulant',postulantId,'postulations']" (click)="deletePostulantJob()">ELIMINAR POSTULACION</button>
+      </div>
+    </div>
+  </div>
+</app-main-nav-postulant>

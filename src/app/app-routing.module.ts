@@ -26,6 +26,7 @@ import {NewInterviewComponent} from "./pages/new-interview/new-interview.compone
 import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-profile/modify-professional-profile.component";
 import {ModifyCompanyProfileComponent} from "./pages/modify-company-profile/modify-company-profile.component";
 import {TermsAndConditionsComponent} from "./pages/terms-and-conditions/terms-and-conditions.component";
+import { MypostulantionInformationComponent } from './pages/mypostulantion-information/mypostulantion-information.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,7 @@ const routes: Routes = [
   {path:'postulant/:postulantId/joboffer/:jobofferId/newpostulation', component: PostulationsComponent},
   {path:'postulant/:postulantId/interview', component: InterviewPostulantAllComponent},
   {path:'postulant/:postulantId/postulations', component: MypostulationsComponent},
+  {path:'postulant/:postulantId/postulations/:jobId',component: MypostulantionInformationComponent},
   {path:'postulant/:postulantId/myaccount', component : MyAccountPostulantComponent},
   {path:'postulant/:postulantId/modify-personal-information-postulant', component : ModifyPersonalInformationPostulantComponent},
   {path:'joboffer/:jobofferId/employeers/:employeerId', component: MyadInformationComponent},

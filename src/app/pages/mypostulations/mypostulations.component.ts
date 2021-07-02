@@ -19,17 +19,19 @@ export class MypostulationsComponent implements OnInit {
 
   constructor(private route:ActivatedRoute, private postulantjobs_service : PostulantjobsService) {
     this.jobsData={} as Job;
-
+    this.route.params.subscribe(params=>{ 
+      this.postulantId=params.postulantId
+    })
 
   }
 
   ngOnInit(): void {
     this.getAllJobsAByEmployeerId()
-    console.log(this.postulantId);
-    this.route.params.subscribe(params=>this.postulantId=params.postulantId)
   }
 
   getAllJobsAByEmployeerId() : void{
+    console.log('pios',this.postulantId);
+    
     this.postulantjobs_service.getAllPostulantJobsByPostulantId(this.postulantId).subscribe((response: any)=>{
       this.jobs=response.content;
       console.log(this.jobs);

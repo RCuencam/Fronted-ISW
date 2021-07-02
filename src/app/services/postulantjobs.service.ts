@@ -46,4 +46,15 @@ export class PostulantjobsService {
 
   }
 
+  getPostulantJobByOfferId(jobId: number){
+    
+    return this.http.get(`${this.url}/postulantjobs/${jobId}`)
+      .pipe(retry(2), catchError(this.handleError));
+  }
+
+  deletePostulantJob(postulantId: number, jobofferId:number){
+    return this.http.delete(`${this.url}/postulants/${postulantId}/joboffers/${jobofferId}/postulantjobs`)
+    .pipe(retry(2), catchError(this.handleError));
+  }
+
 }
