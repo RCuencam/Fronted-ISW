@@ -47,6 +47,7 @@ export class SelectpostulantsComponent implements OnInit {
       this.postulantjobs_service.getAllPostulantJobsByJobOfferId(paramsJobOffer.jobofferId)
         .subscribe((response: any) => {
           this.postulantjobs = response.content;
+          console.log(response.content)
 
         });
     })));
