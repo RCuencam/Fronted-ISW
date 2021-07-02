@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ModifyPersonalInformationEmployeerApiService} from "../../services/modify-personal-information-employeer-api.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {User} from "../../models/user";
+import {DialogContratComponent} from "../dialog-changes-saved-successfully/dialog-contrat.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-modify-personal-information-employeer',
@@ -13,7 +15,8 @@ export class ModifyPersonalInformationEmployeerComponent implements OnInit {
 
   constructor(private usersApi: ModifyPersonalInformationEmployeerApiService,
               private router: Router,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              public dialog: MatDialog) {
     this.userData = {} as User;
   }
 
@@ -28,7 +31,13 @@ export class ModifyPersonalInformationEmployeerComponent implements OnInit {
   ngOnInit(): void {
     this.getAllUsers();
   }
-
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogContratComponent, {});
+    dialogRef.afterClosed().subscribe(res => {
+      console.log(res);
+      this.router.navigate(['/employeer/',this.employeerId,'myaccount']);
+    })
+  }
   getAllUsers(): void {
     this.employeerId = Number(this.route.params.subscribe(params => {
       this.usersApi.getUsersById(params.employeerId).subscribe((response: any) => {
@@ -48,7 +57,7 @@ export class ModifyPersonalInformationEmployeerComponent implements OnInit {
         this.usersApi.updateUser(this.userData.id, newUser)
           .subscribe(response => {
             console.log(response);
-            this.router.navigate(['/employeer/',this.employeerId,'myaccount']);
+            this.openDialog();
           });
       });
     }))

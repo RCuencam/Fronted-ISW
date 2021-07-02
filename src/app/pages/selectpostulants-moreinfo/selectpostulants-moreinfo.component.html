@@ -1,0 +1,22 @@
+<div class="job-list-container-list">
+  <ul>
+    <li class="job-item"   >
+
+      <div class="job-item-text-left"  >
+
+        <h2 >{{postulantData.firstname + ' ' + postulantData.lastname}} </h2>
+        <h2 >{{postulantData.civil_status }} </h2>
+
+      </div>
+
+      <div class="job-item-text-left"  *ngFor="let profilePostulant of profilePostulants " >
+
+        <h2 >{{profilePostulant.ocupation }} </h2>
+        <h2 >{{profilePostulant.description }} </h2>
+
+
+
+      </div>
+    </li>
+  </ul>
+</div>

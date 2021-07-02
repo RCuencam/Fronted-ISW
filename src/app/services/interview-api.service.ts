@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import {catchError, retry} from "rxjs/operators";
 import {Interview} from "../models/interview";
+import {Postulant} from "../models/postulant";
 
 @Injectable({
   providedIn: 'root'
@@ -26,6 +27,7 @@ export class InterviewApiService {
     }
     return throwError('Something happened with request, please try again later.');
   }
+  httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 
   getInterviewByPostulantIdAndJobOfferId(postulantId: number, jobofferId: number): Observable<Interview>{
     return this.http.get<Interview>(`${this.basePath}/${postulantId}/joboffers/${jobofferId}/interviews`)
@@ -41,4 +43,13 @@ export class InterviewApiService {
     return this.http.get<Interview>(this.base)
       .pipe(retry(2), catchError(this.handleError));
   }
+
+
+
+  addInterview(postulantId:number,jobooferId:number,item: any): Observable<Interview>{
+    return this.http.post<Interview>(`${this.basePath}/${postulantId}/joboffers/${jobooferId}/interviews`, JSON.stringify(item),this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+    //pipe sirve para reintentar el request :D antes de mandarlo como error
+  }
+
 }
