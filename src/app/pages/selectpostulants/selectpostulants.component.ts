@@ -18,7 +18,7 @@ export class SelectpostulantsComponent implements OnInit {
   jobOfferId!: number;
   employeerId!: number
   jobofferData!: Job
-   postulantJobsData!: Postulantjobs
+  postulantJobsData!: Postulantjobs
   postulantaccept: Array<Boolean>=[];
 
   protected _panelOpenState: boolean;
@@ -47,7 +47,6 @@ export class SelectpostulantsComponent implements OnInit {
       this.postulantjobs_service.getAllPostulantJobsByJobOfferId(paramsJobOffer.jobofferId)
         .subscribe((response: any) => {
           this.postulantjobs = response.content;
-
         });
     })));
   }
