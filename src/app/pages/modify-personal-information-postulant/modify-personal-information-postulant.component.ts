@@ -3,6 +3,8 @@ import {ModifyPersonalInformationPostulantApiService} from "../../services/modif
 import {ActivatedRoute, Router} from "@angular/router";
 import {Postulant} from "../../models/postulant";
 import {User} from "../../models/user";
+import {DialogContratComponent} from "../dialog-changes-saved-successfully/dialog-contrat.component";
+import {MatDialog} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-modify-personal-information-postulant',
@@ -14,7 +16,8 @@ export class ModifyPersonalInformationPostulantComponent implements OnInit {
 
   constructor(private usersApi: ModifyPersonalInformationPostulantApiService,
               private router: Router,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              public dialog: MatDialog) {
     this.userData = {} as User;
   }
 
@@ -28,7 +31,13 @@ export class ModifyPersonalInformationPostulantComponent implements OnInit {
   ngOnInit(): void {
     this.getAllUsers();
   }
-
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogContratComponent, {});
+    dialogRef.afterClosed().subscribe(res => {
+      console.log(res);
+      this.router.navigate(['/postulant/',this.postulantId,'myaccount']);
+    })
+  }
   getAllUsers(): void {
     this.postulantId = Number(this.route.params.subscribe(params => {
       this.usersApi.getUsersById(params.postulantId).subscribe((response: any) => {
@@ -48,8 +57,7 @@ export class ModifyPersonalInformationPostulantComponent implements OnInit {
         this.usersApi.updateUser(this.userData.id, newUser)
           .subscribe(response => {
             console.log(response);
-
-            this.router.navigate(['/postulant/',this.postulantId,'myaccount']);
+            this.openDialog();
           });
       });
     }))

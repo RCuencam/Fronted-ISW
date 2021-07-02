@@ -56,7 +56,7 @@ import {MatDatepickerModule} from "@angular/material/datepicker";
 import { JobOfferNewComponentComponent } from './pages/job-offer-new-component/job-offer-new-component.component';
 import { InterviewsPostulantApiComponent } from './pages/interviews-postulant-api/interviews-postulant-api.component';
 import { InterviewPostulantAllComponent } from './pages/interview-postulant-all/interview-postulant-all.component';
-import { DialogContratComponent } from './pages/dialog-contrat/dialog-contrat.component';
+import { DialogContratComponent } from './pages/dialog-changes-saved-successfully/dialog-contrat.component';
 import {MatDialogModule} from "@angular/material/dialog";
 import { DialogJobNewComponent } from './pages/dialog-job-new/dialog-job-new.component';
 import { MyadsComponent } from './pages/myads/myads.component';
@@ -69,6 +69,9 @@ import { NewInterviewComponent } from './pages/new-interview/new-interview.compo
 import { MyadInformationComponent } from './pages/myad-information/myad-information.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { SelectpostulantsMoreinfoComponent } from './pages/selectpostulants-moreinfo/selectpostulants-moreinfo.component';
+import { ModifyProfessionalProfileComponent } from './pages/modify-professional-profile/modify-professional-profile.component';
+import { ModifyCompanyProfileComponent } from './pages/modify-company-profile/modify-company-profile.component';
+import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 
 
 @NgModule({
@@ -112,9 +115,11 @@ import { SelectpostulantsMoreinfoComponent } from './pages/selectpostulants-more
     SelectpostulantsComponent,
     NewInterviewComponent,
     MyadInformationComponent,
-    SelectpostulantsMoreinfoComponent
-
-
+    SelectpostulantsMoreinfoComponent,
+    MyAccountEmployeerComponent,
+    ModifyProfessionalProfileComponent,
+    ModifyCompanyProfileComponent,
+    TermsAndConditionsComponent
 
   ],
 
