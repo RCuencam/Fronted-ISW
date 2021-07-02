@@ -72,3 +72,49 @@
         margin: 0 auto;
     }
 }
+.job-list-container{
+    width: 100%;
+}
+.job-list-container-form-input input{
+    width: 400px;
+    height: 30px;
+}
+.job-list-container-form button{
+    margin-left: 30px;
+    border: 0;
+    background: #1955AE;
+    color: white;
+    padding: 0 20px;
+}
+.job-list-container-list ul{
+    list-style: none;
+    padding:0;
+}
+.job-item{
+  border-radius: 10px;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 6px -2px #000000;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 500ms;
+}
+.job-item:hover{
+    transform: scale(1.05);
+}
+.job-item-text-left h2{
+    color: #1955AE;
+    font-weight: 700;
+}
+.job-item-text-right img{
+    width: 50px;
+    height: 50px;
+}
+.job-item-text-right-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

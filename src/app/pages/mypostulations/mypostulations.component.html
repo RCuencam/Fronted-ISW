@@ -52,6 +52,22 @@
         </div>
       </div>
       <div class="list-jobs">
+        <ul>
+          <li class="job-item" *ngFor="let item of jobs" >
+              <div class="job-item-text-left">
+                  <span>{{item.directionJobOffer}}</span>
+                  <h2>{{item.titleJobOffer}}</h2>
+                  <span>{{item.typeJobOffer}}</span>
+              </div>
+              <div class="job-item-text-right">
+                  <div class="job-item-text-right-img">
+                  </div>
+                  <br>
+                  <span>{{item.aceppt}}</span>
+                  <span>Publicado el: {{item.final_date_offerJobOffer}}</span>
+              </div>
+          </li>
+      </ul>
       </div>
     </div>
     
