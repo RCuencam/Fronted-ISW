@@ -16,5 +16,5 @@ export interface Postulantjobs {
   final_date_offerJobOffer: string,
   salaryJobOffer: number,
   directionJobOffer: string
-  
+
 }

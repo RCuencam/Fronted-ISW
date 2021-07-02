@@ -7,6 +7,8 @@ import {MatDialog} from "@angular/material/dialog";
 import {DialogJobNewComponent} from "../dialog-job-new/dialog-job-new.component";
 import {Interview} from "../../models/interview";
 import {InterviewApiService} from "../../services/interview-api.service";
+import {Postulantjobs} from "../../models/postulantjobs";
+import {NewInterviewApiService} from "../../services/new-interview-api.service";
 
 @Component({
   selector: 'app-new-interview',
@@ -15,21 +17,47 @@ import {InterviewApiService} from "../../services/interview-api.service";
 })
 export class NewInterviewComponent implements OnInit {
 
-  jobOfferForm!: NgForm;
+  //Interview
   interviewData!: Interview
+
+  //postulant
   postulantId! :number
-  jobooferId!: number
+
+  //Job Offer
+  jobOfferId!: number
+
+  //Employeer
   employeerId!: number;
 
-  constructor(private interviewApiService: InterviewApiService,
+  //PostulantJob
+  postulantjobs:Array<Postulantjobs>=[];
+
+  acepptInterview: Array<Boolean> = [];
+
+  constructor(private interviewApiService: NewInterviewApiService,
               private route: ActivatedRoute,
               public dialog: MatDialog,) {
     this.interviewData={} as Interview;
   }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params=>this.employeerId=params.employeerId);
-     this.route.params.subscribe(params=>this.jobooferId=params.jobofferId);
+    this.employeerId = Number(this.route.params.subscribe(paramsEmployeer => {
+      this.jobOfferId = Number(this.route.params.subscribe(paramsJobOffer => {
+        this.postulantId = Number(this.route.params.subscribe(paramsPostulant =>{
+          this.employeerId = paramsEmployeer.employeerId;
+          this.jobOfferId = paramsJobOffer.jobOfferId;
+          this.postulantId = paramsPostulant.postulantId;
+        }))
+      }))
+    }))
+    this.getAllPostulantJob();
+  }
+
+  getAllPostulantJob(){
+    this.interviewApiService.getAllPostulantJob().subscribe((response: any) =>{
+      this.postulantjobs = response.content
+      console.log(this.postulantjobs)
+    })
   }
 
   openDialog(): void {
