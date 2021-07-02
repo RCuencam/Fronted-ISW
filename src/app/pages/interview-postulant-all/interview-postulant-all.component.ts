@@ -16,6 +16,8 @@ export class InterviewPostulantAllComponent implements OnInit {
 
   fecha = new Date();
 
+  interviewData: Array<Interview> = [];
+
   week: any = [
     "Lunes",
     "Martes",
@@ -47,7 +49,7 @@ export class InterviewPostulantAllComponent implements OnInit {
       this.interview_service.getInterviewByPostulantId(paramsPostulant.postulantId)
         .subscribe((response : any) => {
           this.postulantId = paramsPostulant.postulantId;
-          this.interviewInfo = response.content[0];
+          this.interviewData = response.content;
         })
       }
     ))

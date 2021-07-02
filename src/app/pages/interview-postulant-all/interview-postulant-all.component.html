@@ -10,27 +10,41 @@
 
       <h3>  Fecha actual: {{fecha.toLocaleDateString()}} </h3>
 
-      <mat-card class="interview-item">
-        <h4>
-          {{interviewInfo.titleJobOffer}}
-        </h4>
+        <ul>
 
-        <h5>
-          Fecha de Inicio de la entrevista: <br> {{interviewInfo.date_Interview}}
-        </h5>
+          <li class="job-item" *ngFor="let interview of interviewData"   >
 
-        <h5>
-          Fecha final de la entrevista: <br> {{interviewInfo.final_date_Interview}}
-        </h5>
+            <div>
 
-        <button>
-          <a href="{{interviewInfo.link_Interview}}" target="_blank">
-            Link de la entrevista
-          </a>
-        </button>
+              <h4>
 
+                {{interview.titleJobOffer}}
 
-      </mat-card>
+              </h4>
+
+              <h5>
+
+                Fecha de Inicio de la entrevista: <br> {{interview.date_Interview}}
+
+              </h5>
+
+              <h5>
+
+                Fecha final de la entrevista: <br> {{interview.final_date_Interview}}
+
+              </h5>
+
+              <button>
+                <a href="{{interview.link_Interview}}" target="_blank">
+                  Link de la entrevista
+                </a>
+              </button>
+
+            </div>
+
+          </li>
+
+        </ul>
 
     </mat-card>
 
