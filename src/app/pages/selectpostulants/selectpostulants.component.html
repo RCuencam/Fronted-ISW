@@ -10,15 +10,15 @@
       <li class="job-item" *ngFor="let postulantjob of postulantjobs"   >
         <div class="job-item-text-left">
 
-          <h2 [routerLink]="['/','employeer',employeerId,'joboffer',jobOfferId,'postulantjobs',postulantjob.postulantId] ">{{postulantjob.firstNamePostulant +' '+postulantjob.lastNamePostulant }} </h2>
+          <h2 [routerLink]="['/','employeer',employeerId,'joboffer',jobOfferId,'postulantjobs',postulantjob.idPostulant] ">{{postulantjob.firstnamePostulant +' '+postulantjob.lastnamePostulant }} </h2>
 
         </div>
         <div class="job-item-text-right">
           <div class="job-item-text-right-img">
           </div>
 
-          <mat-checkbox [(ngModel)]="postulantjob.accept"    >  </mat-checkbox>
-          <span class="span_name">{{postulantjob.accept ? 'Aceptado':'No aceptado' }} </span>
+          <mat-checkbox [(ngModel)]="postulantjob.aceppt"    >  </mat-checkbox>
+          <span class="span_name">{{postulantjob.aceppt ? 'Aceptado':'No aceptado' }} </span>
         </div>
       </li>
     </ul>
