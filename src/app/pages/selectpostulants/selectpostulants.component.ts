@@ -48,6 +48,7 @@ export class SelectpostulantsComponent implements OnInit {
         .subscribe((response: any) => {
           this.postulantjobs = response.content;
           console.log(response.content)
+          console.log('soy un arreglo',this.postulantjobs)
 
         });
     })));
@@ -61,5 +62,25 @@ export class SelectpostulantsComponent implements OnInit {
           console.log(response);
         });
     })));
+  }
+
+
+  acceptPostulants() {
+
+
+    for (var i = 0; i < this.postulantjobs.length; i++) {
+
+     if (this.postulantjobs[i].aceppt === true) {
+
+        this.postulantjobs_service.updatePostulantJob(this.postulantjobs[i].idPostulant, this.jobOfferId, {aceppt: true}).subscribe((response: any) => {
+          console.log('aceptado',response)
+        });
+
+      } else if (this.postulantjobs[i].aceppt === false) {
+        this.postulantjobs_service.updatePostulantJob(this.postulantjobs[i].idPostulant, this.jobOfferId, {aceppt: false}).subscribe((response: any) => {
+          console.log('no me aceptaron:c',response)
+        });
+      }
+    }
   }
 }

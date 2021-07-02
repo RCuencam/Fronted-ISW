@@ -47,7 +47,7 @@ export class PostulantjobsService {
   }
 
   getPostulantJobByOfferId(jobId: number){
-    
+
     return this.http.get(`${this.url}/postulantjobs/${jobId}`)
       .pipe(retry(2), catchError(this.handleError));
   }
@@ -57,4 +57,11 @@ export class PostulantjobsService {
     .pipe(retry(2), catchError(this.handleError));
   }
 
+
+  updatePostulantJob(postulantId:number, jobOfferId: number,item: any): Observable<Postulantjobs> {
+    return this.http.put<Postulantjobs>(`${this.url}/postulant/${postulantId}/joboffers/${jobOfferId}/postulantjobs`, JSON.stringify(item), this.httpOptions)
+      .pipe(retry(2), catchError(this.handleError));
+    //pipe sirve para reintentar el request :D antes de mandarlo como error
+
+  }
 }

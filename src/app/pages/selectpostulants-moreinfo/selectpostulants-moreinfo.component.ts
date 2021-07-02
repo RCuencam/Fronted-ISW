@@ -21,6 +21,7 @@ export class SelectpostulantsMoreinfoComponent implements OnInit {
   profilePostulants:Array<ProfilePostulant>=[];
   postulantData!: Postulant;
   constructor(private profilePostulant_service: ProfilepostulantService, private jobOffer_service: JobsApiService,private postulant_service: PostulantService,
+              private postulantjobs:PostulantjobsService,
               private router: Router,
               private route: ActivatedRoute) {
     this.postulantData={}as Postulant
@@ -55,5 +56,7 @@ console.log(this.postulantId)
       });
 
   }
+
+
 
 }
