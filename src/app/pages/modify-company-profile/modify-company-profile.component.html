@@ -22,13 +22,6 @@
 
       <form>
         <mat-form-field appearance="outline" class="profile-form-input">
-          <mat-hint> Sector </mat-hint>
-          <input matInput matAutosizeMinRows=4 required name="sector" [(ngModel)]="newsector" placeholder="{{companyData.sector}}">
-        </mat-form-field>
-      </form>
-
-      <form>
-        <mat-form-field appearance="outline" class="profile-form-input">
           <mat-hint> Logo </mat-hint>
           <input matInput matAutosizeMinRows=4 required name="logo" [(ngModel)]="newlogo" placeholder="{{companyData.logo}}">
         </mat-form-field>
@@ -51,7 +44,7 @@
       <br>
     </div>
     <br><br>
-    <button class="btn-option" (click)="getAllCompanies()" [routerLink]="['Home/',employeerId]" mat-raised-button color="primary"  >Guardar cambios</button>
+    <button class="btn-option" (click)="updateCompany()" [routerLink]="['/','employeer',employeerId]" mat-raised-button color="primary"  >Guardar cambios</button>
   </div>
 </app-main-nav-employeer>
 

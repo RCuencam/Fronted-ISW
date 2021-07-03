@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {catchError, retry} from "rxjs/operators";
-import {Profile} from "../models/Profile";
 import {Company} from "../models/company";
 
 @Injectable({
@@ -27,14 +26,14 @@ export class ModifyCompanyProfileApiService {
     return throwError('Something happened with request, please try again later.');
   }
 
-  getCompaniesById(companyId: number) {
-    return this.http.get(`${this.url}/${companyId}/companys`)
+  getCompaniesByEmployeerId(employeerId: number) {
+    return this.http.get(`${this.url}/${employeerId}/companys`)
       .pipe(retry(2), catchError(this.handleError));
   }
 
 
-  updateCompany(companyid: number , employeerid:number, item: Company): Observable<Company> {
-    return this.http.put<Company>(`${this.url}/${employeerid}/profiles/${companyid}`, JSON.stringify(item), this.httpOptions)
+  updateCompany(employeerId:number, sectorId: number, item: Company): Observable<Company> {
+    return this.http.put<Company>(`${this.url}/${employeerId}/sector/${sectorId}/companys`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 }
