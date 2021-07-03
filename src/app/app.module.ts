@@ -99,7 +99,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     ApprovedPostulantComponent,
     MyAccountPostulantComponent,
     EmployeerpruebaComponent,
-    LoginRegisterComponent,
+   LoginRegisterComponent,
     ChoosePostulantOrEmployerComponent,
     EmployeerNewComponent,
     PostulantNewComponent,
@@ -124,6 +124,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     ModifyCompanyProfileComponent,
     TermsAndConditionsComponent,
     MypostulantionInformationComponent,
+
 
   ],
 

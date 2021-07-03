@@ -8,7 +8,7 @@ import {catchError, retry} from "rxjs/operators";
 })
 export class JobsApiService {
 
-  private url: string = "https://jobagapi.herokuapp.com/api/jobOffers/"
+  private url: string = "https://jobagapi.herokuapp.com/api/jobOffers"
   private jobofferEmployeersUrl : string="https://jobagapi.herokuapp.com/api/employeers"
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'aplication/json','Access-Control-Allow-Origin': '*'})}
 
@@ -37,7 +37,7 @@ export class JobsApiService {
     return this.http.get<Job>(`${this.jobofferEmployeersUrl}/${id}/joboffers`)
     .pipe(retry(2), catchError(this.handleError));
   }
-  
+
   getJobByEmployeerId(idJob : number, idEmployeer : number):Observable<Job>{
     return this.http.get<Job>(`${this.url}/${idJob}/employeers/${idEmployeer}`)
     .pipe(retry(2),catchError(this.handleError));
@@ -45,7 +45,7 @@ export class JobsApiService {
 
   updateJobByEmployeerId(idJob: number, employeerId : number,data: Job):Observable<Job>{
     console.log(data);
-    
+
     return this.http.put<Job>(`${this.jobofferEmployeersUrl}/${employeerId}/jobOffers/${idJob}`,data)
     .pipe(retry(2), catchError(this.handleError));
   }

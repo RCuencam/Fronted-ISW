@@ -5,8 +5,9 @@ import {LoginRegisterService} from "../../services/login-register.service";
 import {Router} from "@angular/router";
 import {EmployeerService} from "../../services/employeer.service";
 import {PostulantService} from "../../services/postulant.service";
-import { AuthService } from 'src/app/services/auth.service';
+
 import { TokenStorageService } from 'src/app/services/token-storage.service';
+import {AuthService} from "../../services/auth.service";
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
