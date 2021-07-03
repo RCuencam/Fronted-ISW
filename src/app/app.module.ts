@@ -53,7 +53,6 @@ import {PostulantService} from "./services/postulant.service";
 import {MatTabsModule} from "@angular/material/tabs";
 import { ChangepasswordComponent } from './pages/changepassword/changepassword.component';
 import {MatDatepickerModule} from "@angular/material/datepicker";
-
 import { InterviewsPostulantApiComponent } from './pages/interviews-postulant-api/interviews-postulant-api.component';
 import { InterviewPostulantAllComponent } from './pages/interview-postulant-all/interview-postulant-all.component';
 import { DialogContratComponent } from './pages/dialog-changes-saved-successfully/dialog-contrat.component';
@@ -74,6 +73,8 @@ import { ModifyCompanyProfileComponent } from './pages/modify-company-profile/mo
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { MypostulantionInformationComponent } from './pages/mypostulantion-information/mypostulantion-information.component';
 import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job-offer-new-component.component";
+import { AuthInterceptor } from './helpers/auth.interceptor';
+
 
 
 @NgModule({
@@ -126,6 +127,7 @@ import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job
 
   ],
 
+
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -155,7 +157,9 @@ import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job
     MatDialogModule,
     MatMenuModule,
   ],
-  providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
+
+
+  providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService, AuthInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
