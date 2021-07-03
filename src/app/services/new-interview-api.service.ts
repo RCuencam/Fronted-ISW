@@ -3,6 +3,7 @@ import {HttpClient, HttpErrorResponse, HttpHeaders} from "@angular/common/http";
 import {Observable, throwError} from "rxjs";
 import {Job} from "../models/job";
 import {catchError, retry} from "rxjs/operators";
+import {Interview} from "../models/interview";
 
 @Injectable({
   providedIn: 'root'
@@ -32,9 +33,8 @@ export class NewInterviewApiService {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  addInterview(item: any, employeerId: number): Observable<Job>{
-    return  this.http.post<Job>(`${this.url_update}/${employeerId}/joboffers`, JSON.stringify(item),this.httpOptions)
-      .pipe(retry(2), catchError(this.handleError));
-  }
+
+
+
 
 }

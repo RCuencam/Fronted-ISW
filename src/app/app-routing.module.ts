@@ -65,7 +65,6 @@ const routes: Routes = [
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant/contrat', component: ContratComponent},
   {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant', component: ApprovedPostulantComponent},
-  {path:'employeer/:employeerId/job-offer/new', component: JobOfferNewComponentComponent},
 
   {path:'employeer/:employeerId/modify-personal-information-employeer', component : ModifyPersonalInformationEmployeerComponent},
 

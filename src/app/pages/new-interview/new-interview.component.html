@@ -34,19 +34,20 @@
         </mat-form-field>
       </form>
 
-
       <div class="job-list-container-list">
         <ul>
-          <li class="job-item" *ngFor="let postulantjob of postulantjobs"   >
+          <li class="job-item" *ngFor="let postulantjob of postulantjobs"    >
             <div class="job-item-text-left">
 
               <h2> {{postulantjob.firstnamePostulant +' '+postulantjob.lastnamePostulant }} </h2>
 
-              <mat-checkbox [(ngModel)]="acepptInterview"    >  </mat-checkbox>
-              <span class="span_name">{{acepptInterview ? 'Aceptado':'No aceptado' }} </span>
+            <mat-checkbox   [(ngModel)]="postulantjob.prueba"    >  </mat-checkbox>
+            <span class="span_name">{{postulantjob.prueba ? 'Añadido':'No Añadido' }} </span>
 
             </div>
+
           </li>
+          <button class="btn-option"  mat-stroked-button color="primary" (click)="acceptInterview()"  >Confirmar postulantes</button>
         </ul>
       </div>
 

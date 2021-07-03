@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {NgForm} from "@angular/forms";
-import {Job} from "../../models/job";
-import {JobNewApiService} from "../../services/job-new-api.service";
 import {ActivatedRoute} from "@angular/router";
 import {MatDialog} from "@angular/material/dialog";
 import {DialogJobNewComponent} from "../dialog-job-new/dialog-job-new.component";
 import {Interview} from "../../models/interview";
-import {InterviewApiService} from "../../services/interview-api.service";
 import {Postulantjobs} from "../../models/postulantjobs";
 import {NewInterviewApiService} from "../../services/new-interview-api.service";
+import {Interviewp} from "../../models/interviewp";
+import {InterviewApiService} from "../../services/interview-api.service";
 
 @Component({
   selector: 'app-new-interview',
@@ -32,9 +30,9 @@ export class NewInterviewComponent implements OnInit {
   //PostulantJob
   postulantjobs:Array<Postulantjobs>=[];
 
-  acepptInterview: Array<Boolean> = [];
+  acepptInterviews: Array<Interviewp> = [];
 
-  constructor(private interviewApiService: NewInterviewApiService,
+  constructor(private interviewApiService: NewInterviewApiService, private  interviewservice: InterviewApiService,
               private route: ActivatedRoute,
               public dialog: MatDialog,) {
     this.interviewData={} as Interview;
@@ -46,6 +44,7 @@ export class NewInterviewComponent implements OnInit {
         this.postulantId = Number(this.route.params.subscribe(paramsPostulant =>{
           this.employeerId = paramsEmployeer.employeerId;
           this.jobOfferId = paramsJobOffer.jobOfferId;
+          console.log(this.jobOfferId)
           this.postulantId = paramsPostulant.postulantId;
         }))
       }))
@@ -56,7 +55,11 @@ export class NewInterviewComponent implements OnInit {
   getAllPostulantJob(){
     this.interviewApiService.getAllPostulantJob().subscribe((response: any) =>{
       this.postulantjobs = response.content
-      console.log(this.postulantjobs)
+      for(var i=0;i<this.postulantjobs.length;i++){
+      console.log(this.postulantjobs[i].prueba)
+
+      }
+      console.log(this.acepptInterviews.length)
     })
   }
 
@@ -66,10 +69,22 @@ export class NewInterviewComponent implements OnInit {
       console.log(res);
     })
   }
-/*
-  AddJobOfferNew(): void{
-    const newInterview = {description: this.interviewData., begin_date_offer: this.jobOfferData.begin_date_offer, final_date_offer: this.jobOfferData.final_date_offer, salary: this.jobOfferData.salary, direction: this.jobOfferData.direction, type: this.jobOfferData.type, title: this.jobOfferData.title };
-    this.interviewApiService.addInterview(this.postulantId,newInterview, ).subscribe((response: any) => {console.log(response)});
-  }
-*/
+
+
+  acceptInterview() {
+
+    const newInterview = {date_Interview: this.interviewData.date_Interview, final_date_Interview: this.interviewData.final_date_Interview, link_Interview: this.interviewData.link_Interview}
+      for (var i = 0; i < this.postulantjobs.length; i++) {
+
+      if (this.postulantjobs[i].prueba === true) {
+
+        this.interviewservice.addInterview(this.postulantjobs[i].idPostulant, this.postulantjobs[i].idJobOffer, newInterview).subscribe((response: any) => {
+
+        });
+
+
+      }
+    }
+
+}
 }

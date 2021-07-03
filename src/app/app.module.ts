@@ -156,6 +156,6 @@ import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job
     MatMenuModule,
   ],
   providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
-  bootstrap: [AppComponent,LoginRegisterComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

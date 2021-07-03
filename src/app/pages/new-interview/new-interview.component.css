@@ -45,7 +45,7 @@
   margin-top: 30px;
   text-align: center;
   color: #1955AE;
-  font-size: xxx-large;
+  font-size: xx-large;
 
 }
 .span_name{
@@ -72,7 +72,7 @@
 .job-item-text-left h2{
   color: #1955AE;
   font-weight: 700;
-  font-size: xxx-large;
+  font-size: x-large;
 }
 
 
@@ -88,7 +88,7 @@
     width: 50%;
   }
   .job-list-container-form{
-    width: 100%;
+    width: 50%;
     height: 30px;
     display: flex;
     justify-content: center;
