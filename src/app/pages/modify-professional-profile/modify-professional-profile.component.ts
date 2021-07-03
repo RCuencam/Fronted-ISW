@@ -3,8 +3,6 @@ import {Profile} from "../../models/Profile";
 import {ModifyProfessionalProfileApiService} from "../../services/modify-professional-profile-api.service";
 import {ActivatedRoute, Router} from "@angular/router";
 import {Postulant} from "../../models/postulant";
-import {LanguagesApiService} from "../../services/languages-api.service";
-import {Languages} from "../../models/languages";
 import {DialogContratComponent} from "../dialog-changes-saved-successfully/dialog-contrat.component";
 import {MatDialog} from "@angular/material/dialog";
 
@@ -23,12 +21,12 @@ export class ModifyProfessionalProfileComponent implements OnInit {
     this.profileData = {} as Profile;
     this.postulantData = {} as Postulant;
   }
+
   newocupation!: string;
   newvideo!: string;
   newdescription!:string;
   postulantId!: number;
   profileId!: number;
-
 
   ngOnInit(): void {
     this.getAllProfiles();
@@ -46,20 +44,24 @@ export class ModifyProfessionalProfileComponent implements OnInit {
         this.postulantId = params.postulantId;
         this.profileData = response.content[0];
         console.log(this.profileData);
-        const newProfile = {
-          id: this.profileData.id,
-          ocupation: this.newocupation,
-          description: this.newdescription,
-          video: this.newvideo
-        };
-        this.profilesApi.updateProfile(this.postulantId, this.profileData.id, newProfile)
-          .subscribe(response => {
-            console.log(response);
-            this.openDialog();
-          });
       });
     }))
   }
 
+  updateProfile(): void{
+    const newProfile = {
+      id: this.profileData.id,
+      ocupation: this.newocupation,
+      description: this.newdescription,
+      video: this.newvideo
+    };
+
+    this.profilesApi.updateProfile(this.postulantId, this.profileData.id, newProfile)
+      .subscribe(response => {
+        console.log(response);
+        this.openDialog();
+      });
+
+  }
 
 }
