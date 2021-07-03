@@ -74,6 +74,7 @@ import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-
 import { MypostulantionInformationComponent } from './pages/mypostulantion-information/mypostulantion-information.component';
 import {JobOfferNewComponentComponent} from "./pages/job-offer-new-component/job-offer-new-component.component";
 import { AuthInterceptor } from './helpers/auth.interceptor';
+import { DialogPostulationSendSuccessfullyComponent } from './pages/dialog-postulation-send-successfully/dialog-postulation-send-successfully.component';
 
 
 
@@ -124,6 +125,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
     ModifyCompanyProfileComponent,
     TermsAndConditionsComponent,
     MypostulantionInformationComponent,
+    DialogPostulationSendSuccessfullyComponent,
 
 
   ],

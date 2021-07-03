@@ -2,9 +2,9 @@
     <div class="job-list-container-form">
         <form action="">
             <mat-form-field class="job-list-container-form-input">
-            <input matInput matAutosizeMinRows=4 placeholder="Ingresa el empleo">
+            <input matInput matAutosizeMinRows=4 placeholder="Ingresa el empleo"  [(ngModel)]="texta" name="texta">
             </mat-form-field>
-            <button mat-button>BUSCAR</button>
+            <button mat-button (click)="searchJob()">BUSCAR</button>
         </form>
     </div>
     <div class="job-list-container-list">

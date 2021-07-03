@@ -13,12 +13,12 @@ export class JobsListComponent implements OnInit {
   @Input() jobs=[] as any;
   postulantId!:string
   jobsData:Job
+  texta=''
   constructor(private jobs_service : JobsApiService,private route:ActivatedRoute ) {
     this.jobsData={} as Job;
     this.route.params.subscribe(params=>this.postulantId=params.postulantId)
-
   }
-
+  
   ngOnInit(): void {
     console.log(this.jobs);
     
@@ -30,5 +30,17 @@ export class JobsListComponent implements OnInit {
       
     });
   }
+
+  searchJob(){
+    console.log(this.texta);
+    if(this.texta)
+    this.jobs=this.jobs.filter((item : any)=>{
+      if(item.title.includes(this.texta)){
+        return item
+      }
+    })
+  
+  }
+  
 
 }
