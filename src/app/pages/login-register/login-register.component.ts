@@ -30,8 +30,10 @@ export class LoginRegisterComponent implements OnInit {
   ingresante!:number;
   fecha = new Date();
   employeer: {}
+  postulant: {}
   constructor(private tokenStorageService: TokenStorageService, private authService: AuthService, private usersApi: LoginRegisterService,private employeerApi: EmployeerService, private postulantApi: PostulantService, private router: Router) {
     this.employeer={}
+    this.postulant={}
   }
   ngOnInit(): void {
   }
@@ -49,23 +51,22 @@ export class LoginRegisterComponent implements OnInit {
     this.usersApi.getAllUsers().subscribe((response: any) => {
 
       console.log('xd',response.content)
-      
+
       for(var i=0;i<response.content.length;i++){
         if(response.content[i].email==this.emailexist &&
           response.content[i].password==this.passwordexist
-          
+
           ){
             this.validador=true;
             this.ingresante= response.content[i].id;
           }
-          
+
         }
         console.log(this.ingresante);
 
       if(this.validador){
 
-        this.employeerApi.getEmployeerbyId(this.ingresante).subscribe((responseEmployeer: any) => {
-          console.log('info',responseEmployeer.typeof);
+        this.employeerApi.getEmployeerbyId(this.ingresante).subscribe((responseEmployeer: any ) => {
           this.employeer=responseEmployeer
 
           this.authService.login(responseEmployeer).subscribe(
@@ -79,13 +80,24 @@ export class LoginRegisterComponent implements OnInit {
             }
           );
 
-
-
         this.router.navigate([`employeer/${this.ingresante}`])
             .then(() => console.log('Ingrese'));
         });
 
-        this.postulantApi.getPostulantbyId(this.ingresante).subscribe((responseEmployeer: any) => {
+        this.postulantApi.getPostulantbyId(this.ingresante).subscribe((responsePostulant: any) => {
+
+               this.postulant=responsePostulant
+
+          this.authService.login(responsePostulant).subscribe(
+            data => {
+              console.log('confirm',data);
+
+            },
+            error => {
+              console.log('error',error.error.errorMessage);
+
+            }
+          );
           this.router.navigate([`postulant/${this.ingresante}`])
             .then(() => console.log('Ingrese'));
         });
@@ -98,7 +110,7 @@ export class LoginRegisterComponent implements OnInit {
 
     });
   }
-  
+
 
   matcher = new MyErrorStateMatcher();
 

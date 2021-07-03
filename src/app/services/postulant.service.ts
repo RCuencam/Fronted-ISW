@@ -18,19 +18,15 @@ export class PostulantService {
 // API Error Handling
 
   handleError(error: HttpErrorResponse): Observable<never> {
-    if (error.error instanceof ErrorEvent) {
-      console.log('An error occurred: ', error.error.message);
-    }
-    else {
-      console.log(`Backend returned code ${error.status}, body was: ${error.error}`);
-    }
-    return throwError('Something happened with request, please try again later.');
+
+
+    return throwError('');
   }
 
 
   getPostulantbyId(id:number) {
     return this.http.get(`${this.url}/${id}`)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(retry(-1), catchError(this.handleError));
   }
 
    // Create Student

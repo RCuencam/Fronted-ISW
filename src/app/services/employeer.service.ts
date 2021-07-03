@@ -23,13 +23,13 @@ export class EmployeerService {
     else {
       console.log(`Backend returned code ${error.status}, body was: ${error.error}`);
     }
-    return throwError('Something happened with request, please try again later.');
+    return throwError('');
   }
 
 
   getEmployeerbyId(id:number) {
     return this.http.get(`${this.url}/${id}`)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(retry(0), catchError(this.handleError));
   }
 
   getEmployeers() {
