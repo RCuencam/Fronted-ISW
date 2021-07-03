@@ -30,7 +30,8 @@ import { MypostulantionInformationComponent } from './pages/mypostulantion-infor
 
 const routes: Routes = [
 
-  {path:'login', component: LoginRegisterComponent},
+  {path:'', pathMatch: 'full', redirectTo: 'login'},
+  {path:'login', component: LoginRegisterComponent, pathMatch: 'full'},
   {path:'employeer/new', component: EmployeerNewComponent},
   {path:'postulant/new', component: PostulantNewComponent},
   {path:'changepassword', component: ChangepasswordComponent},
