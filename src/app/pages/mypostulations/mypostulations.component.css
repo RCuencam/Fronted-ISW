@@ -1,0 +1,124 @@
+
+/*---------------MAIN SECTION*/
+.jobs_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px;
+    height: 90vh;
+}
+.jobs-container-header{
+    text-align: center;
+    margin: 50px auto;
+}
+.jobs-container-header-input{
+    width: 100%;
+    margin: 20px 0;
+}
+.jobs-container-header button{
+    width: 200px;
+    padding:10px 0;
+    background: #1955AE;
+    color: white;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 1px 8px 17px -7px rgba(0,0,0,0.75);
+}
+
+.jobs-container-header h1{
+    font-weight: 700;
+    font-size: 3em;
+    color: #1955AE;
+}
+.jobs-container-content{
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+}
+.filter-jobs{
+    width: 50%;
+}
+.list-jobs{
+    width: 50%;
+}
+.filter-jobs-container{
+    width: 70%;
+    margin: 0 auto;
+    background: #1955AE;
+    padding: 30px;
+}
+.filter-jobs-container h1{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+.filter-jobs-container-item{
+    margin: 40px 0;
+    border-radius: 10px !important;
+}
+@media screen and (max-width:768px){
+    .jobs-container-content{
+        flex-direction: column;
+    }
+    .filter-jobs{
+        width: 100%;
+    }
+    .list-jobs{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+.job-list-container{
+    width: 100%;
+}
+.job-list-container-form-input input{
+    width: 400px;
+    height: 30px;
+}
+.job-list-container-form button{
+    margin-left: 30px;
+    border: 0;
+    background: #1955AE;
+    color: white;
+    padding: 0 20px;
+}
+.job-list-container-list ul{
+    list-style: none;
+    padding:0;
+}
+.job-item{
+  border-radius: 10px;
+  margin: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 3px 6px -2px #000000;
+  padding: 15px;
+  cursor: pointer;
+  transition: all 500ms;
+}
+.job-item:hover{
+    transform: scale(1.05);
+}
+.job-item-text-left h2{
+    color: #1955AE;
+    font-weight: 700;
+}
+.job-item-text-right img{
+    width: 50px;
+    height: 50px;
+}
+.job-item-text-right-img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.job-item-text-right h2{
+    color: #1955AE;
+    font-weight: 700;
+}

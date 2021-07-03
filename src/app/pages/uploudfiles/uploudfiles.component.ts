@@ -28,8 +28,8 @@ export class UploudfilesComponent implements OnInit {
 
   onUploadSuccess(res: object) {
     console.log('###uploadSuccess', res);
-     this.information=res;
-    this.setInfo(res);
+    this.information=res;
+
   }
 
 
@@ -37,13 +37,7 @@ export class UploudfilesComponent implements OnInit {
     console.log('###uploadError', err);
   }
 
-  setInfo(res: object){
-   console.log(this.information,"olah")
-  }
 
-  getInfo(){
-    return this.information;
-  }
 
 
 

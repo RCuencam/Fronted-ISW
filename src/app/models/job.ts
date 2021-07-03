@@ -1,12 +1,11 @@
 export interface Job {
-    id: number
-    location: string
-    title:string
-    type:string
-    date:string
-    url:string
-    details:string
-    requirements:Array<String>
-    benefits:Array<String>
-  }
-  
+  id: number
+  description: string,
+  begin_date_offer: string,
+  final_date_offer: string,
+  salary: number,
+  direction: string,
+  type: string,
+  title: string
+
+}

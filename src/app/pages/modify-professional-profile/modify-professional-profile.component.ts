@@ -1,101 +1,65 @@
 import { Component, OnInit } from '@angular/core';
+import {Profile} from "../../models/Profile";
 import {ModifyProfessionalProfileApiService} from "../../services/modify-professional-profile-api.service";
-import {ModifyProfessionalProfile} from "../../models/modify-professional-profile";
 import {ActivatedRoute, Router} from "@angular/router";
-import {MatChipInputEvent} from "@angular/material/chips";
-import {COMMA, ENTER} from "@angular/cdk/keycodes";
-import {Languages} from "../../models/languages";
+import {Postulant} from "../../models/postulant";
 import {LanguagesApiService} from "../../services/languages-api.service";
+import {Languages} from "../../models/languages";
+import {DialogContratComponent} from "../dialog-changes-saved-successfully/dialog-contrat.component";
+import {MatDialog} from "@angular/material/dialog";
 
-export interface Language{
-  name:string;
-}
 @Component({
   selector: 'app-modify-professional-profile',
   templateUrl: './modify-professional-profile.component.html',
   styleUrls: ['./modify-professional-profile.component.css']
 })
-export class ModifyProfessionalProfileComponent  {
-  ProfessionalProfileId:number = 0;
-  ProfessionalProfileInfo: ModifyProfessionalProfile
-  languagesId:number = 0;
-  languagesInfo: Languages;
-  readonly separatorKeysCodes = [ENTER, COMMA] as const;
-  selectable=true;
-  removable=true;
-  addOnBlur = true;
+export class ModifyProfessionalProfileComponent implements OnInit {
+  profileData: Profile;
+  postulantData: Postulant;
+  constructor(private profilesApi: ModifyProfessionalProfileApiService,
+              private router: Router,
+              private route: ActivatedRoute,
+              public dialog: MatDialog) {
+    this.profileData = {} as Profile;
+    this.postulantData = {} as Postulant;
+  }
+  newocupation!: string;
+  newvideo!: string;
+  newdescription!:string;
+  postulantId!: number;
+  profileId!: number;
 
-  languages: Language[] = [
-    {name: 'Inglés'},
-    {name: 'Alemán'},
-    {name: 'Chino'},
-  ];
 
-  constructor(private router: Router,
-              private route:ActivatedRoute,
-              private profile_services: ModifyProfessionalProfileApiService,
-              private language_services: LanguagesApiService) {
-    this.route.params.subscribe(params=>this.ProfessionalProfileId=params.id);
-    this.route.params.subscribe(params=>this.languagesId=params.id);
-    this.ProfessionalProfileInfo={} as ModifyProfessionalProfile;
-    this.languagesInfo={} as Languages;
+  ngOnInit(): void {
+    this.getAllProfiles();
   }
-
-  ngOnInit():void{
-    this.getProfessionalProfileById();
-    this.getLanguageById();
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogContratComponent, {});
+    dialogRef.afterClosed().subscribe(res => {
+      console.log(res);
+      this.router.navigate(['/postulant/', this.postulantId, 'myaccount']);
+    })
   }
-  getProfessionalProfileById():void{
-    console.log(this.ProfessionalProfileId);
-    this.profile_services.getProfessionalProfileById(this.ProfessionalProfileId).subscribe((response:any) =>{
-      this.ProfessionalProfileInfo = response;
-    });
-  }
-  navigateToLanguage(): void {
-    this.router.navigate(['/languages'])
-      .then(() => console.log(this.route.url) );
-  }
-  getLanguageById():void{
-    console.log(this.languagesId);
-    this.language_services.getLanguagesById(this.languagesId).subscribe((response:any) =>{
-      this.languagesInfo = response;
-    });
-  }
-
-  addLanguage(): void {
-    const newLanguage = {name: this.languagesInfo.name, level: this.languagesInfo.level};
-    this.language_services.addLanguage(newLanguage)
-      .subscribe(()=> {
-        this.navigateToLanguage();
+  getAllProfiles(): void{
+    this.postulantId = Number(this.route.params.subscribe(params => {
+      this.profilesApi.getProfilesById(params.postulantId).subscribe((response: any) => {
+        this.postulantId = params.postulantId;
+        this.profileData = response.content[0];
+        console.log(this.profileData);
+        const newProfile = {
+          id: this.profileData.id,
+          ocupation: this.newocupation,
+          description: this.newdescription,
+          video: this.newvideo
+        };
+        this.profilesApi.updateProfile(this.postulantId, this.profileData.id, newProfile)
+          .subscribe(response => {
+            console.log(response);
+            this.openDialog();
+          });
       });
+    }))
   }
 
-  updateLanguage(): void{
-    this.language_services.updateLanguage(this.languagesInfo.id, this.languagesInfo as Languages)
-      .subscribe( response => {
-        console.log(response);
-      });
-    this.navigateToLanguage();
-  }
-
-
-  add(event: MatChipInputEvent): void {
-    const value = (event.value || '').trim();
-
-    if (value) {
-      this.languages.push({name: value});
-    }
-
-    // Clear the input value
-    event.chipInput!.clear();
-  }
-
-  remove(languages: Language): void {
-    const index = this.languages.indexOf(languages);
-
-    if (index >= 0) {
-      this.languages.splice(index, 1);
-    }
-  }
 
 }

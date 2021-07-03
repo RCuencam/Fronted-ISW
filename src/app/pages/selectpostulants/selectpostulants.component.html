@@ -1,0 +1,29 @@
+<app-main-nav-employeer>
+  <br>
+  <h1 class="titulo_h1">{{jobofferData.title}}</h1>
+  <div>
+    <br>
+  <h2 class="titulo_h2">Postulantes</h2>
+
+  <div class="job-list-container-list">
+    <ul>
+      <li class="job-item" *ngFor="let postulantjob of postulantjobs"   >
+        <div class="job-item-text-left">
+
+          <h2 [routerLink]="['/','employeer',employeerId,'joboffer',jobOfferId,'postulantjobs',postulantjob.idPostulant] ">{{postulantjob.firstnamePostulant +' '+postulantjob.lastnamePostulant }} </h2>
+
+        </div>
+        <div class="job-item-text-right">
+          <div class="job-item-text-right-img">
+          </div>
+
+          <mat-checkbox [(ngModel)]="postulantjob.aceppt"    >  </mat-checkbox>
+          <span class="span_name">{{postulantjob.aceppt ? 'Aceptado':'No aceptado' }} </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+    <button class="btn-option"  mat-stroked-button color="primary" (click)="acceptPostulants()"  >Confirmar postulantes</button>
+  </div>
+</app-main-nav-employeer>
+

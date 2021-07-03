@@ -1,0 +1,75 @@
+<app-main-nav-employeer>
+    <div class="jobs-container-header">
+        <h1>MIS ANUNCIOS</h1>
+      </div>
+      <div class="jobs-container-content">
+        <div class="filter-jobs">
+          <div class="filter-jobs-container">
+            <h1>FILTROS</h1>
+            <div class="filter-jobs-container-items">
+              <mat-accordion>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false" class="filter-jobs-container-item">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Lugar de Trabajo
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false" class="filter-jobs-container-item">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Fecha de Publicación
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false" class="filter-jobs-container-item">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Experiencia Laboral
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <p>I'm visible because I am open</p>
+                </mat-expansion-panel>
+                <mat-expansion-panel (opened)="panelOpenState = true"
+                                     (closed)="panelOpenState = false" class="filter-jobs-container-item">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                      Tipo de Puesto
+                    </mat-panel-title>
+                  </mat-expansion-panel-header>
+                  <mat-list>
+      
+                   </mat-list>
+                </mat-expansion-panel>
+      
+              </mat-accordion>
+            </div>
+          </div>
+        </div>
+        <div class="list-jobs">
+          <div class="list-postulations-container">
+            <div *ngFor="let job of jobs" class="postulation-item" [routerLink]="['/','joboffer',job.id,'employeers',employeerId]">
+              <div class="job-item-text-left">
+                <span>{{job.direction}}</span>
+                <h2>{{job.title}}</h2>
+                <span>{{job.type}}</span>
+              </div>
+              <div class="job-item-text-right">
+                  <div class="job-item-text-right-img">
+                  </div>
+                  <br>
+                  <span>Publicado el: {{job.final_date_offer}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+      
+      
+      </div>
+</app-main-nav-employeer>

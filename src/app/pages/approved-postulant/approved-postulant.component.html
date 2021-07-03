@@ -1,18 +1,22 @@
-<div class = "text">
-  <h1>{{jobInfo.title}}</h1>
-  <h2>{{postulantApprovedInfo.name}} {{postulantApprovedInfo.last}}</h2>
-  <div class = "circular--portrait">
-    <img src="assets/images/perfil-bryan.jpeg">
+<app-main-nav-employeer>
+
+  <div class = "text">
+    <h1>{{postulantApprovedInfo.titleJobOffer}}</h1>
+    <h2>{{postulantApprovedInfo.firstNamePostulant}} {{postulantApprovedInfo.lastNamePostulant}}</h2>
+    <div class = "circular--portrait">
+      <img src="assets/images/perfil-bryan.jpeg">
+    </div>
   </div>
-</div>
 
 
-<div class="account-container-content">
-  <div>
-    <button mat-raised-button class="mat-focus-indicator mat-button-approved mat-button-base"><a style="text-decoration: white">POSTULANTE APROBADO</a></button>
+  <div class="account-container-content">
+    <div>
+      <button mat-raised-button class="mat-focus-indicator mat-button-approved mat-button-base"><a style="text-decoration: white">POSTULANTE APROBADO</a></button>
+    </div>
+    <div>
+      <button mat-button [routerLink]="['/contrat']">CONTINUAR A LA CONTRATACION</button>
+    </div>
   </div>
-  <div>
-    <button mat-button [routerLink]="['/contrat']">CONTINUAR A LA CONTRATACION</button>
-  </div>
-</div>
+
+</app-main-nav-employeer>
 

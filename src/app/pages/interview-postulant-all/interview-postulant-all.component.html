@@ -1,0 +1,78 @@
+<app-main-nav-postulant>
+
+  <div class="acomodar">
+
+    <mat-card class="job-item">
+
+      <h1> Entrevistas </h1>
+
+      <br><br>
+
+      <h3>  Fecha actual: {{fecha.toLocaleDateString()}} </h3>
+
+        <ul>
+
+          <li class="job-item" *ngFor="let interview of interviewData"   >
+
+            <div>
+
+              <h4>
+
+                {{interview.titleJobOffer}}
+
+              </h4>
+
+              <h5>
+
+                Fecha de Inicio de la entrevista: <br> {{interview.date_Interview}}
+
+              </h5>
+
+              <h5>
+
+                Fecha final de la entrevista: <br> {{interview.final_date_Interview}}
+
+              </h5>
+
+              <button>
+                <a href="{{interview.link_Interview}}" target="_blank">
+                  Link de la entrevista
+                </a>
+              </button>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+    </mat-card>
+
+
+    <div class="wrapper-calendar">
+      <div class="header-calendar">
+        <div>
+          <button (click)="changeMonth(-1)" class="btn-prev">Antes</button>
+        </div>
+        <h1>{{dateSelect | date:'MMMM, yyyy'}}</h1>
+        <div>
+          <button (click)="changeMonth(1)" class="btn-next">Siguiente</button>
+        </div>
+      </div>
+      <ol>
+        <li *ngFor="let day of week" class="day-name">{{day | slice:0:3}}</li>
+
+        <li (click)="clickDay(day)" [style.gridColumnStart]="first ? day?.indexWeek : 'auto'"
+            *ngFor="let day of monthSelect;let first = first">
+          <span>{{day?.value}}</span>
+        </li>
+      </ol>
+    </div>
+
+  </div>
+
+
+</app-main-nav-postulant>
+
+
+

@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from "rxjs";
 import {BreakpointObserver, Breakpoints} from "@angular/cdk/layout";
 import {map, shareReplay} from "rxjs/operators";
+import {Postulant} from "../../models/postulant";
+import {ActivatedRoute, Router} from "@angular/router";
+import {PostulantService} from "../../services/postulant.service";
+import {Employeer} from "../../models/employeer";
 
 @Component({
   selector: 'app-main-nav-postulant',
@@ -10,13 +14,31 @@ import {map, shareReplay} from "rxjs/operators";
 })
 export class MainNavPostulantComponent {
 
+  postulantData!: Postulant;
+  postulantId!: number
+
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
       map(result => result.matches),
       shareReplay()
     );
+  ngOnInit(): void {
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+    this.getPostulantId();
+  }
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router, private route: ActivatedRoute,private postulantApiService: PostulantService) {
+    this.postulantData={} as Postulant;
+  }
+
+  getPostulantId(): void{
+    this.postulantId = Number(this.route.params.subscribe(params => {
+      this.postulantApiService.getPostulantById(params.postulantId).subscribe((response: any)=> {
+        this.postulantId = params.postulantId;
+        this.postulantData=response
+      });
+    }));
+
+  }
 
 }
 

@@ -1,0 +1,27 @@
+.profile-container-header{
+  text-align: center;
+  margin: 50px auto;
+}
+.profile-container-header h1{
+  font-weight: 700;
+  font-size: 3em;
+  color: #1955AE;
+}
+.profile-form-input{
+  width: 25%;
+  margin: 5px auto;
+}
+.btn-option{
+  width: 15%;
+}
+
+@media screen and (max-width:768px) {
+  .profile-form-input{
+    width: 85%;
+  }
+
+  .btn-option{
+    width: 50%;
+  }
+}
+

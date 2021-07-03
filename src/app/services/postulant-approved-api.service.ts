@@ -13,9 +13,7 @@ import {Interview} from "../models/interview";
 
 export class PostulantApprovedApiService {
 
-  basePath = 'http://localhost:3000/postulant-approved';
-
-  httpOptions = {headers: new HttpHeaders({'Content-Type': 'aplication/json'})}
+  basePath = 'https://jobagapi.herokuapp.com/api/postulants';
 
   constructor(private http: HttpClient) { }
 
@@ -29,8 +27,8 @@ export class PostulantApprovedApiService {
     return throwError('Something happened with request, please try again later')
   }
 
-  getPostulantApprovedById(id: number): Observable<PostulantApproved>{
-    return this.http.get<PostulantApproved>(`${this.basePath}/${id}`)
+  getPostulantApprovedByPostulantIdAndJobOfferId(postulantId: number, jobofferId: number): Observable<PostulantApproved>{
+    return this.http.get<PostulantApproved>(`${this.basePath}/${postulantId}/joboffers/${jobofferId}`)
       .pipe(retry(2), catchError(this.handleError));
   }
 }

@@ -1,0 +1,58 @@
+<app-main-nav-employeer>
+  <div class="profile-container-header">
+    <h1> REGISTRAR UNA ENTREVISTA </h1>
+  </div>
+
+  <div class="profile-container-content">
+
+    <div class="form-group">
+
+      <form (submit)="interviewData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese la fecha de inicio
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 matInput required="date_interview" name="date_interview" type="date" [(ngModel)]="interviewData.date_Interview" placeholder="Date">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="interviewData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese la fecha final de la entrevista
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 matInput required="final_date_interview" name="final_date_interview" type="date" [(ngModel)]="interviewData.final_date_Interview" placeholder="Date">
+        </mat-form-field>
+      </form>
+
+      <form (submit)="interviewData">
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint>
+            Ingrese la url de la sala
+          </mat-hint>
+          <input matInput matAutosizeMinRows=4 matInput required="url" name="url" type="url" [(ngModel)]="interviewData.link_Interview" placeholder="Url">
+        </mat-form-field>
+      </form>
+
+
+      <div class="job-list-container-list">
+        <ul>
+          <li class="job-item" *ngFor="let postulantjob of postulantjobs"   >
+            <div class="job-item-text-left">
+
+              <h2> {{postulantjob.firstnamePostulant +' '+postulantjob.lastnamePostulant }} </h2>
+
+              <mat-checkbox [(ngModel)]="acepptInterview"    >  </mat-checkbox>
+              <span class="span_name">{{acepptInterview ? 'Aceptado':'No aceptado' }} </span>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+
+</app-main-nav-employeer>
+

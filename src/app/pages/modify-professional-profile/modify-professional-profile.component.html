@@ -1,60 +1,37 @@
-<div class="profile-container-header">
-  <h1>PERFIL PROFESIONAL</h1>
-</div>
-<div class="profile-container-contain">
-  <div class="form-group">
-    <form action="">
-      <mat-form-field appearance="outline" class="profile-form-input">
-        <mat-hint>Ocupación</mat-hint>
-        <input type="text" id="name" matInput matAutosizeMinRows=4 value="{{ProfessionalProfileInfo.ocupation}}">
-      </mat-form-field>
-    </form>
-    <form action="">
-      <mat-form-field appearance="outline" class="profile-form-input">
-        <mat-hint>Descripción</mat-hint>
-        <input matInput type="text" matAutosizeMinRows=4 value="{{ProfessionalProfileInfo.description}}">
-      </mat-form-field>
-    </form>
-    <form action="">
-      <mat-form-field appearance="outline" class="profile-form-input">
-        <mat-hint>Idiomas</mat-hint>
-        <mat-chip-list #chipList aria-label="Idioma">
-          <mat-chip *ngFor="let language of languages" [selectable] ="selectable"
-                    [removable]="removable" (removed)="remove(language)">
-            {{language.name}}
-            <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-          </mat-chip>
-          <input placeholder="Idioma"
-                 [matChipInputFor]="chipList"
-                 [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
-                 [matChipInputAddOnBlur]="addOnBlur"
-                 (matChipInputTokenEnd)="add($event)">
-        </mat-chip-list>
-        <input matInput type="text" matAutosizeMinRows=4>
-      </mat-form-field>
-    </form>
-    <form action="">
-      <mat-form-field appearance="outline" class="profile-form-input">
-        <mat-hint>Estudios</mat-hint>
-        <input matInput type="text" matAutosizeMinRows=4 value="{{ProfessionalProfileInfo.estudios}}" >
-      </mat-form-field>
-    </form>
-    <form action="">
-
-      <mat-form-field appearance="outline" class="profile-form-input">
-        <mat-hint>Certificados</mat-hint>
-        <input  matInput  matAutosizeMinRows=4 placeholder="Certificados">
-
-      </mat-form-field>
-    </form>
-    <form action="">
-      <mat-form-field appearance="outline" class="profile-form-input">
-        <mat-hint>Competencias</mat-hint>
-        <input  matInput matAutosizeMinRows=4 placeholder="Competencias">
-      </mat-form-field>
-    </form>
-    <form action="">
-      <input type="submit" mat-raised-button class="mat-focus-indicator mat-button mat-button-base" value="Guardar Cambios">
-    </form>
+<app-main-nav-postulant>
+  <div class="profile-container-header">
+    <h1>PERFIL PROFESIONAL</h1>
   </div>
-</div>
+  <div class="profile-container-header">
+
+    <div class="form-group">
+
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Ocupación </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="ocupation" [(ngModel)]="newocupation" placeholder="{{profileData.ocupation}}">
+        </mat-form-field>
+      </form>
+
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Descripción </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="description" [(ngModel)]="newdescription" placeholder="{{profileData.description}}">
+        </mat-form-field>
+      </form>
+
+      <form>
+        <mat-form-field appearance="outline" class="profile-form-input">
+          <mat-hint> Link de video de presentación </mat-hint>
+          <input matInput matAutosizeMinRows=4 required name="video" [(ngModel)]="newvideo" placeholder="{{profileData.video}}">
+        </mat-form-field>
+      </form>
+      <br>
+    </div>
+    <br><br>
+    <button class="btn-option" (click)="getAllProfiles()" [routerLink]="['Home/',postulantId]" mat-raised-button color="primary"  >Guardar cambios</button>
+  </div>
+</app-main-nav-postulant>
+
+
+

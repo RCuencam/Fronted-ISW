@@ -8,11 +8,12 @@ import {Job} from "../models/job";
   providedIn: 'root'
 })
 export class JobNewApiService {
-  basePath = 'http://localhost:3000/api/jobs';
+
+  constructor(private  http: HttpClient) { }
+
+  private url: string = "https://jobagapi.herokuapp.com/api/employeers"
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
-
-  constructor(private http: HttpClient) { }
 
   handleError(error: HttpErrorResponse): Observable<never> {
     if (error.error instanceof ErrorEvent) {
@@ -24,14 +25,13 @@ export class JobNewApiService {
     return throwError('Something happened with request, please try again later.');
   }
 
-  updateJob(id: number, item: Job): Observable<Job>{
-    return this.http.put<Job>(`${this.basePath}/${id}`, JSON.stringify(item), this.httpOptions)
+  getJobByEmployeerIdAndId(employeerId: number,  id:number) {
+    return this.http.get(`${this.url}/${employeerId}/joboffers/${id}`)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  addJob(item: any): Observable<Job>{
-    return this.http.post<Job>(this.basePath, JSON.stringify(item), this.httpOptions)
+  addJobOffer(item: any, employeerId: number): Observable<Job>{
+    return  this.http.post<Job>(`${this.url}/${employeerId}/joboffers`, JSON.stringify(item),this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
-
 }

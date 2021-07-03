@@ -16,16 +16,21 @@
     </div>
     <mat-nav-list >
       <br><br><br>
-      <a  mat-list-item href="#"> Home  <span class="default-spacer"></span><mat-icon>home</mat-icon> </a>
-      <a mat-list-item routerLink="/jobs" (click)="drawer.toggle()">Postular   <span class="default-spacer"></span><mat-icon>fiber_manual_record  </mat-icon></a>
-      <a mat-list-item routerLink="/postulations" (click)="drawer.toggle()">Mis postulaciones   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
-      <a mat-list-item href="/job/interview/:id">Entrevistas <span class="default-spacer"></span> <mat-icon>home</mat-icon></a>
-      <a mat-list-item routerLink="/myaccount" (click)="drawer.toggle()">Mi cuenta  <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
-      <a mat-list-item href="#">Configuración  <span class="default-spacer"></span><mat-icon>settings</mat-icon></a>
+
+
+      <a mat-list-item  [routerLink]="['/postulant/',postulantId]" (click)="drawer.toggle()">Búsqueda de empleos   <span class="default-spacer"></span><mat-icon>home  </mat-icon></a>
+      <a mat-list-item [routerLink]="['/postulant/', postulantId, 'postulations']" (click)="drawer.toggle()">Mis postulaciones   <span class="default-spacer"></span><mat-icon>work_outline</mat-icon></a>
+      <a mat-list-item [routerLink]="['/postulant/', postulantId, 'interview']" (click)="drawer.toggle()"> Mis entrevistas <span class="default-spacer"></span> <mat-icon>work_outline</mat-icon></a>
+      <a mat-list-item [routerLink]="['/postulant/', postulantId, 'myaccount']" (click)="drawer.toggle()">Mi cuenta  <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
+      <a mat-list-item [routerLink]="['/']" (click)="drawer.toggle()">Cerrar sesión <span class="default-spacer"></span><mat-icon>account_circle</mat-icon> </a>
+
     </mat-nav-list>
+
   </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar>
+
       <button
         type="button"
         aria-label="Toggle sidenav"
@@ -36,8 +41,8 @@
       </button>
       <span class="default-spacer"></span>
       <div class="user-icon">User</div>
-      <span class="user-name">Bienvenido(a) Keiko</span>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="user-logout">
+      <span class="user-name">Bienvenido(a) {{postulantData.firstname}}!</span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon" class="user-logout" [routerLink]="['/','login']">
         Log Out
       </button>
 

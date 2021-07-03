@@ -2,27 +2,29 @@
     <div class="job-list-container-form">
         <form action="">
             <mat-form-field class="job-list-container-form-input">
-              <input matInput matAutosizeMinRows=4 placeholder="Ingresa el empleo">
+            <input matInput matAutosizeMinRows=4 placeholder="Ingresa el empleo">
             </mat-form-field>
-            <button mat-button>BUSCAR</button>  
+            <button mat-button>BUSCAR</button>
         </form>
     </div>
     <div class="job-list-container-list">
         <ul>
-            <li class="job-item" *ngFor="let job of jobs" [routerLink]="['/jobs',job.id]">
+            <li class="job-item" *ngFor="let job of jobs" [routerLink]="['joboffer',job.id]">
                 <div class="job-item-text-left">
-                    <span>{{job.location}}</span>
+                    <span>{{job.direction}}</span>
                     <h2>{{job.title}}</h2>
                     <span>{{job.type}}</span>
                 </div>
                 <div class="job-item-text-right">
                     <div class="job-item-text-right-img">
-                        <img src={{job.url}} alt="">
                     </div>
                     <br>
-                    <span>{{job.date}}</span>
+                    <span>Publicado el: {{job.begin_date_offer}}</span>
                 </div>
             </li>
         </ul>
     </div>
 </div>
+
+
+
