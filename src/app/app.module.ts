@@ -73,6 +73,8 @@ import { ModifyProfessionalProfileComponent } from './pages/modify-professional-
 import { ModifyCompanyProfileComponent } from './pages/modify-company-profile/modify-company-profile.component';
 import { TermsAndConditionsComponent } from './pages/terms-and-conditions/terms-and-conditions.component';
 import { MypostulantionInformationComponent } from './pages/mypostulantion-information/mypostulantion-information.component';
+import { AuthInterceptor } from './helpers/auth.interceptor';
+
 
 
 @NgModule({
@@ -154,7 +156,7 @@ import { MypostulantionInformationComponent } from './pages/mypostulantion-infor
         MatDialogModule,
         MatMenuModule,
     ],
-  providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService],
+  providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService, AuthInterceptor],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

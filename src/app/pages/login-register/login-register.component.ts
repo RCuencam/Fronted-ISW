@@ -5,6 +5,8 @@ import {LoginRegisterService} from "../../services/login-register.service";
 import {Router} from "@angular/router";
 import {EmployeerService} from "../../services/employeer.service";
 import {PostulantService} from "../../services/postulant.service";
+import { AuthService } from 'src/app/services/auth.service';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -21,13 +23,16 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class LoginRegisterComponent implements OnInit {
 
-    constructor(private usersApi: LoginRegisterService,private employeerApi: EmployeerService, private postulantApi: PostulantService, private router: Router) { }
   emailexist!:string
   passwordexist!:string
   postulanteOempleador=false
   validador=false
   ingresante!:number;
-    fecha = new Date()
+  fecha = new Date();
+  employeer: {}
+  constructor(private tokenStorageService: TokenStorageService, private authService: AuthService, private usersApi: LoginRegisterService,private employeerApi: EmployeerService, private postulantApi: PostulantService, private router: Router) {
+    this.employeer={}
+  }
   ngOnInit(): void {
   }
 
@@ -43,23 +48,40 @@ export class LoginRegisterComponent implements OnInit {
   getAllUsers(): void {
     this.usersApi.getAllUsers().subscribe((response: any) => {
 
-      console.log(response.content)
-
+      console.log('xd',response.content)
+      
       for(var i=0;i<response.content.length;i++){
         if(response.content[i].email==this.emailexist &&
           response.content[i].password==this.passwordexist
-
-        ){
-         this.validador=true;
-          this.ingresante= response.content[i].id;
+          
+          ){
+            this.validador=true;
+            this.ingresante= response.content[i].id;
+          }
+          
         }
-
-      }
+        console.log(this.ingresante);
 
       if(this.validador){
 
         this.employeerApi.getEmployeerbyId(this.ingresante).subscribe((responseEmployeer: any) => {
-          this.router.navigate([`employeer/${this.ingresante}`])
+          console.log('info',responseEmployeer.typeof);
+          this.employeer=responseEmployeer
+
+          this.authService.login(responseEmployeer).subscribe(
+            data => {
+              console.log('confirm',data);
+
+            },
+            error => {
+              console.log('error',error.error.errorMessage);
+
+            }
+          );
+
+
+
+        this.router.navigate([`employeer/${this.ingresante}`])
             .then(() => console.log('Ingrese'));
         });
 
@@ -76,6 +98,7 @@ export class LoginRegisterComponent implements OnInit {
 
     });
   }
+  
 
   matcher = new MyErrorStateMatcher();
 
