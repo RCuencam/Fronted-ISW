@@ -3,7 +3,7 @@
   border-radius: 30px;
   align-items: center;
   margin: 5% 0;
-  box-shadow: 0px 3px 6px -2px #000000;
+
   cursor: pointer;
 }
 
@@ -112,13 +112,67 @@ h2 {
   border: 0;
 }
 .acomodar{
+  width: 80%;
+  margin: 0 auto;
 }
-
+.acomodar h1{
+  font-size: 3em;
+  font-weight: 700;
+}
+.job-item{
+  width: 100%;
+}
+.job-item-item{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0px 3px 6px -2px #000000;
+  cursor: pointer;
+  margin: 50px auto;
+}
+.job-item-item h4{
+  width: 100%;
+  font-size: 2.3em;
+  color: #1955AE;
+  font-weight: 700;
+  margin-right: 20px;
+}
+.job-item-item h5{
+  font-size: 1.3em;
+  font-weight: 700;
+}
+.job-containerss{
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+@media screen and (max-width:768px){
+  .job-containerss{
+    flex-direction: column;
+  }
+}
 ul {
   list-style-type: none;
 }
+.interview_button{
+  background: #1955AE;
+  color: white;
+  padding: 10px 10px !important;
+  border-radius: 5px;
+}
+.interview_button a{
+  text-decoration: none;
+  color: white;
+}
 
-
+.wrapper-calendar{
+  margin: 0 auto;
+}
 
 
 

@@ -2,7 +2,7 @@
 
   <div class="acomodar">
 
-    <mat-card class="job-item">
+    <div class="job-item">
 
       <h1> Entrevistas </h1>
 
@@ -12,41 +12,44 @@
 
         <ul>
 
-          <li class="job-item" *ngFor="let interview of interviewData"   >
-
-            <div>
-
-              <h4>
-
-                {{interview.titleJobOffer}}
-
-              </h4>
-
-              <h5>
-
-                Fecha de Inicio de la entrevista: <br> {{interview.date_Interview}}
-
-              </h5>
-
-              <h5>
-
-                Fecha final de la entrevista: <br> {{interview.final_date_Interview}}
-
-              </h5>
-
-              <button>
-                <a href="{{interview.link_Interview}}" target="_blank">
-                  Link de la entrevista
-                </a>
-              </button>
-
+          <li class="job-item-item" *ngFor="let interview of interviewData"   >
+            <div class="job-containerss">
+              <div>
+  
+                <h4>
+  
+                  {{interview.titleJobOffer}}
+  
+                </h4>
+  
+                
+              </div>
+              <div>
+                <h5>
+    
+                  Fecha de Inicio de la entrevista: <br> {{interview.date_Interview}}
+    
+                </h5>
+    
+                <h5>
+    
+                  Fecha final de la entrevista: <br> {{interview.final_date_Interview}}
+    
+                </h5>
+    
+                <button class="interview_button">
+                  <a href="{{interview.link_Interview}}" target="_blank">
+                    Link de la entrevista
+                  </a>
+                </button>
+              </div>
             </div>
 
           </li>
 
         </ul>
 
-    </mat-card>
+      </div>
 
 
     <div class="wrapper-calendar">
