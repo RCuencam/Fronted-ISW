@@ -21,12 +21,13 @@ export class PostulantService {
 
 
     return throwError('');
+
   }
 
 
   getPostulantbyId(id:number) {
     return this.http.get(`${this.url}/${id}`)
-      .pipe(retry(-1), catchError(this.handleError));
+      .pipe(retry(0), catchError(this.handleError));
   }
 
    // Create Student
@@ -41,7 +42,7 @@ export class PostulantService {
 
   getPostulantById(id: number): Observable<Postulant>{
     return this.http.get<Postulant>(`${this.url}/${id}`)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(retry(0), catchError(this.handleError));
   }
 
   //Get All Postulants

@@ -65,8 +65,9 @@ export class LoginRegisterComponent implements OnInit {
         console.log(this.ingresante);
 
       if(this.validador){
-
+        console.clear();
         this.employeerApi.getEmployeerbyId(this.ingresante).subscribe((responseEmployeer: any ) => {
+          console.clear();
           this.employeer=responseEmployeer
 
           this.authService.login(responseEmployeer).subscribe(
@@ -75,39 +76,42 @@ export class LoginRegisterComponent implements OnInit {
 
             },
             error => {
+              console.clear();
               console.log('error',error.error.errorMessage);
 
             }
           );
-
+          console.clear();
         this.router.navigate([`employeer/${this.ingresante}`])
-            .then(() => console.log('Ingrese'));
+            .then(() => console.clear());
+
         });
 
         this.postulantApi.getPostulantbyId(this.ingresante).subscribe((responsePostulant: any) => {
-
+            console.clear();
                this.postulant=responsePostulant
 
           this.authService.login(responsePostulant).subscribe(
             data => {
+
               console.log('confirm',data);
 
             },
             error => {
               console.log('error',error.error.errorMessage);
-
+              console.clear();
             }
           );
           this.router.navigate([`postulant/${this.ingresante}`])
-            .then(() => console.log('Ingrese'));
-        });
+            .then(() => console.clear());
+        })
 
-
+        console.clear();
       }
       else {
         alert("Contraseña incorrecta intentelo nuevamente")
       }
-
+      console.clear();
     });
   }
 

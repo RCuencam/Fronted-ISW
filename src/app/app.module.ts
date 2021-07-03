@@ -127,7 +127,6 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
 
   ],
 
-
   imports: [
     HttpClientModule,
     BrowserModule,
@@ -160,6 +159,7 @@ import { AuthInterceptor } from './helpers/auth.interceptor';
 
 
   providers: [PostulantsApiService,JobsApiService,EmployeerService,PostulantService, AuthInterceptor],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
