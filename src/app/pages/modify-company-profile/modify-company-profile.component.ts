@@ -52,7 +52,17 @@ export class ModifyCompanyProfileComponent implements OnInit {
           sector: this.newsector,
           logo: this.newlogo,
           ruc: this.newruc,
-          direccion: this.newdireccion
+          direccion: this.newdireccion,
+          idEmployeer: this.companyData.idEmployeer,
+          firstnameEmployeer: this.companyData.firstnameEmployeer,
+          lastnameEmployeer: this.companyData.lastnameEmployeer,
+          emailEmployeer: this.companyData.emailEmployeer,
+          numberEmployeer: this.companyData.numberEmployeer,
+          passwordEmployeer: this.companyData.passwordEmployeer,
+          documentEmployeer: this.companyData.documentEmployeer,
+          idSector: this.companyData.idSector,
+          nameSector: this.companyData.nameSector,
+          descriptionSector: this.companyData.descriptionSector
         };
         this.companiesApi.updateCompany(this.companyData.id, this.employeerData.id, newCompany)
           .subscribe(response => {
