@@ -75,6 +75,7 @@ export class ModifyCompanyProfileComponent implements OnInit {
     this.companiesApi.updateCompany(this.employeerId, this.companyData.idSector, newCompany)
       .subscribe(response => {
         console.log(response);
+        this.openDialog();
       });
   }
 
