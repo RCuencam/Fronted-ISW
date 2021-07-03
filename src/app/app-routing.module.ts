@@ -27,6 +27,7 @@ import {ModifyProfessionalProfileComponent} from "./pages/modify-professional-pr
 import {ModifyCompanyProfileComponent} from "./pages/modify-company-profile/modify-company-profile.component";
 import {TermsAndConditionsComponent} from "./pages/terms-and-conditions/terms-and-conditions.component";
 import { MypostulantionInformationComponent } from './pages/mypostulantion-information/mypostulantion-information.component';
+import {DialogJobNewComponent} from "./pages/dialog-job-new/dialog-job-new.component";
 
 const routes: Routes = [
 
@@ -57,10 +58,10 @@ const routes: Routes = [
 //////////////////////////////////////////////////////////////////////////////////////////////////rutas de toolbarpostulante
 
 ///testeo//
+
+
+
   {path:'postulant/:postulantId/modify-professional-profile', component : ModifyProfessionalProfileComponent},
-
-
-
   {path:'employeer/:employeerId/joboffernew', component: JobOfferNewComponentComponent},
   {path:'employeer/:employeerId/postulant/:postulantId/joboffer/:jobOfferId/approved-postulant/contrat', component: ContratComponent},
   {path:'postulants/:postulantId/joboffer/:jobOfferId/interview', component: InterviewsComponent},

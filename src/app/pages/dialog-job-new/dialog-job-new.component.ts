@@ -9,17 +9,23 @@ import {ActivatedRoute} from "@angular/router";
   styleUrls: ['./dialog-job-new.component.css']
 })
 export class DialogJobNewComponent implements OnInit {
+  employeerId!: number;
 
   constructor(
     public dialogRef: MatDialogRef<DialogJobNewComponent>,
     @Inject(MAT_DIALOG_DATA) public message: string = "contrat",private route: ActivatedRoute
-  ) { }
-  employeerId!: number;
+  ) { this.route.params.subscribe(params=>this.employeerId=params.employeerId);
+
+    console.log('olah',this.employeerId)
+  }
+
 
 
 
   ngOnInit(): void {
     this.route.params.subscribe(params=>this.employeerId=params.employeerId);
+
+    console.log(this.employeerId)
   }
 
 }
