@@ -12,7 +12,7 @@ export class ModifyPersonalInformationPostulantApiService {
   constructor(private http: HttpClient) {
   }
 
-  private url: string = "https://jobagapi.herokuapp.com/api/users";
+  private url: string = "https://jobag.herokuapp.com/api/users";
 
   httpOptions = {headers: new HttpHeaders({'Content-Type': 'application/json'})};
 

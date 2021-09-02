@@ -11,7 +11,7 @@ export class JobNewApiService {
 
   constructor(private  http: HttpClient) { }
 
-  private url: string = "https://jobagapi.herokuapp.com/api/employeers"
+  private url: string = "https://jobag.herokuapp.com/api/employeers"
 
   httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json'})};
 
